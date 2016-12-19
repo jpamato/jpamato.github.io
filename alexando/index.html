@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<title>ALEXANDO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/home.css">
+
+<body>
+
+<div id='fullMask' style='display:none;'>&nbsp;</div>
+<div id='dialog' class="w3-panel w3-white" style='display:none;'><span onclick="closeDialog(this)" class="w3-closebtn">&times;</span>
+	<div id='dialogContent'>&nbsp;</div>
+</div>
+
+<!-- Links (sit on top) -->
+<ul class="w3-top topnav" id="myTopnav">
+
+  <div class="w3-section w3-row" id='logoBar'>
+	  <div  class="w3-col s6 m6 l6" id='logo'><img src='img/logo.png' class='left'><span>El revés del derecho</span></div>
+    <div  class="w3-col s6 m6 l6" style='padding-top:1%;font-size:2.4vw'>
+	    <div class='social left'>
+    <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+    <i class="fa fa-twitter w3-hover-text-light-blue"></i>
+    <i class="fa fa-snapchat w3-hover-text-yellow"></i>
+    <i class="fa fa-pinterest-p w3-hover-text-red"></i>
+    <i class="fa fa-instagram w3-hover-text-purple"></i>
+    <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+    </div>
+    <div class='search right'><input id="buscar" type="text" placeholder="Buscar..." />
+	<i class="fa fa-search buscarSubmit"></i></div>
+    </div>
+  </div> 
+  <div style='display: flex;background-color: #3c5678;'>
+	<div class="w3-col s5 m6 l8">
+	<div class='left'>
+		<li class="icon">
+		<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
+		</li>
+
+		<li class='search sectionButt'><input id="buscarMobile" type="text" placeholder="Buscar..." />
+		<i class="fa fa-search buscarSubmit"></i></li>
+
+		<li class='sectionButt'><a href='#queEs' style='color:#11ada1'>Qué es alexando</a></li>
+		<li class='sectionButt'><a href='#misDerechos'>Unidades jurídicas</a></li>		
+		<li class='sectionButt'><a href='#sNosotros'>Sobre nosotros</a></li>		
+		
+	</div>
+	</div>
+
+	<div id='navTitle' class="w3-col s2 m3 l2" onclick="javascript:location.href='index.html'" style='text-align:center;'><img src='img/logo.png' height=33px></div>
+
+	<div class="w3-col s5 m6 l4">
+	<div class='right'>   
+		<li><button class="w3-btn consultaButton orangeButton" onclick="abrirConsulta()">Tu consulta</button></li>
+	</div>
+</div>
+</div>
+</ul>
+	
+  <!-- Content -->
+
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+	<div class="w3-content" id='consulta' style="display:none;">
+	<form id='consulForm'>
+		<textarea style='width:100%;height:100px;resize: none;resize: none;' name='cuerpoConsult' placeholder="Escribí tu consulta (GRATIS)"></textarea>
+		<br/>
+		<input name="email" class='w3-col s6 m6 l6' type="text" style='height:35px;' placeholder="tu email"/>	
+		<div class='w3-col s6 m6 l6'><button class="w3-btn sendButton orangeButton" style='margin-left:1%;width:99%;height:35px;' onclick="enviarConsulta()">Enviar</button></div>
+	</form>
+
+	</div>
+
+	<div class="w3-content" id='queEs' style="">
+
+		<div class="w3-content w3-display-container">
+
+			<a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1,'queEsSlides')">&#10094;</a>
+			<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1,'queEsSlides')">&#10095;</a>
+
+			<div class="w3-display-container queEsSlides">
+				<img src="img/dabah1.jpg" style="width:100%">      
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dapibus nunc. Phasellus porttitor dui in risus rutrum faucibus. Phasellus posuere, nibh id ultricies bibendum, odio turpis accumsan urna, quis finibus enim odio in ligula.</p>
+			</div>
+			<div class="w3-display-container queEsSlides">
+				<img src="img/workbench.jpg" style="width:100%">      
+				<p>Mauris tempor tellus in nisi porta iaculis. Curabitur faucibus justo nec molestie elementum. Nullam luctus pellentesque sapien a facilisis.</p>
+			</div>
+			<div class="w3-display-container queEsSlides">
+				<img src="img/sound.jpg" style="width:100%">      
+				<p>Donec pretium efficitur laoreet. Morbi luctus, elit sed fringilla molestie, purus lectus facilisis tortor, eu pulvinar tellus libero non libero. Proin eget nisi sed odio consequat pharetra at id leo. Proin lorem quam, tempus nec convallis sit amet, eleifend nec est.</p>
+			</div>   
+
+			<div class="w3-center w3-section w3-xlarge w3-text-white w3-display-bottomleft" style="width:100%;display:none;">    
+				<span class="w3-tag queEsSlides_dots w3-border w3-hover-white w3-white" onclick="currentDiv(1,'queEsSlides')"></span>
+				<span class="w3-tag queEsSlides_dots w3-border w3-hover-white w3-white" onclick="currentDiv(2,'queEsSlides')"></span>
+				<span class="w3-tag queEsSlides_dots w3-border w3-hover-white w3-white" onclick="currentDiv(3,'queEsSlides')"></span>
+			</div>
+			<br/>
+			<div style='text-align:center;'><button class='orangeButton' style='font-size:14px;padding: 5px 20px 5px 20px;'>Más sobre Alexando</button></div>
+		</div>
+
+		
+
+	</div>
+  
+  
+	<div class="w3-content" id='misDerechos' style="">
+
+		<div class='sectionBar'><h3>Unidades Jurídicas</h3></div>
+
+		<div class="w3-content w3-display-container">
+
+			<div class="w3-section w3-xlarge w3-text-white" style='position:absolute;z-index:100;top:-10px;right:50px;'>
+
+				<span class="w3-tag misDerechosSlides_dots w3-border w3-hover-white w3-white" onclick="currentDiv(1,'misDerechosSlides')"></span>
+				<span class="w3-tag misDerechosSlides_dots w3-border w3-hover-white w3-white" onclick="currentDiv(2,'misDerechosSlides')"></span>
+				<span class="w3-tag misDerechosSlides_dots w3-border w3-hover-white w3-white" onclick="currentDiv(3,'misDerechosSlides')"></span>
+			</div>
+
+			<a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1,'misDerechosSlides')">&#10094;</a>
+			<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1,'misDerechosSlides')">&#10095;</a>
+
+			<div class="w3-display-container misDerechosSlides">
+				<img src="img/coffee.jpg" style="width:100%">
+				<div class="w3-display-topleft externo w3-container">
+					<span class="w3-white w3-animate-bottom">Compras por internet</span>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dapibus nunc. Phasellus porttitor dui in risus rutrum faucibus. Phasellus posuere, nibh id ultricies bibendum, odio turpis accumsan urna, quis finibus enim odio in ligula. Mauris tempor tellus in nisi porta iaculis. Curabitur faucibus justo nec molestie elementum. Nullam luctus pellentesque sapien a facilisis. Donec pretium efficitur laoreet. Morbi luctus, elit sed fringilla molestie, purus lectus facilisis tortor, eu pulvinar tellus libero non libero.</p>
+			</div>
+			<div class="w3-display-container misDerechosSlides">
+				<img src="img/workbench.jpg" style="width:100%">
+				<div class="w3-display-topleft externo w3-container ">
+					<span class="w3-white w3-animate-bottom">Alquileres</span>
+				</div>
+				<p>Sed commodo aliquam est. Donec sed leo non magna viverra cursus id ac erat. Fusce eu mauris et metus suscipit volutpat ut eget turpis. Morbi a nunc hendrerit dolor porta faucibus vitae id justo. Etiam sed tortor eget dolor suscipit bibendum. Sed ut porttitor risus. Suspendisse quis ligula elit. Donec quis dolor quis neque laoreet aliquet. In hac habitasse platea dictumst. Integer pellentesque condimentum magna, eu venenatis turpis.</p>
+			</div>
+			<div class="w3-display-container misDerechosSlides">
+				<img src="img/sound.jpg" style="width:100%">
+				<div class="w3-display-topleft externo w3-container">
+					<span class="w3-white w3-animate-bottom">Sociedades conyugales</span>
+				</div>
+				<p>Praesent feugiat, libero vel congue euismod, nulla nunc congue eros, in accumsan lorem augue semper nunc. Nunc id augue at eros ultricies venenatis vel sed orci. Aliquam erat volutpat. Quisque elementum ac tellus finibus auctor. Quisque non elit interdum, tincidunt est quis, tincidunt lectus. Aenean suscipit lacus in sem efficitur blandit. Etiam magna tortor, fermentum finibus nunc eu, feugiat consequat felis.</p>
+			</div>
+
+
+		</div>
+	</div>
+
+	<div class="w3-content" id='sNosotros' style="">
+
+		<div class='sectionBar'><h3>Contacto</h3></div>
+		<div class="w3-section w3-row" style='padding:20px 80px 0px 80px;'>
+			<div id='avatar' class="w3-col m4 l4"><img src='img/avatar.png' height=180px></div>
+			<div class="w3-col m8 l8"> <p>Morbi a nunc hendrerit dolor porta faucibus vitae id justo. Etiam sed tortor eget dolor suscipit bibendum. Sed ut porttitor risus.</p><br/>
+				<div class='w3-col m3 l3 socialCircle'><img src='img/1482175470_facebook_circle.png'></div>
+				<div class='w3-col m3 l3 socialCircle'><img src='img/1482175587_google_circle.png'></div>
+				<div class='w3-col m3 l3 socialCircle'><img src='img/1482175633_vimeo_circle.png'></div>
+				<div class='w3-col m3 l3 socialCircle'><img src='img/1482175599_twitter_circle.png'></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-grey w3-center">
+	
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/lib/slideShow.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>

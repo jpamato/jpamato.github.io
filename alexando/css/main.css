@@ -1,0 +1,205 @@
+@font-face {
+    font-family: VagBlack;
+    src: url('../fonts/VAGRoundedStd-Black.otf');
+}
+
+@font-face {
+    font-family: VagBold;
+    src: url('../fonts/VAGRoundedStd-Bold.otf');
+}
+
+@font-face {
+    font-family: VagLight;
+    src: url('../fonts/VAGRoundedStd-Light.otf');
+}
+
+@font-face {
+    font-family: VagThin;
+    src: url('../fonts/VAGRoundedStd-Thin.otf');
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+/* ##DIALOG */
+#fullMask{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:1024px;
+	z-index:100;
+	background-color:rgba(0,0,0,0.5);
+}
+#dialog{
+	position:fixed;
+	z-index:1000;
+	color:black;
+	background-color:white;
+	text-align:center;
+	top:100px;
+	left:35%;
+	width:30%;
+	height:300px;
+}
+
+/* ##TOPNAV */
+#logo{
+	display:table;
+}
+#logo img{
+	width:90%;
+}
+#logo span{
+	font-size: 2.5vw;vertical-align: middle;display:table-cell;color:#3c5678;padding-left:7%;
+}
+.buscarSubmit {
+    position: relative;
+    z-index: 1;
+    left: -15%;
+    top: 1px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+}
+.orangeButton{
+	background-color:#f17d21;
+	color:white;
+	border:0px;
+}
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	//background-color: #3c5678;
+	background-color: white;
+	padding-left:5%;
+	padding-right:5%;
+	z-index: 200;
+}
+ul.topnav li {
+	float: left;
+	margin-right: 5px;
+}
+ul.topnav li a {
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 4px 8px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 1.6vw;
+}
+ul.topnav li.sectionButt a:hover {
+	background-color: #555;
+}
+ul.topnav li.icon,ul.topnav li.search {display: none;}
+
+#navTitle{display:none;}
+
+#consulForm{
+	padding: 0px 100px 40px 100px;
+}
+
+#consulta{
+	padding-top:80px;
+}
+
+/* ##SECTIONS  */
+.sectionBar{
+	background-color:#777;
+	color:white;
+	padding-left:50px;
+	margin-bottom: 30px;
+}
+
+footer{
+	margin-top:50px;
+}
+
+footer a{
+	text-decoration:none;
+}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:767px) {
+
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:767px) {
+
+	.w3-btn.consultaButton{
+		height:33px;
+		font-size: 14px;
+	}
+	ul.topnav{
+		background-color:#3c5678;
+		padding-left:0px;
+		padding-right:0px
+	}
+
+	ul.topnav li:not(:first-child) {display: none;}
+	ul.topnav li.icon {
+		float: left;
+		display: inline-block;
+		font-size:17px;
+	}
+
+	ul.topnav li.search {
+		margin-left:10px;	
+	}
+
+	ul.topnav li a{font-size:4.5vw;}
+
+	ul.topnav li.icon a{font-size:17px;}
+
+	/*ul.topnav.responsive {position: relative;}*/
+	ul.topnav.responsive li.icon {
+		margin-right:100%;
+	}
+	ul.topnav.responsive li.sectionButt {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;    
+	}
+
+	#logoBar{
+		display:none;
+	}
+
+	#navTitle{
+		display:inline;
+	}
+
+	#buscarMobile{
+		width: 80%;
+    		margin-top: 10px;
+    		margin-bottom: 10px;
+    		font-size: 3vw;
+	}
+
+	#consulForm{
+		padding: 0px 50px 80px 50px;
+	}
+
+	#consulta{
+		padding-top:0px;
+	}
+}
+
+@media screen and (min-width:1100px) {
+	.orangeButton{
+		font-size:1.4vw;
+	}
+}
+

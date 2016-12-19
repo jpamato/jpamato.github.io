@@ -1,0 +1,64 @@
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+
+//## QUE ES SECTION
+#queEs{
+	//background-color:grey;
+	max-width:1980px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-top: 10%;
+	padding-bottom:40px;
+}
+
+//## MIS DERECHOS SECTION
+#misDerechos{
+	padding-top: 50px;
+}
+.w3-display-topleft.externo{
+	top:-50px;
+	font-size: 2vw;
+        padding: 12px 24px;
+}
+
+//## QUE ES SECTION
+#sNosotros{
+	padding-top: 50px;
+}
+
+
+/* ## SLIDE SHOWS */
+.w3-content.w3-display-container{
+	width:100%;
+	padding:50px;
+}
+.queEsSlides,.misDerechosSlides{
+	display:none;
+	//padding:50px;
+}
+.w3-btn-floating{
+	color:grey;
+	background-color:transparent;
+	font-size:50px;
+}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+
+@media screen and (max-width:767px) {
+	#queEs{
+		margin-top: -50px;
+	}
+
+	.w3-display-topleft.externo{
+		top: -47px;
+		font-size: 14px;
+		padding-left:1%;
+
+	}
+
+	.socialCircle{
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	
+}
