@@ -1,10 +1,16 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function NavToggle() {
+function NavToggle(val) {
     var x = document.getElementById("myTopnav");
-    if (x.className === "w3-top topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "w3-top topnav";
+    if(val==null){
+	    if (x.className === "w3-top topnav") {
+		x.className += " responsive";
+	    } else {
+		x.className = "w3-top topnav";
+	    }
+    }else if(val){
+	x.className = "w3-top topnav responsive";
+    }else{
+	x.className = "w3-top topnav";
     }
 }
 
