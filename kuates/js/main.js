@@ -9,6 +9,7 @@ var app = (function(){
 	var userType;
 	var uID;
 
+	localStorage.setItem("localSaved",0);
 	var localSaved = localStorage.getItem("localSaved");
 	if(localSaved==null){
 		localStorage.setItem("localSaved",0);
