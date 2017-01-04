@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>:Kuates:</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/terminos.css">
+
+<body>
+
+<div id='fullMask' style='display:none;'>&nbsp;</div>
+<div id='dialog' class="w3-panel w3-white" style='display:none;'><span onclick="closeDialog(this)" class="w3-closebtn">&times;</span>
+	<div id='dialogContent'>&nbsp;</div>
+</div>
+
+<!-- Links (sit on top) -->
+<ul class="w3-top topnav" id="myTopnav">
+
+	<div class="w3-col s5 m5 l5">
+		<div class='left'>
+			<li class="icon">
+			<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
+			</li>
+			<li id='crear'><button class="w3-btn navButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+			<li><button class="w3-btn navButton" onclick="javascript:location.href='explorar.html'">EXPLORA</button></li>		
+	</div>
+	</div>
+	
+
+	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><b>KUATES</b></div>
+
+	<div class="w3-col s5 m5 l5">
+			<div class='right'>   
+		<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
+		<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h6>Carola</h6><button onclick="toggleMenu()"><i class="fa fa-angle-down" style="font-size:18px"></i></button></span></li>
+	</div>
+</div>
+</ul>
+
+<ul id='userMenu' style='display:none;'>
+	<li onclick="javascript:location.href='perfil.html'"><b>MI PERFIL</b></li>
+	<li><b>MENSAJES</b></li>
+	<li><b>MIS PROYECTOS</b></li>
+	<li><b>MIS FAVORITOS</b></li>
+	<li onclick="logOut()"><b>SALIR</b></li>
+</ul>
+
+
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+			<div class="w3-center">
+				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">TERMINOS Y CONDICIONES</span>
+			</div>
+			
+			
+
+</div>
+
+	<!-- Footer -->
+
+	<footer class="w3-container w3-padding-32 w3-grey w3-center">
+		<div>
+			<div class='w3-col s2 m2 l2 left'>
+				<a href="contacto.html">CONTACTO</a>		
+			</div>
+
+			<h4 id='footTitle' class='w3-col s8 m8 l8'><b onclick="javascript:location.href='index.html'">KUATES</b></h4>
+
+			<div class='w3-col s2 m2 l2 right'>   
+				<a href="terminos.html">TÉRMINOS Y CONDICIONES</a>		
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<script>
+
+	</script>
+
+</body>
+</html>

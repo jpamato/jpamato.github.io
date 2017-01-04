@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<title>:Kuates:</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/sign.css">
+
+<body>
+
+<div id='fullMask' style='display:none;'>&nbsp;</div>
+<div id='dialog' class="w3-panel w3-white" style='display:none;'><span onclick="closeDialog(this)" class="w3-closebtn">&times;</span>
+	<div id='dialogContent'>&nbsp;</div>
+</div>
+
+<!-- Links (sit on top) -->
+<ul class="w3-top topnav" id="myTopnav">
+
+	<div class="w3-col s5 m5 l5">
+		<div class='left'>
+			<li class="icon">
+			<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
+			</li>
+			<li id='crear'><button class="w3-btn navButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+			<li><button class="w3-btn navButton" onclick="javascript:location.href='explorar.html'">EXPLORA</button></li>		
+	</div>
+	</div>
+	
+
+	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><b>KUATES</b></div>
+
+	<div class="w3-col s5 m5 l5">
+			<div class='right'>   
+		<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>		
+		<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h6>Carola</h6><button onclick="toggleMenu()"><i class="fa fa-angle-down" style="font-size:18px"></i></button></span></li>
+	</div>
+</div>
+</ul>
+
+<ul id='userMenu' style='display:none;'>
+	<li onclick="javascript:location.href='perfil.html'"><b>MI PERFIL</b></li>
+	<li><b>MENSAJES</b></li>
+	<li><b>MIS PROYECTOS</b></li>
+	<li><b>MIS FAVORITOS</b></li>
+	<li onclick="logOut()"><b>SALIR</b></li>
+</ul>
+
+
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+	<form id='signForm'>
+		<!-- Grid -->
+		<div class="w3-row w3-container">
+
+			<div class="w3-center">
+				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">CREA TU CUENTA</span>
+			</div>
+			
+			<div class='campos'>
+			<div class="w3-col l2 w3-container w3-padding-12">
+				<div id='userPhoto' class='w3-circle'><img src='img/avatar.png' width=128px></div>
+				<label for='fileInput'><H5 style="width:128px;text-align:center;">CAMBIA TU AVATAR</H5></label>
+				<input id="fileInput" type="file" name='avatar' style='display:none;'>				
+			</div>
+
+			<div class="w3-col l5 m6 w3-container w3-padding-12">
+
+				<div class='lineInput'><label><b>NOMBRE</b></label><input name='nombre' class='w3-input required' type='text'></div>
+				<div class='lineInput'><label><b>ID</b></label><input name='id' class='w3-input' type='text'></div>
+				<div class='lineInput'><label><b>EMAIL</b></label><input name='email' class='w3-input' type='text'></div>
+				<div class='lineInput'><label><b>CONTRASEÑA</b></label><input name='contraseña' class='w3-input' type='password'></div>
+				<div class='lineInput'><label><b>CONFIRMÁ TU CONTRASEÑA</b></label><input name='ccontraseña' class='w3-input' type='password'></div>
+				<div id='base1' style='font-size:1vw'><input class='w3-check' type='checkbox'><label>ACEPTO <a href='terminos.html' target="_blank">BASES Y CONDICIONES</a></label></div>
+
+			</div>
+
+			<div class="w3-col l5 m6 w3-container w3-padding-12">
+
+				<!--<div class='lineInput'><label><b>NACIMIENTO</b></label><input id="date" class='w3-input' data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="date"  type="text"></div>-->
+				<div class='lineInput'><label><b>NACIMIENTO</b></label>
+					<span id="date"></span>
+				</div>
+				<div class='lineInput'><label><b>ESCUELA</b></label><input name='escuela' class='w3-input' type='text'></div>
+				<div class='lineInput'><label><b>ESTADO</b></label><input name='estado' class='w3-input' type='text'></div>
+				<div class='lineInput'><label><b>CIUDAD</b></label><input name='ciudad' class='w3-input' type='text'></div>
+			</div>		   
+		</div>
+		</div>
+
+		<div id='backers' class="w3-row w3-container" style='display:none;'>
+
+			<div class="w3-col l2 w3-container w3-padding-12">&nbsp;</div>
+			<div class="w3-col l10 m12 w3-container">
+				<hr style='border-bottom: 1px dashed;margin-top:0px;'>
+				<h6 style='padding-left:16px;'>COMPLETA LOS SIGUIENTES CAMPOS EXCLUSIVOS PARA BACKERS:</h6>
+
+				<div class="w3-col l5 m6 w3-container">
+					<div class='lineInput'><label><b>CALLE</b></label><input name='calle' class='w3-input' type='text'></div>
+					<div class='lineInput'><label><b>NRO EXTERNO</b></label><input name='nro_externo' class='w3-input' type='text'></div>
+					<div class='lineInput'><label><b>NRO INTERNO</b></label><input name='nro_interno' class='w3-input' type='text'></div>
+					<div class='lineInput'><label><b>CP</b></label><input name='cp' class='w3-input' type='text'></div>
+					<div id='base2' style='font-size:1vw'><input class='w3-check' type='checkbox'><label>ACEPTOP <a href='#'>BASES Y CONDICIONES</a></label></div>
+				</div>
+
+				<div class="w3-col l5 m6 w3-container w3-padding-12">
+					<div class='lineInput'><label><b>PROFESIÓN</b></label><input name='profesion' class='w3-input' type='text'></div>
+					<div class='lineInput'><label><b>TELÉFONO</b></label><input name='telefono' class='w3-input' type='text'></div>
+
+				</div>
+			</div>
+		</div>
+		<div>
+
+			<div class="w3-center">
+				<input id='submitButt' type="submit" value="CREAR MI CUENTA">
+			</div>
+		</form>
+
+		<div id='signDone' style='display:none;'>
+			<div class="w3-center">
+				<p class="w3-xlarge w3-border-dark-grey w3-padding-16">Gracias <span class='user'>CAROLA</span><br/>por completar el formulario</p>
+				<p class="w3-xlarge w3-border-dark-grey w3-padding-16">Revisa tu correo electrónico<br/>te hemos enviado un email para activar tu cuenta!</p>
+			</div>
+		</div>
+
+		<div id='signActivated' style='display:none;'>
+			<div class="w3-center">
+				<p class="w3-xlarge w3-border-dark-grey w3-padding-16"><span class='user'>CAROLA</span>, la activación de tu cuenta<br/> se ha realizado con éxito</p>
+				<p class="w3-large w3-border-dark-grey w3-padding-16"><button id='toCrear' onclick="javascript:location.href='crear.html'">COMIENZA A CREAR PROYECTOS</button><button onclick="javascript:location.href='explorar.html'">EXPLORA PROYECTOS</button></p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="w3-container w3-padding-32 w3-grey w3-center">
+		<div>
+			<div class='w3-col s2 m2 l2 left'>
+				<a href="contacto.html">CONTACTO</a>		
+			</div>
+
+			<h4 id='footTitle' class='w3-col s8 m8 l8'><b onclick="javascript:location.href='index.html'">KUATES</b></h4>
+
+			<div class='w3-col s2 m2 l2 right'>   
+				<a href="terminos.html">TÉRMINOS Y CONDICIONES</a>		
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/sign.js"></script>
+
+	<script>
+
+	</script>
+
+</body>
+</html>

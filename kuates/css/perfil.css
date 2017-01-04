@@ -1,0 +1,24 @@
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+select{
+	border:none;
+}
+
+#signActivated button{
+	border:none;
+	margin:10px;
+}
+
+#date{
+	display:inline-flex;
+	padding: 0px 10px 0px 10px;
+}
+
+.edit{
+	font-size: 1.8vw;
+	text-align:right;
+	width:100%;
+}

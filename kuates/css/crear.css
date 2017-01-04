@@ -1,0 +1,94 @@
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+#proyNav{
+	margin-top:30px;
+	margin-bottom:40px;
+	color:rgba(0,0,0,0.2);
+}
+
+#navLine{
+	display:inline-flex;
+}
+
+#navLine hr{
+	border:1px solid rgba(0,0,0,0.1);
+	width:80px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.step{
+	text-align:center;
+}
+
+.w3-content .w3-circle{
+	border:1px solid rgba(0,0,0,0.2);
+	width:36px;
+	height:36px;
+	padding:8px;
+	margin: auto;
+}
+
+.w3-display-middle{
+	position:relative;
+}
+
+#proyectData .w3-input{	
+	display:inline;
+	padding: 0px 10px 0px 10px;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	width:350px;
+}
+
+#proyName{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#proyDesc{
+    border-width: 1px 1px 1px 1px;
+    border-color: rgba(0,0,0,0.1);
+    height: 100px;
+    resize: none;
+}
+
+#navButtons{
+	width: 150px;
+	height: 1px;;
+	margin: 50px auto 0px auto;
+}
+
+#navLeft{
+	float:left;
+	border:1px solid rgba(0,0,0,0.2);
+	background-color:white;
+	color:rgba(0,0,0,0.2);
+}
+
+#navRight{
+	float:right;
+	border:none;
+	background-color:grey;
+	color:white;
+}
+
+#stepCont_2 img{
+	width:100%;
+	padding:5px;
+}
+
+#thumbCont{
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.2, 0.88, 0.5, 1);
+    transition-duration: 1500ms;
+    transform: translateX(0px);
+}
+
+.thumbDelete{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: -15px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<title>:Kuates:</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/crear.css">
+<link rel="stylesheet" href="css/thumbs2.css">
+<link rel="stylesheet" href="css/thumbnail-slider.css">
+
+<body>
+
+<div id='fullMask' style='display:none;'>&nbsp;</div>
+<div id='dialog' class="w3-panel w3-white" style='display:none;'><span onclick="closeDialog(this)" class="w3-closebtn">&times;</span>
+	<div id='dialogContent'>&nbsp;</div>
+</div>
+
+<!-- Links (sit on top) -->
+<ul class="w3-top topnav" id="myTopnav">
+
+	<div class="w3-col s5 m5 l5">
+		<div class='left'>
+			<li class="icon">
+			<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
+			</li>
+			<li id='crear'><button class="w3-btn navButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+			<li><button class="w3-btn navButton" onclick="javascript:location.href='explorar.html'">EXPLORA</button></li>		
+	</div>
+	</div>
+	
+
+	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><b>KUATES</b></div>
+
+	<div class="w3-col s5 m5 l5">
+			<div class='right'>   
+		<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
+		<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h6>Carola</h6><button onclick="toggleMenu()"><i class="fa fa-angle-down" style="font-size:18px"></i></button></span></li>
+	</div>
+</div>
+</ul>
+
+<ul id='userMenu' style='display:none;'>
+	<li onclick="javascript:location.href='perfil.html'"><b>MI PERFIL</b></li>
+	<li><b>MENSAJES</b></li>
+	<li><b>MIS PROYECTOS</b></li>
+	<li><b>MIS FAVORITOS</b></li>
+	<li onclick="logOut()"><b>SALIR</b></li>
+</ul>
+
+
+	<div class="w3-content" style="max-width:800px;margin-top:80px;margin-bottom:80px">
+			<div class="w3-center">
+				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">CREA TU PROYECTO</span>
+			</div>
+
+			<div id='proyNav' class='w3-center'>
+			<span id='navLine'>				
+				<div id='step1' class='step'><div class='w3-circle'><div class=w3-display-middle>1</div></div>
+				Nombre</div>
+				<hr style='margin-left:-10px;margin-right:-15px;'>
+				<div id='step2' class='step'><div class='w3-circle'><div class=w3-display-middle>2</div></div>
+				Categoría</div>
+				<hr style='margin-left:-15px;margin-right:-21px;'>
+				<div id='step3' class='step'><div class='w3-circle'><div class=w3-display-middle>3</div></div>
+				Descripción</div>
+				<hr style='margin-left:-21px;margin-right:-11px;'>
+				<div id='step4' class='step'><div class='w3-circle'><div class=w3-display-middle>4</div></div>
+				Archivos</div>
+			</span>			
+			</div>
+
+			<form id='proyectData'>
+			<div class="w3-center">
+			<div id='stepCont_1'>
+			
+				<h4>Escribe un nombre para tu proyecto:</h4>
+				<input id='proyName' name='nombre' class='w3-input required' type='text'>
+				<p>Escribe un nombre divertido que llame la atención y<br/>
+				que explique en pocas palabras de qué se trata tu idea
+				</p>
+			</div>
+
+			<div id='stepCont_2' style='display:none;'>
+				<h4>Elige la categoría de tu proyecto:</h4>
+				<div class="w3-row w3-container">
+				<div class="w3-col m6 l3 categoria" name='invento'><img src='img/invento.png'></div>
+				<div class="w3-col m6 l3 categoria" name='solución'><img src='img/solucion.png'></div>
+				<div class="w3-col m6 l3 categoria" name='fantástico'><img src='img/fantastico.png'></div>
+				<div class="w3-col m6 l3 categoria" name='divertido'><img src='img/divertido.png'></div>
+
+				<div class="w3-col m6 l3 categoria" name='ayude'><img src='img/ayude.png'></div>
+				<div class="w3-col m6 l3 categoria" name='inspirador'><img src='img/inspirador.png'></div>
+				<div class="w3-col m6 l3 categoria" name='música'><img src='img/musica.png'></div>
+				<div class="w3-col m6 l3 categoria" name='artístico'><img src='img/artistico.png'></div>				
+				</div>
+				<p>Elige la categoría que explique mejor qué tienes ganas de crear.<br/>
+				Esto ayudará a otros :kuates a entender cómo pueden ayudarte
+				</p>
+			</div>
+			<div id='stepCont_3' style='display:none;'>
+				<h4>Cuentanos sobre tu proyecto:</h4>
+				<textarea id='proyDesc' name='descripcion' class='w3-input required'>
+
+				</textarea>
+
+				<p>Describe los detalles de tu proyecto para que otros :kuates<br/>
+				entiendan de que se trata y puedan ayudarte.
+				</p>
+			</div>
+			<div id='stepCont_4' style='display:none;'>
+				<h4>Sube los archivos que creas necesarios</h4>
+				
+				<div id='some_container_div'></div>				
+
+				<!--***-->
+				
+				<div id="thumbnail-slider">
+                
+		<button id='scrollLeft' class='w3-circle'><i class="fa fa-angle-left" style="font-size:20px"></i></button>
+		<div class="inner">			
+			<label for='fileInput' style='position: absolute;right: 0px;z-index: 1;background-color: white;height: 100px;width: 120px;'><i class="fa fa-arrow-up" style="font-size:90px"></i></label>
+			<input id="fileInput" name='archivos' type="file" style='display:none;'>
+			<ul id="thumbCont">
+			<!--<li class="" style="display: inline-block; height: 90px; width: 120px; z-index: 0;">
+                            <<div class="w3-panel" style="background-image: url(&quot;img/2.jpg&quot;); cursor: pointer;">
+				    <span onclick="deleteThumb(this)"class="w3-closebtn w3-grey thumbDelete">×</span>
+			    </div>
+			</li>-->
+
+			</ul>
+			
+			
+		</div>
+		<button id='scrollRight' class='w3-circle'><i class="fa fa-angle-right" style="font-size:20px"></i></button>
+
+		</div>
+
+				<!--***-->
+
+
+				<p>Puedes subir imágenes, video y documentos de texto<br/>
+				que complementen la información que has escrito en la descripción
+				</p>
+			</div>
+
+		</div>
+			
+		</form>
+
+		<div id='stepCont_5' style='display:none;'>
+				<h4>MUCHAS GRACIAS</h4>				
+
+				<p>Tu proyecto será publicado en breve</p>
+		</div>
+
+		<div id='navButtons' class='w3-center'>
+			<button id='navLeft' class='w3-circle'><i class="fa fa-angle-left" style="font-size:20px"></i></button>
+			<button id='navRight' class='w3-circle'><i class="fa fa-angle-right" style="font-size:20px"></i></button>
+		</div>
+
+		</div>
+		
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="w3-container w3-padding-32 w3-grey w3-center">
+		<div>
+			<div class='w3-col s2 m2 l2 left'>
+				<a href="contacto.html">CONTACTO</a>		
+			</div>
+
+			<h4 id='footTitle' class='w3-col s8 m8 l8'><b onclick="javascript:location.href='index.html'">KUATES</b></h4>
+
+			<div class='w3-col s2 m2 l2 right'>   
+				<a href="terminos.html">TÉRMINOS Y CONDICIONES</a>		
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/crear.js"></script>
+	<script src="js/lib/thumbnail-slider.js"></script>
+
+	<script>
+
+	</script>
+
+</body>
+</html>

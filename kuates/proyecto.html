@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<title>:Kuates:</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/proyecto.css">
+
+<body>
+
+<div id='fullMask' style='display:none;'>&nbsp;</div>
+<div id='dialog' class="w3-panel w3-white" style='display:none;'><span onclick="closeDialog(this)" class="w3-closebtn">&times;</span>
+	<div id='dialogContent'>&nbsp;</div>
+</div>
+
+<!-- Links (sit on top) -->
+<ul class="w3-top topnav" id="myTopnav">
+
+	<div class="w3-col s5 m5 l5">
+		<div class='left'>
+			<li class="icon">
+			<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
+			</li>
+			<li id='crear'><button class="w3-btn navButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+			<li><button class="w3-btn navButton" onclick="javascript:location.href='explorar.html'">EXPLORA</button></li>		
+		</div>
+	</div>
+
+
+	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><b>KUATES</b></div>
+
+	<div class="w3-col s5 m5 l5">
+		<div class='right'>   
+			<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
+			<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h6>Carola</h6><button onclick="toggleMenu()"><i class="fa fa-angle-down" style="font-size:18px"></i></button></span></li>
+		</div>
+	</div>
+</ul>
+<ul id='userMenu' style='display:none;'>
+	<li><b>MI PERFIL</b></li>
+	<li><b>MENSAJES</b></li>
+	<li><b>MIS PROYECTOS</b></li>
+	<li><b>MIS FAVORITOS</b></li>
+	<li><b>SALIR</b></li>
+</ul>
+
+<div class="w3-content" style="max-width:1100px;margin-top:60px;margin-bottom:80px">
+
+	<div class="w3-center">
+		<h5 id="categoria">categoria</h5>
+		<span id='pTitle' class="w3-xlarge w3-border-dark-grey w3-padding-16">QUIERO HACER UN PERRO ROBOT CON CARTON</span>
+
+		<div class="w3-row w3-container">
+			<div class="w3-col l8 m8 w3-container w3-padding-12">
+				<div class="w3-content" id='homeSlider'>
+					<!-- Slideshow -->
+					<!--  <div class="w3-container" id='homeSlider'>-->
+					<div class="w3-content w3-display-container">
+
+						<a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+						<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+
+						<div id="photoContainer">
+						<div class="w3-display-container mySlides">
+							<img src="img/team1.jpg" style="width:100%">							
+						</div>
+						<div class="w3-display-container mySlides">
+							<img src="img/workbench.jpg" style="width:100%">							
+						</div>
+						<div class="w3-display-container mySlides">
+							<img src="img/sound.jpg" style="width:100%">						
+						</div>    
+						</div>
+						<div class="w3-center w3-section w3-xlarge w3-text-white w3-display-bottomleft" style="width:100%">
+
+							<span class="w3-tag demodots w3-border w3-hover-white w3-white" onclick="currentDiv(1)"></span>
+							<span class="w3-tag demodots w3-border w3-hover-white w3-white" onclick="currentDiv(2)"></span>
+							<span class="w3-tag demodots w3-border w3-hover-white w3-white" onclick="currentDiv(3)"></span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div id='creador' class="w3-col l4 m4 w3-container w3-padding-12">
+
+				<div class='w3-circle' style='width: 128px;height: 128px;overflow: hidden;margin:auto;'><img width=128px id="avatar" src='img/avatar.png'></div>
+				<br/>
+				<div id='stats'><a id="userName" href='#'>JUANCITO GOMEZ</a></br>
+					<span id='ciudad'>Ciudad</span>
+					<div class="w3-row w3-container" style="font-size: 2.0vw;">
+						<div class="w3-col l4 m4 s4 w3-container w3-padding-12">
+							<i class="fa fa-trophy" aria-hidden="true"></i> <b id='cantLogros'>5</b><p style='font-size:0.8vw;margin-top:0px;text-align:center;'><b>LOGROS</b></p>
+						</div>
+						<div class="w3-col l4 m4 s4 w3-container w3-padding-12" style='border-left: solid 1px;border-right: solid 1px;'>
+							<b>2</b><p style='font-size:0.8vw;margin-top:0px;;'><b>PROYECTOS ACTIVOS</b></p>
+						</div>
+						<div class="w3-col l4 m4 s4 w3-container w3-padding-12">
+							<b>5</b><p style='font-size:0.8vw;margin-top:0px;text-align:center;'><b>PROYECTOS FINALIZADOS</b></p>
+						</div>						  
+					</div>
+				</div>
+				<div class="w3-row w3-container" style="font-size: 1.25vw;margin-top:20px">
+					<div class='barra'>
+						<div class='barraLlena' style='width:60%;'>&nbsp;</div>
+						<div class='barraVacia' style='width:40%;'>&nbsp;</div>
+					</div>
+					<div class='left'><b>60% logrado</b></div><div class='right'><b>5 días restantes</b></div>
+				</div>
+
+				<button id="votar"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;VOTAR PROYECTO</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+		</div>
+	</div>
+
+
+	<div id='pFiles' style='margin-top: 10px;'>
+		<div class="w3-row w3-container">
+			<div class="w3-col l2 m2 s2" style='border-right:solid 1px;'>
+				<img class='left' src='img/doc.png' width=25%><p>DOCUMENT.TXT</p>
+			</div>
+			<div class="w3-col l2 m2 s2" style='border-right:solid 1px;'>
+				<img class='left' src='img/doc.png' width=25%><p>DOCUMENT.TXT</p>
+			</div>
+			<div class="w3-col l2 m2 s2" style='border-right:solid 1px;'>
+				<img class='left' src='img/doc.png' width=25%><p>DOCUMENT.TXT</p>
+			</div>
+			<div class="w3-col l2 m2 s2" style='border-right:solid 1px;'>
+				<img class='left' src='img/doc.png' width=25%><p>DOCUMENT.TXT</p>
+			</div>
+			<div class="w3-col l2 m2 s2" style='border-right:solid 1px;'>
+				<img class='left' src='img/doc.png' width=25%><p>DOCUMENT.TXT</p>
+			</div>
+			<div class="w3-col l2 m2 s2" style='border-right:solid 1px;'>
+				<img class='left' src='img/doc.png' width=25%><p>DOCUMENT.TXT</p>
+			</div>
+		</div>
+	</div>
+	<div id='pDescrip'>
+		<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac. Praesent semper sed nulla vitae pretium. Vestibulum libero massa, hendrerit sit amet lectus vel, euismod sollicitudin erat. Pellentesque tellus sem, vulputate non nisi quis, placerat pretium lectus. Ut quis tellus dapibus, condimentum metus eu, sagittis neque. Etiam mi tellus, imperdiet vitae feugiat interdum, efficitur nec sapien. Duis id sagittis massa, ac consectetur ipsum.</p>
+	</div>
+</div>
+
+<div id='feedback'>
+	<div id='comentarios' class="w3-col l7 m7">
+		<h3 style='text-align:left'>COMENTARIOS</h3>
+
+		<div class='comment' id='toComment'>
+			<div class="w3-row w3-container">
+				<div class="w3-col l1 m1 s1 avatar"><div class='w3-circle left' style='width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;'><img width=50px src='img/avatar.png'></div></div>
+				<div class="w3-col l10 m10 s10" style='text-align:left;padding:10px 10px 0px 10px;'>
+					<textarea placeholder='¿Cómo puedes ayudar?'></textarea>	
+					<div class='left' style='color:black;'>						
+						<input id="inputPhoto" name='archivos' type="file" style='display:none;'>
+						<label for='inputPhoto'><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input id="inputVideo" name='archivos' type="file" style='display:none;'>
+						<label for='inputVideo'><i class="fa fa-film" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input id="inputDoc" name='archivos' type="file" style='display:none;'>
+						<label for='inputDoc'><i class="fa fa-file" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					</div>
+					<div class='right'><button id="comentar" style='background-color:#ddd;'>COMENTAR</button></div>
+					<ul id="thumbCont"></ul>
+				</div>
+			</div>
+
+			<hr style='width:99%;border:dashed 1px;margin-top: 5px;'>
+		</div>
+
+		<div class='comment'>
+			<div class="w3-row w3-container">
+				<div class="w3-col l1 m1 s1 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l10 m10 s10" style='text-align:left'>
+					<a href='#'>JUANCITO GOMEZ</a>
+					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac</p>
+				</div>
+			</div>
+			<hr style='width:95%;border:dashed 1px;'>
+		</div>
+
+		<div class='comment'>
+			<div class="w3-row w3-container">
+				<div class="w3-col l1 m1 s1 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l10 m10 s10" style='text-align:left'>
+					<a href='#'>JUANCITO GOMEZ</a>
+					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac</p>
+				</div>
+			</div>
+			<hr style='width:95%;border:dashed 1px;'>
+		</div>
+
+		<div class='comment'>
+			<div class="w3-row w3-container">
+				<div class="w3-col l1 m1 s1 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l10 m10 s10" style='text-align:left'>
+					<a href='#'>JUANCITO GOMEZ</a>
+					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac</p>
+				</div>
+			</div>
+			<hr style='width:95%;border:dashed 1px;'>
+		</div>
+	</div>
+
+	<div id='backers' class="w3-col l5 m5">
+		<h3 style='text-align:left'>BACKERS</h3>
+		<div class='backer'>
+			<div class="w3-row w3-container" style='padding-left:0px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l8 m8 s8" style='text-align:left'>por <a href='#'>JUANCITO GOMEZ</a><br/>
+					<i class="fa fa-trophy" aria-hidden="true"></i> <b>5</b></div>
+				<div class="w3-col l1 m1 s1"><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+			</div>
+			<hr style='width:95%;border:solid 1px;'>
+		</div>
+
+		<div class='backer'>
+			<div class="w3-row w3-container" style='padding-left:0px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l8 m8 s8" style='text-align:left'>por <a href='#'>JUANCITO GOMEZ</a><br/>
+					<i class="fa fa-trophy" aria-hidden="true"></i> <b>5</b></div>
+				<div class="w3-col l1 m1 s1"><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+			</div>
+			<hr style='width:95%;border:solid 1px;'>
+		</div>
+
+		<div class='backer'>
+			<div class="w3-row w3-container" style='padding-left:0px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l8 m8 s8" style='text-align:left'>por <a href='#'>JUANCITO GOMEZ</a><br/>
+					<i class="fa fa-trophy" aria-hidden="true"></i> <b>5</b></div>
+				<div class="w3-col l1 m1 s1"><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+			</div>
+			<hr style='width:95%;border:solid 1px;'>
+		</div>
+
+		<div class='backer'>
+			<div class="w3-row w3-container" style='padding-left:0px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
+				<div class="w3-col l8 m8 s8" style='text-align:left'>por <a href='#'>JUANCITO GOMEZ</a><br/>
+					<i class="fa fa-trophy" aria-hidden="true"></i> <b>5</b></div>
+				<div class="w3-col l1 m1 s1"><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+			</div>
+			<hr style='width:95%;border:solid 1px;'>
+		</div>
+
+
+	</div>
+</div>
+
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-grey w3-center">
+	<div>
+		<div class='w3-col s2 m2 l2 left'>
+			<a href="contacto.html">CONTACTO</a>		
+		</div>
+
+		<h4 id='footTitle' class='w3-col s8 m8 l8'><b onclick="javascript:location.href='index.html'">KUATES</b></h4>
+
+		<div class='w3-col s2 m2 l2 right'>   
+			<a href="terminos.html">TÉRMINOS Y CONDICIONES</a>		
+		</div>
+	</div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/lib/slideShow.js"></script>
+<script src="js/proyecto.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>
