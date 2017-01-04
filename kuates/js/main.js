@@ -14,13 +14,15 @@ var app = (function(){
 		localStorage.setItem("localSaved",0);
 		localSaved = 0;		
 	}
+	var users;
 	if(Number(localSaved)==0){
 		getU();
 		getP();
+	}else{
+		users = localStorage.getItem("users");
+		users = JSON.parse(users);
 	}
 
-	var users = localStorage.getItem("users");
-	users = JSON.parse(users);
 	userIndex = localStorage.getItem("userIndex");
 
 	checkLogin();
