@@ -292,7 +292,7 @@ function getCleanText(some_text) {
 	clean_text = clean_text.replace("Ó", "&#211;"); 
 	clean_text = clean_text.replace("Ú", "&#218;"); 
 
-	clean_text = clean_text.replace("á", "&#225;"); 
+	clean_text = clean_text.replace(/á/gi, "&#225;"); 
 	clean_text = clean_text.replace("é", "&#233;"); 
 	clean_text = clean_text.replace("í", "&#237;"); 
 	clean_text = clean_text.replace("ó", "&#243;"); 
