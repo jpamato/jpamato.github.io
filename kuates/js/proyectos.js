@@ -1,8 +1,12 @@
 var proyectos = [];
 $(function(){
 	var proyectos = localStorage.getItem("projects");
-	//console.log(proyectos);
-	proyectos = JSON.parse(proyectos);
+	if(proyectos!=null){
+		//console.log(proyectos);
+		proyectos = JSON.parse(proyectos);
+	}else{
+		proyectos=[];
+	}
 	//console.log(proyectos);
 	/*proyectos.pop();
 	localStorage.setItem("projects",JSON.stringify(proyectos));*/

@@ -8,7 +8,7 @@ var app = (function(){
 	var user;
 	var userType;
 	var uID;
-	
+
 	var localSaved = localStorage.getItem("localSaved");
 	if(localSaved==null){
 		localStorage.setItem("localSaved",0);
@@ -80,25 +80,43 @@ var app = (function(){
 		userID:this.uID
 
 	};
-
-	function getU(){		
+	var jsonDone = false;
+	function getU(){
+		users = [];
 		$.getJSON( "data/users.json", function( data ) {
 			$.each( data, function(index) {
 				users.push(data[index]);	
   			});
 			//for(var i=0;i<users.length;i++)console.log("nombre"+i+": "+users[i]["nombre"]);			
 			localStorage.setItem("users",JSON.stringify(users));
-  		});	
+  		});
+		if(jsonDone){
+			localStorage.setItem("localSaved",1);
+			localSaved = 1;
+			location.reload(true); 
+			console.log("doneUsers");
+		}else{
+			jsonDone=true;
+		}
 	}
 
 	function getP(){
-		var projects;
+		var projects=[];
 		$.getJSON( "data/projects.json", function( data ) {
   			$.each( data, function(index) {
-				projects.push(data[index]);	
+				projects.push(data[index]);				
   			});
+			for(var i=0;i<projects.length;i++)console.log("nombre"+i+": "+projects[i]["nombre"]);
+			localStorage.setItem("projects",JSON.stringify(projects));
   		});
-		localStorage.setItem("users",JSON.stringify(projects));
+		if(jsonDone){
+			localStorage.setItem("localSaved",1);
+			localSaved = 1;
+			location.reload(true); 
+			console.log("doneProjects");
+		}else{
+			jsonDone=true;
+		}
 	}
 
 	function checkLogin() {
