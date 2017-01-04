@@ -15,11 +15,13 @@ var app = (function(){
 		localSaved = 0;		
 	}
 	var users;
+	console.log("localSaved: "+localSaved);
 	if(Number(localSaved)==0){
 		getU();
 		getP();
 	}else{
 		users = localStorage.getItem("users");
+		console.log(users);
 		users = JSON.parse(users);
 	}
 
