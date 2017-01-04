@@ -215,11 +215,11 @@ function logIn(){
 }
 function checkUsers(email,pass){
 	console.log(email+" - "+pass);
-	/*var users = localStorage.getItem("users");	
-	users = JSON.parse(users);*/
+	var users = localStorage.getItem("users");	
+	users = JSON.parse(users);
 	//console.log(users);
 	
-	var users = app.getUsers();
+	//var users = app.getUsers();
 	console.log(users);
 	var result = $.grep(users, function(e){ return e.email == email; });
 	if(result.length>0){
