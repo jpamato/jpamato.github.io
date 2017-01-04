@@ -226,6 +226,7 @@ function checkUsers(email,pass){
 	if(result.length>0){
 		if(result[0]["contrasena"]==pass){
 			userReg = result[0];
+			console.log("UserReg: "+userReg);
 			userIndex = users.indexOf(result[0]);
 			localStorage.setItem("userIndex",userIndex);
 			localStorage.setItem("user",userReg['nombre']);
