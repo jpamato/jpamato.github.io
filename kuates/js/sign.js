@@ -66,8 +66,8 @@ $(function(){
 
 		registro['avatar'] = $('#userPhoto img').attr("src");
 
-		if(registro['contraseña']!=registro['ccontraseña']){
-			incomplete("Tu contraseña y su confirmación no coinciden");
+		if(registro['contrasena']!=registro['ccontrasena']){
+			incomplete("Tu contrase&ntilde;a y su confirmaci&oacute;n no coinciden");
 			registro = {};
 			complete=false;
 		}
@@ -91,11 +91,11 @@ $(function(){
 });
 
 function getDateSelector(minYear,maxYear){
-	var html = '<select id="day" name="day" style="width: auto;"><option value="">DÍA</option>';
+	var html = '<select id="day" name="day" style="width: auto;"><option value="">D&Iacute;A</option>';
 	for(var i=1;i<32;i++)
 		html+='<option value="'+i+'">'+i+'</option>';
 	
-	html+='</select>&nbsp;<select id="month" name="month" style="width: auto;"><option value="">MES</option><option value="0">Ene</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Abr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Ago</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dic</option></select>&nbsp;<select id="year" name="year" style="width: auto;"><option value="">AÑO</option>';
+	html+='</select>&nbsp;<select id="month" name="month" style="width: auto;"><option value="">MES</option><option value="0">Ene</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Abr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Ago</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dic</option></select>&nbsp;<select id="year" name="year" style="width: auto;"><option value="">A&Ntilde;O</option>';
 		
 	for(var i=maxYear;i>minYear-1;i--)
 		html+='<option value="'+i+'">'+i+'</option>';

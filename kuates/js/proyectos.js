@@ -39,7 +39,7 @@ $(function(){
 				  "<div class='barra'>"+
 				  "<div class='barraLlena' style='width:60%;'>&nbsp;</div><div class='barraVacia' style='width:40%;'>&nbsp;</div>"+
 				  "</div>"+
-				  "<div class='left'><b>60% logrado</b></div><div class='right'><b>5 días restantes</b></div>"+
+				  "<div class='left'><b>60% logrado</b></div><div class='right'><b>5 d&iacute;as restantes</b></div>"+
 			  "</div>"+
 		  "</div>";
 	}

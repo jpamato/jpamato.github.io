@@ -8,11 +8,11 @@ $(function(){
 });
 
 function getDateSelector(minYear,maxYear){
-	var html = '<select id="day" style="width: auto;"><option value="">DÍA</option>';
+	var html = '<select id="day" style="width: auto;"><option value="">D&Iacute;A</option>';
 	for(var i=1;i<32;i++)
 		html+='<option value="'+i+'">'+i+'</option>';
 	
-	html+='</select>&nbsp;<select id="month" style="width: auto;"><option value="">MES</option><option value="0">Ene</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Abr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Ago</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dic</option></select>&nbsp;<select id="year" style="width: auto;"><option value="">AÑO</option>';
+	html+='</select>&nbsp;<select id="month" style="width: auto;"><option value="">MES</option><option value="0">Ene</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Abr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Ago</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dic</option></select>&nbsp;<select id="year" style="width: auto;"><option value="">A&Ntilde;O</option>';
 		
 	for(var i=maxYear;i>minYear-1;i--)
 		html+='<option value="'+i+'">'+i+'</option>';
@@ -119,7 +119,7 @@ function crearDone(){
 	$("#navButtons").hide();
 	$('#stepCont_4').hide();
 	$('#stepCont_5').show();
-	var html = '<h2 style="text-align:center;">MUCHAS GRACIAS '+app.userName.toUpperCase()+'</h2><h4 style="text-align:center;">Tu proyecto será publicado en breve</h4>';
+	var html = '<h2 style="text-align:center;">MUCHAS GRACIAS '+app.userName.toUpperCase()+'</h2><h4 style="text-align:center;">Tu proyecto ser&aacute; publicado en breve</h4>';
 	$('#stepCont_5').html(html);
 }
 

@@ -1,9 +1,9 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	//localStorage.clear();
+	localStorage.clear();
 	//
-		
+	/*	
 	var logged = 0;
 	var user;
 	var userType;
@@ -55,7 +55,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	
+	/*
 	return {
 		getUsers: function(){
 			return users;
@@ -143,7 +143,7 @@ var app = (function(){
 			$("#crear").hide();
 		}
 	}
-
+*/
 })();
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -184,9 +184,9 @@ function ingresar(){
 	var html = "<H4>INGRESAR</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
 		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text'></div>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASEÑA</b></label><input id='pass' class='w3-input' type='text'></div>"+		
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text'></div>"+		
 		"<div style='font-size:1vw'><input class='w3-check' type='checkbox'><label>RECORDARME</label>"+
-		"<a style='margin-left:25px;' href='#' onclick='getPassword()'>OLVIDÉ MI CONTRASEÑA</a></div>"+
+		"<a style='margin-left:25px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
 		"<H4 style='text-align:center;' onclick='logIn()'>ENTRAR</H4>"+
 		"<hr style='border-bottom: 1px dashed;'>"+
 		"<H4 style='text-align:center;'>¿NO TIENES USUARIO?</H4>"+
@@ -224,7 +224,7 @@ function checkUsers(email,pass){
 	var result = $.grep(users, function(e){ return e.email == email; });
 	console.log(result);
 	if(result.length>0){
-		if(result[0]["contrase&#241;a"]==pass){
+		if(result[0]["contrasena"]==pass){
 			userReg = result[0];
 			userIndex = users.indexOf(result[0]);
 			localStorage.setItem("userIndex",userIndex);
@@ -263,10 +263,10 @@ function getPassword(){
 	$('#dialog').css("left","30%");
 	$('#dialog').css("width","40%");
 	$('#dialog').css("height","200px");
-	var html = "<H4 style='margin:20px 0px 20px 0px;'>OLVIDÉ MI CONTRASEÑA</H4>"+
+	var html = "<H4 style='margin:20px 0px 20px 0px;'>OLVID&Eacute; MI CONTRASE&Ntilde;A</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
 		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>EMAIL</b></label><input class='w3-input' type='text'></div>"+
-		"<H6 style='text-align:center;margin-top:20px;'>Te enviaremos un email con tu contraseña</H6>"+
+		"<H6 style='text-align:center;margin-top:20px;'>Te enviaremos un email con tu contrase&ntilde;a</H6>"+
 		"<H4 style='text-align:center;'>RECUPERAR</H4>"+
 		"</form>";
 	$('#dialogContent').html(html);

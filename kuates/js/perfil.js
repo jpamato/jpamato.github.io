@@ -39,9 +39,9 @@ $(function(){
 		$("#"+id).focus();
 	});
 
-	$("#contraseña").change(function() {
-		$("#ccontraseña").attr('readonly',false);
-		$("#ccontraseña").val("");
+	$("#contrasena").change(function() {
+		$("#ccontrasena").attr('readonly',false);
+		$("#ccontrasena").val("");
 	});
 
 
@@ -65,8 +65,8 @@ $(function(){
 
 		userReg['avatar'] = $('#userPhoto img').attr("src");
 
-		if(userReg['contraseña']!=userReg['ccontraseña']){
-			incomplete("Tu contraseña y su confirmación no coinciden");
+		if(userReg['contrasena']!=userReg['ccontrasena']){
+			incomplete("Tu contrase&ntilde;a y su confirmación no coinciden");
 			complete=false;
 		}
 		
