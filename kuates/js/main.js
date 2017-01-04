@@ -22,7 +22,6 @@ var app = (function(){
 		getP();
 	}else{
 		users = localStorage.getItem("users");
-		console.log(users);
 		users = JSON.parse(users);
 	}
 
