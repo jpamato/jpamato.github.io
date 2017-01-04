@@ -284,15 +284,16 @@ function downloadData(dataJson){
 //reemplazar carateres por html ascii codes
 function getCleanText(some_text) {
 	var clean_text = some_text;
-	clean_text = clean_text.replace("¿", "&#191;"); 
+	
 
 	clean_text = clean_text.replace("\u00C1", "&#193;"); 
+	
 	clean_text = clean_text.replace("É", "&#201;"); 
 	clean_text = clean_text.replace("Í", "&#205;"); 
 	clean_text = clean_text.replace("Ó", "&#211;"); 
 	clean_text = clean_text.replace("Ú", "&#218;"); 
 
-	clean_text = clean_text.replace(/á/gi, "&#225;"); 
+	clean_text = clean_text.replace(/á/gi, "&#225;");
 	clean_text = clean_text.replace("é", "&#233;"); 
 	clean_text = clean_text.replace("í", "&#237;"); 
 	clean_text = clean_text.replace("ó", "&#243;"); 
@@ -300,6 +301,8 @@ function getCleanText(some_text) {
 
 	clean_text = clean_text.replace("Ñ", "&#209;"); 
 	clean_text = clean_text.replace("ñ", "&#241;"); 
+
+	clean_text = clean_text.replace("¿", "&#191;"); 
 
 	return clean_text;
 }
