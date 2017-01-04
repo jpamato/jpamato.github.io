@@ -39,7 +39,7 @@ var app = (function(){
 	//downloadData(users);
 
 	
-	//console.log(userReg);
+	console.log(userReg);
 
 
 	/*$.getJSON( "data/users.json", function( data ) {
