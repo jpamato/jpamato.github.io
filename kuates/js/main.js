@@ -284,9 +284,12 @@ function downloadData(dataJson){
 //reemplazar carateres por html ascii codes
 function getCleanText(some_text) {
 	var clean_text = some_text;
-	
 
-	clean_text = clean_text.replace("\u00C1", "&#193;"); 
+	//console.log(encodeURIComponent("Á-É-Í-Ó-Ú-á-é-í-ó-ú-ñ-Ñ-¿"));	
+	
+	clean_text = encodeURIComponent(clean_text);
+
+	/*clean_text = clean_text.replace("%C3%81", "&#193;"); 
 	
 	clean_text = clean_text.replace("É", "&#201;"); 
 	clean_text = clean_text.replace("Í", "&#205;"); 
@@ -302,9 +305,9 @@ function getCleanText(some_text) {
 	clean_text = clean_text.replace("Ñ", "&#209;"); 
 	clean_text = clean_text.replace("ñ", "&#241;"); 
 
-	clean_text = clean_text.replace("¿", "&#191;"); 
+	clean_text = clean_text.replace("¿", "&#191;"); */
 
-	return clean_text;
+	return decodeURIComponent(clean_text);
 }
 
 console.log(app.log);
