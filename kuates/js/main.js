@@ -289,9 +289,9 @@ function getCleanText(some_text) {
 	
 	clean_text = encodeURIComponent(clean_text);
 
-	/*clean_text = clean_text.replace("%C3%81", "&#193;"); 
+	clean_text = clean_text.replace("%C3%81", "&#193;"); 
 	
-	clean_text = clean_text.replace("É", "&#201;"); 
+	/*clean_text = clean_text.replace("É", "&#201;"); 
 	clean_text = clean_text.replace("Í", "&#205;"); 
 	clean_text = clean_text.replace("Ó", "&#211;"); 
 	clean_text = clean_text.replace("Ú", "&#218;"); 
