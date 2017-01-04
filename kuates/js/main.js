@@ -283,6 +283,6 @@ function downloadData(dataJson){
 	$('<a href="data:' + data + '" download="data.json">download JSON</a>').appendTo('#userMenu');
 }
 
-console.log(app.log);
-console.log(app.userName);
-console.log(app.userID);
+//console.log(app.log);
+//console.log(app.userName);
+//console.log(app.userID);
