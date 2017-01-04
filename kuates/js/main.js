@@ -1,9 +1,9 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	localStorage.clear();
+	//localStorage.clear();
 	//
-	/*	
+		
 	var logged = 0;
 	var user;
 	var userType;
@@ -56,7 +56,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	/*
+	
 	return {
 		getUsers: function(){
 			return users;
