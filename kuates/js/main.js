@@ -3,13 +3,13 @@ var userIndex;
 var app = (function(){
 	localStorage.clear();
 	//
-		
+	/*	
 	var logged = 0;
 	var user;
 	var userType;
 	var uID;
 
-	localStorage.setItem("localSaved",0);
+	//localStorage.setItem("localSaved",0);
 	var localSaved = localStorage.getItem("localSaved");
 	if(localSaved==null){
 		localStorage.setItem("localSaved",0);
@@ -56,7 +56,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	
+	/*
 	return {
 		getUsers: function(){
 			return users;
@@ -92,15 +92,15 @@ var app = (function(){
   			});
 			//for(var i=0;i<users.length;i++)console.log("nombre"+i+": "+users[i]["nombre"]);			
 			localStorage.setItem("users",JSON.stringify(users));
-  		});
-		if(jsonDone){
-			localStorage.setItem("localSaved",1);
-			localSaved = 1;
-			//location.reload(true); 
-			console.log("doneUsers");
-		}else{
-			jsonDone=true;
-		}
+			if(jsonDone){
+				localStorage.setItem("localSaved",1);
+				localSaved = 1;
+				location.reload(true); 
+				console.log("doneUsers");
+			}else{
+				jsonDone=true;
+			}
+  		});		
 	}
 
 	function getP(){
@@ -111,15 +111,15 @@ var app = (function(){
   			});
 			for(var i=0;i<projects.length;i++)console.log("nombre"+i+": "+projects[i]["nombre"]);
 			localStorage.setItem("projects",JSON.stringify(projects));
-  		});
-		if(jsonDone){
-			localStorage.setItem("localSaved",1);
-			localSaved = 1;
-			//location.reload(true); 
-			console.log("doneProjects");
-		}else{
-			jsonDone=true;
-		}
+			if(jsonDone){
+				localStorage.setItem("localSaved",1);
+				localSaved = 1;
+				location.reload(true); 
+				console.log("doneUsers");
+			}else{
+				jsonDone=true;
+			}
+  		});		
 	}
 
 	function checkLogin() {
