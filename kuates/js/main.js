@@ -1,7 +1,7 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	//localStorage.clear();
+	localStorage.clear();
 	//
 		
 	var logged = 0;
@@ -95,7 +95,7 @@ var app = (function(){
 		if(jsonDone){
 			localStorage.setItem("localSaved",1);
 			localSaved = 1;
-			location.reload(true); 
+			//location.reload(true); 
 			console.log("doneUsers");
 		}else{
 			jsonDone=true;
@@ -114,7 +114,7 @@ var app = (function(){
 		if(jsonDone){
 			localStorage.setItem("localSaved",1);
 			localSaved = 1;
-			location.reload(true); 
+			//location.reload(true); 
 			console.log("doneProjects");
 		}else{
 			jsonDone=true;
