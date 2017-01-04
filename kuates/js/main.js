@@ -1,9 +1,9 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	localStorage.clear();
+	//localStorage.clear();
 	//
-/*		
+		
 	var logged = 0;
 	var user;
 	var userType;
@@ -55,7 +55,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	/*
+	
 	return {
 		getUsers: function(){
 			return users;
@@ -142,7 +142,7 @@ var app = (function(){
 			$('#logged').hide();
 			$("#crear").hide();
 		}
-	}*/
+	}
 
 })();
 
@@ -281,7 +281,7 @@ function downloadData(dataJson){
 	var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dataJson));
 	$('<a href="data:' + data + '" download="data.json">download JSON</a>').appendTo('#userMenu');
 }
-/*
+
 console.log(app.log);
 console.log(app.userName);
-console.log(app.userID);*/
+console.log(app.userID);
