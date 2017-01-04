@@ -15,8 +15,8 @@ $(function(){
 	var user = $.grep(users, function(e){ return e.userID == userID; })[0];
 
 	console.log(proyecto);
-	$("#categoria").html(proyecto["categoria"]);
-	$("#pTitle").html(proyecto["nombre"].toUpperCase());
+	$("#categoria").html(getCleanText(proyecto["categoria"]));
+	$("#pTitle").html(getCleanText(proyecto["nombre"].toUpperCase()));
 
 	if(app.log!=1){
 		$("#votar").prop("disabled", true);
@@ -49,11 +49,11 @@ $(function(){
 	}
 
 	$("#avatar").attr('src',user['avatar']);
-	$("#ciudad").html(user["ciudad"]);
-	$("#userName").html(user["nombre"].toUpperCase());
+	$("#ciudad").html(getCleanText(user["ciudad"]));
+	$("#userName").html(getCleanText(user["nombre"].toUpperCase()));
 	$("#userName").attr("href","usuario.html?userID="+user["userID"]);
 
-	$("#pDescrip").find('p').html(proyecto["descripcion"]);
+	$("#pDescrip").find('p').html(getCleanText(proyecto["descripcion"]));
 	if(proyecto["logros"]==null){
 		$("#cantLogros").html("0");
 		console.log("aca");

@@ -220,13 +220,10 @@ function checkUsers(email,pass){
 	//console.log(users);
 	
 	//var users = app.getUsers();
-	console.log(users);
 	var result = $.grep(users, function(e){ return e.email == email; });
-	console.log(result);
 	if(result.length>0){
 		if(result[0]["contrasena"]==pass){
 			userReg = result[0];
-			console.log("UserReg: "+userReg);
 			userIndex = users.indexOf(result[0]);
 			localStorage.setItem("userIndex",userIndex);
 			localStorage.setItem("user",userReg['nombre']);
@@ -282,6 +279,29 @@ function generateID(){
 function downloadData(dataJson){
 	var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dataJson));
 	$('<a href="data:' + data + '" download="data.json">download JSON</a>').appendTo('#userMenu');
+}
+
+//reemplazar carateres por html ascii codes
+function getCleanText(some_text) {
+	var clean_text = some_text;
+	clean_text = clean_text.replace("¿", "&#191;"); 
+
+	clean_text = clean_text.replace("Á", "&#193;"); 
+	clean_text = clean_text.replace("É", "&#201;"); 
+	clean_text = clean_text.replace("Í", "&#205;"); 
+	clean_text = clean_text.replace("Ó", "&#211;"); 
+	clean_text = clean_text.replace("Ú", "&#218;"); 
+
+	clean_text = clean_text.replace("á", "&#225;"); 
+	clean_text = clean_text.replace("é", "&#233;"); 
+	clean_text = clean_text.replace("í", "&#237;"); 
+	clean_text = clean_text.replace("ó", "&#243;"); 
+	clean_text = clean_text.replace("ú", "&#250;"); 
+
+	clean_text = clean_text.replace("Ñ", "&#209;"); 
+	clean_text = clean_text.replace("ñ", "&#241;"); 
+
+	return clean_text;
 }
 
 console.log(app.log);
