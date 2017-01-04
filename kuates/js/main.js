@@ -224,7 +224,7 @@ function checkUsers(email,pass){
 	var result = $.grep(users, function(e){ return e.email == email; });
 	console.log(result);
 	if(result.length>0){
-		if(result[0]["contraseña"]==pass){
+		if(result[0]["contrase&#241;a"]==pass){
 			userReg = result[0];
 			userIndex = users.indexOf(result[0]);
 			localStorage.setItem("userIndex",userIndex);
