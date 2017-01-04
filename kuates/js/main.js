@@ -222,6 +222,7 @@ function checkUsers(email,pass){
 	//var users = app.getUsers();
 	console.log(users);
 	var result = $.grep(users, function(e){ return e.email == email; });
+	console.log(result);
 	if(result.length>0){
 		if(result[0]["contraseña"]==pass){
 			userReg = result[0];
