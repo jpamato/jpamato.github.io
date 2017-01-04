@@ -286,7 +286,7 @@ function getCleanText(some_text) {
 	var clean_text = some_text;
 	clean_text = clean_text.replace("¿", "&#191;"); 
 
-	clean_text = clean_text.replace("Á", "&#193;"); 
+	clean_text = clean_text.replace("\u00C1", "&#193;"); 
 	clean_text = clean_text.replace("É", "&#201;"); 
 	clean_text = clean_text.replace("Í", "&#205;"); 
 	clean_text = clean_text.replace("Ó", "&#211;"); 
