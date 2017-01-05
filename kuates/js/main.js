@@ -283,9 +283,9 @@ function downloadData(dataJson){
 
 //reemplazar carateres por html ascii codes
 function getCleanText(some_text) {
-	/*var clean_text = some_text;
+	var clean_text = some_text;
 
-	for(var i=0;i<clean_text.length;i++){
+	/*for(var i=0;i<clean_text.length;i++){
 		//console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));		
 		if(clean_text.charCodeAt(i)==193){
 			clean_text[i]="&#193;";
@@ -352,7 +352,7 @@ function getCleanText(some_text) {
 
 	/**/
 
-	//return clean_text;
+	return clean_text;
 }
 
 console.log(app.log);
