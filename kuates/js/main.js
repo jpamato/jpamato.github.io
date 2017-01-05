@@ -289,30 +289,45 @@ function getCleanText(some_text) {
 		//console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));		
 		if(clean_text.charCodeAt(i)==193){
 			clean_text[i]="&#193;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==201){
 			clean_text[i]="&#201;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==205){
 			clean_text[i]="&#205;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==211){
 			clean_text[i]="&#211;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==218){
 			clean_text[i]="&#218;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==225){
 			clean_text[i]="&#225;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==233){
 			clean_text[i]="&#233;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==237){
 			clean_text[i]="&#237;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==243){
 			clean_text[i]="&#243;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==250){
 			clean_text[i]="&#250;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==209){
 			clean_text[i]="&#209;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==241){
 			clean_text[i]="&#241;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}else if(clean_text.charCodeAt(i)==191){
 			clean_text[i]="&#191;";
+			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
+		}else if(clean_text.charCodeAt(i)>255){
+			console.log("ACA: "+clean_text[i]+"-"+clean_text.charCodeAt(i));
 		}
 	}
 	
