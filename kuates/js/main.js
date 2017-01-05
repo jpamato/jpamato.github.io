@@ -352,7 +352,7 @@ function getCleanText(some_text) {
 
 	/**/
 
-	return clean_text;
+	//return clean_text;
 }
 
 console.log(app.log);
