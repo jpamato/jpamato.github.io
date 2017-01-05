@@ -283,19 +283,19 @@ function downloadData(dataJson){
 
 function changeSpecialCase(text,toUpper){
 	if(toUpper){
-		text = text.replace("á", "&#193;");
-		text = text.replace("é", "&#201;"); 
-		text = text.replace("í", "&#205;"); 
-		text = text.replace("ó", "&#211;"); 
-		text = text.replace("ú", "&#218;"); 
-		text = text.replace("ñ", "&#209;"); 
+		text = text.replace("&#225;", "&#193;");
+		text = text.replace("&#233;", "&#201;"); 
+		text = text.replace("&#237;", "&#205;"); 
+		text = text.replace("&#243;", "&#211;"); 
+		text = text.replace("&#250;", "&#218;"); 
+		text = text.replace("&#241;", "&#209;"); 
 	}else{
-		text = text.replace("Á", "&#225;");
-		text = text.replace("É", "&#233;"); 
-		text = text.replace("Í", "&#237;"); 
-		text = text.replace("Ó", "&#243;"); 
-		text = text.replace("Ú", "&#250;");
-		text = text.replace("Ñ", "&#241;");
+		text = text.replace("&#193;", "&#225;");
+		text = text.replace("&#201;", "&#233;"); 
+		text = text.replace("&#205;", "&#237;"); 
+		text = text.replace("&#211;", "&#243;"); 
+		text = text.replace("&#218;", "&#250;");
+		text = text.replace("&#209;", "&#241;");
 	}
 	return text;
 }
