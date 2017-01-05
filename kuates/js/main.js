@@ -1,9 +1,9 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	localStorage.clear();
+	//localStorage.clear();
 	//
-	/*	
+		
 	var logged = 0;
 	var user;
 	var userType;
@@ -36,9 +36,10 @@ var app = (function(){
 	/*var projects;
 	getP();*/
 	
-	//downloadData(users);	
+	//downloadData(users);
+
 	
-	//console.log(userReg);
+	console.log(userReg);
 
 
 	/*$.getJSON( "data/users.json", function( data ) {
@@ -54,7 +55,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	/*
+	
 	return {
 		getUsers: function(){
 			return users;
@@ -142,7 +143,7 @@ var app = (function(){
 			$("#crear").hide();
 		}
 	}
-*/
+
 })();
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -299,6 +300,6 @@ function changeSpecialCase(text,toUpper){
 	return text;
 }
 
-/*console.log(app.log);
+console.log(app.log);
 console.log(app.userName);
-console.log(app.userID);*/
+console.log(app.userID);
