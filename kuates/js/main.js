@@ -285,13 +285,40 @@ function downloadData(dataJson){
 function getCleanText(some_text) {
 	var clean_text = some_text;
 
-	//console.log(encodeURIComponent("Á-É-Í-Ó-Ú-á-é-í-ó-ú-ñ-Ñ-¿"));	
+	for(var i=0;i<clean_text.length;i++){
+		//console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));		
+		if(clean_text.charCodeAt(i)==193){
+			clean_text[i]="&#193;";
+		}else if(clean_text.charCodeAt(i)==201){
+			clean_text[i]="&#201;";
+		}else if(clean_text.charCodeAt(i)==205){
+			clean_text[i]="&#205;";
+		}else if(clean_text.charCodeAt(i)==211){
+			clean_text[i]="&#211;";
+		}else if(clean_text.charCodeAt(i)==218){
+			clean_text[i]="&#218;";
+		}else if(clean_text.charCodeAt(i)==225){
+			clean_text[i]="&#225;";
+		}else if(clean_text.charCodeAt(i)==233){
+			clean_text[i]="&#233;";
+		}else if(clean_text.charCodeAt(i)==237){
+			clean_text[i]="&#237;";
+		}else if(clean_text.charCodeAt(i)==243){
+			clean_text[i]="&#243;";
+		}else if(clean_text.charCodeAt(i)==250){
+			clean_text[i]="&#250;";
+		}else if(clean_text.charCodeAt(i)==209){
+			clean_text[i]="&#209;";
+		}else if(clean_text.charCodeAt(i)==241){
+			clean_text[i]="&#241;";
+		}else if(clean_text.charCodeAt(i)==191){
+			clean_text[i]="&#191;";
+		}
+	}
 	
-	clean_text = encodeURIComponent(clean_text);
-
-	clean_text = clean_text.replace("%C3%81", "&#193;"); 
-	
-	/*clean_text = clean_text.replace("É", "&#201;"); 
+	/*
+	clean_text = clean_text.replace("Á", "&#193;");
+	clean_text = clean_text.replace("É", "&#201;"); 
 	clean_text = clean_text.replace("Í", "&#205;"); 
 	clean_text = clean_text.replace("Ó", "&#211;"); 
 	clean_text = clean_text.replace("Ú", "&#218;"); 
@@ -305,9 +332,12 @@ function getCleanText(some_text) {
 	clean_text = clean_text.replace("Ñ", "&#209;"); 
 	clean_text = clean_text.replace("ñ", "&#241;"); 
 
-	clean_text = clean_text.replace("¿", "&#191;"); */
+	clean_text = clean_text.replace("¿", "&#191;");
+	}
 
-	return decodeURIComponent(clean_text);
+	/**/
+
+	return clean_text;
 }
 
 console.log(app.log);
