@@ -1,9 +1,9 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	//localStorage.clear();
+	localStorage.clear();
 	//
-		
+	/*	
 	var logged = 0;
 	var user;
 	var userType;
@@ -36,10 +36,9 @@ var app = (function(){
 	/*var projects;
 	getP();*/
 	
-	//downloadData(users);
-
+	//downloadData(users);	
 	
-	console.log(userReg);
+	//console.log(userReg);
 
 
 	/*$.getJSON( "data/users.json", function( data ) {
@@ -55,7 +54,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	
+	/*
 	return {
 		getUsers: function(){
 			return users;
@@ -143,7 +142,7 @@ var app = (function(){
 			$("#crear").hide();
 		}
 	}
-
+*/
 })();
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -281,80 +280,25 @@ function downloadData(dataJson){
 	$('<a href="data:' + data + '" download="data.json">download JSON</a>').appendTo('#userMenu');
 }
 
-//reemplazar carateres por html ascii codes
-function getCleanText(some_text) {
-	var clean_text = some_text;
-
-	/*for(var i=0;i<clean_text.length;i++){
-		//console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));		
-		if(clean_text.charCodeAt(i)==193){
-			clean_text[i]="&#193;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==201){
-			clean_text[i]="&#201;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==205){
-			clean_text[i]="&#205;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==211){
-			clean_text[i]="&#211;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==218){
-			clean_text[i]="&#218;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==225){
-			clean_text[i]="&#225;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==233){
-			clean_text[i]="&#233;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==237){
-			clean_text[i]="&#237;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==243){
-			clean_text[i]="&#243;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==250){
-			clean_text[i]="&#250;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==209){
-			clean_text[i]="&#209;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==241){
-			clean_text[i]="&#241;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)==191){
-			clean_text[i]="&#191;";
-			console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}else if(clean_text.charCodeAt(i)>255){
-			console.log("ACA: "+clean_text[i]+"-"+clean_text.charCodeAt(i));
-		}
+function changeSpecialCase(text,toUpper){
+	if(toUpper){
+		text = text.replace("á", "&#193;");
+		text = text.replace("é", "&#201;"); 
+		text = text.replace("í", "&#205;"); 
+		text = text.replace("ó", "&#211;"); 
+		text = text.replace("ú", "&#218;"); 
+		text = text.replace("ñ", "&#209;"); 
+	}else{
+		text = text.replace("Á", "&#225;");
+		text = text.replace("É", "&#233;"); 
+		text = text.replace("Í", "&#237;"); 
+		text = text.replace("Ó", "&#243;"); 
+		text = text.replace("Ú", "&#250;");
+		text = text.replace("Ñ", "&#241;");
 	}
-	
-	/*
-	clean_text = clean_text.replace("Á", "&#193;");
-	clean_text = clean_text.replace("É", "&#201;"); 
-	clean_text = clean_text.replace("Í", "&#205;"); 
-	clean_text = clean_text.replace("Ó", "&#211;"); 
-	clean_text = clean_text.replace("Ú", "&#218;"); 
-
-	clean_text = clean_text.replace(/á/gi, "&#225;");
-	clean_text = clean_text.replace("é", "&#233;"); 
-	clean_text = clean_text.replace("í", "&#237;"); 
-	clean_text = clean_text.replace("ó", "&#243;"); 
-	clean_text = clean_text.replace("ú", "&#250;"); 
-
-	clean_text = clean_text.replace("Ñ", "&#209;"); 
-	clean_text = clean_text.replace("ñ", "&#241;"); 
-
-	clean_text = clean_text.replace("¿", "&#191;");
-	}
-
-	/**/
-
-	return clean_text;
+	return text;
 }
 
-console.log(app.log);
+/*console.log(app.log);
 console.log(app.userName);
-console.log(app.userID);
+console.log(app.userID);*/

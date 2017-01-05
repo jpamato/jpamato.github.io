@@ -15,8 +15,8 @@ $(function(){
 	var user = $.grep(users, function(e){ return e.userID == userID; })[0];
 
 	console.log(proyecto);
-	$("#categoria").html(getCleanText(proyecto["categoria"]));
-	$("#pTitle").html(getCleanText(proyecto["nombre"].toUpperCase()));
+	$("#categoria").html(proyecto["categoria"]);
+	$("#pTitle").html(changeSpecialCase(proyecto["nombre"].toUpperCase(),true));
 
 	if(app.log!=1){
 		$("#votar").prop("disabled", true);
@@ -49,8 +49,8 @@ $(function(){
 	}
 
 	$("#avatar").attr('src',user['avatar']);
-	$("#ciudad").html(getCleanText(user["ciudad"]));
-	$("#userName").html(getCleanText(user["nombre"].toUpperCase()));
+	$("#ciudad").html(user["ciudad"]);
+	$("#userName").html(changeSpecialCase(user["nombre"].toUpperCase(),true));
 	$("#userName").attr("href","usuario.html?userID="+user["userID"]);
 
 	$("#pDescrip").find('p').html(getCleanText(proyecto["descripcion"]));
