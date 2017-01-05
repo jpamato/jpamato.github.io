@@ -1,9 +1,9 @@
 var userReg;
 var userIndex;
 var app = (function(){
-	//localStorage.clear();
+	localStorage.clear();
 	//
-		
+	/*
 	var logged = 0;
 	var user;
 	var userType;
@@ -55,7 +55,7 @@ var app = (function(){
     			console.log(data[index]["nombre"]);
   		}); 		 
 	});*/
-	
+	/*
 	return {
 		getUsers: function(){
 			return users;
@@ -143,7 +143,7 @@ var app = (function(){
 			$("#crear").hide();
 		}
 	}
-
+*/
 })();
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -283,7 +283,7 @@ function downloadData(dataJson){
 
 //reemplazar carateres por html ascii codes
 function getCleanText(some_text) {
-	var clean_text = some_text;
+	/*var clean_text = some_text;
 
 	for(var i=0;i<clean_text.length;i++){
 		//console.log(clean_text[i]+"-"+clean_text.charCodeAt(i));		
