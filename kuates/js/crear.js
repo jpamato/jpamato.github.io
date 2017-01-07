@@ -2,8 +2,8 @@ var proyecto = {};
 var archivos = [];
 var projectIndex = -1;
 $(function(){
-	$('#step1').css('color','gray');
-	$('#step1').find('.w3-circle').css('background-color','grey');
+	$('#step1').css('color','#74db53');
+	$('#step1').find('.w3-circle').css('background-color','#74db53');
 	$('#step1').find('.w3-circle').css('color','white');
 });
 
@@ -185,23 +185,37 @@ function SaveProject(){
 
 function navDone(last, actual){
 	if(last<actual){		
-		$('#step'+actual).css('color','gray');
-		$('#step'+actual).find('.w3-circle').css('background-color','grey');
+		$('#step'+actual).css('color','#74db53');
+		$('#step'+actual).find('.w3-circle').css('background-color','#74db53');
 		$('#step'+actual).find('.w3-circle').css('color','white');
 
-		$('#step'+last).css('color','rgba(127,127,127,0.1)');
-		$('#step'+last).find('.w3-circle').css('background-color','rgba(127,127,127,0.1)');
-		$('#step'+last).find('.w3-circle').css('border-color','rgba(127,127,127,0.1)');
+		/*$('#step'+last).css('color','rgba(116,219,83,0.1)');
+		$('#step'+last).find('.w3-circle').css('background-color','rgba(116,219,83,0.1)');
+		$('#step'+last).find('.w3-circle').css('border-color','rgba(116,219,83,0.1)');
+		$('#step'+last).find('.w3-circle').css('color','white');*/
+		$('#step'+last).css('color','#74db53');
+		$('#step'+last).find('.w3-circle').css('background-color','#74db53');
+		$('#step'+last).find('.w3-circle').css('border-color','#74db53');
 		$('#step'+last).find('.w3-circle').css('color','white');
+
+		if(actual>1)
+			$('#line'+actual).css('border-color','#74db53');
+		if(last>1)
+			$('#line'+last).css('border-color','#74db53');
 	}else{
-		$('#step'+actual).css('color','gray');
-		$('#step'+actual).find('.w3-circle').css('background-color','grey');
+		$('#step'+actual).css('color','#74db53');
+		$('#step'+actual).find('.w3-circle').css('background-color','#74db53');
 		$('#step'+actual).find('.w3-circle').css('color','white');
 
-		$('#step'+last).css('color','rgba(0,0,0,0.2)');
-		$('#step'+last).find('.w3-circle').css('background-color','white');
-		$('#step'+last).find('.w3-circle').css('border-color','rgba(0,0,0,0.2)');
-		$('#step'+last).find('.w3-circle').css('color','rgba(0,0,0,0.2)');
+		$('#step'+last).css('color','rgba(116,219,83,0.3)');
+		$('#step'+last).find('.w3-circle').css('background-color','rgba(116,219,83,0.3)');
+		$('#step'+last).find('.w3-circle').css('border-color','rgba(116,219,83,0.3)');
+		$('#step'+last).find('.w3-circle').css('color','white');
+
+		if(actual>1)
+			$('#line'+actual).css('border-color','#74db53');
+		if(last>1)
+			$('#line'+last).css('border-color','rgba(116,219,83,0.3)');
 	}
 }
 

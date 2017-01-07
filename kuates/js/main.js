@@ -26,6 +26,8 @@ var app = (function(){
 	}
 
 	userIndex = localStorage.getItem("userIndex");
+	if(userIndex!=null)
+		userReg=users[userIndex];
 
 	checkLogin();
 	
@@ -135,7 +137,7 @@ var app = (function(){
 			$('#logged img').attr("src",localStorage.getItem("avatar"));
 			this.user = localStorage.getItem("user");
 			this.uID = localStorage.getItem("userID");
-			$('#logged H6').html(this.user);
+			$('#loggedName').html(this.user);
 			$("#crear").show();
 		}else{
 			$('#toLog').show();
@@ -205,10 +207,10 @@ function logIn(){
 		$('#logged img').attr("src",localStorage.getItem("avatar"));
 		app.user = localStorage.getItem("user");
 		app.uID = localStorage.getItem("userID");
-		app.userType = localStorage.getItem("userID");
+		app.userType = localStorage.getItem("userType");
 		app.log = localStorage.getItem("logged");
 
-		$('#logged H6').html(app.user);
+		$('#loggedName').html(app.user);
 		fullMaskToggle();
 		
 	}

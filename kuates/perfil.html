@@ -22,33 +22,33 @@
 	<div class="w3-col s5 m5 l5">
 		<div class='left'>
 			<li class="icon">
-			<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
+			<a href="javascript:void(0);" onclick="NavToggle()"><i class="fa fa-bars" aria-hidden="true"></i></a>
 			</li>
-			<li id='crear'><button class="w3-btn navButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
-			<li><button class="w3-btn navButton" onclick="javascript:location.href='explorar.html'">EXPLORA</button></li>		
+			<li id='crear'><button class="w3-btn kButton blueButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+			<li><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></li>		
+		</div>
 	</div>
-	</div>
-	
 
-	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><b>KUATES</b></div>
+
+	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><img src='img/logo.png'></div>
 
 	<div class="w3-col s5 m5 l5">
 		<div class='right'>   
-			<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>			
-			<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h6>Carola</h6><button onclick="toggleMenu()"><i class="fa fa-angle-down" style="font-size:18px"></i></button></span></li>
+			<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
+			<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h5 onclick="toggleMenu()"><span id='loggedName'>Carola </span><span style="font-size:24px;margin-left: 7px;"><i class="fa fa-angle-down"></i></span></h5></span></li>
 		</div>
 	</div>
 </ul>
 
 <ul id='userMenu' style='display:none;'>
-	<li onclick="javascript:location.href='perfil.html'"><b>MI PERFIL</b></li>
-	<li><b>MENSAJES</b></li>
-	<li><b>MIS PROYECTOS</b></li>
-	<li><b>MIS FAVORITOS</b></li>
-	<li onclick="logOut()"><b>SALIR</b></li>
+	<li onclick="javascript:location.href='perfil.html'"><b>Mi perfil</b></li>
+	<li><b>Mensajes</b></li>
+	<li onclick="misProyectos()"><b>Mis proyectos</b></li>
+	<li><b>Mis favoritos</b></li>
+	<li onclick="logOut()"><b>Salir</b></li>
 </ul>
 
-<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+<div class="w3-content" style="max-width:1100px;margin-top:100px;margin-bottom:80px">
 
 	<form id='signForm'>
 		<!-- Grid -->
@@ -57,49 +57,49 @@
 			<div class="w3-center">
 				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">MI PERFIL</span>
 			</div>
-			
+
 			<div class='campos'>
-			<div class="w3-col l2 w3-container w3-padding-12">
-				<div id='userPhoto'><img src='img/avatar.png' class='w3-circle' width=128px></div>
-				<label for='fileInput'><H5 style="width:128px;text-align:center;">CAMBIA TU AVATAR</H5></label>
-				<input id="fileInput" class='noShow' type="file" name='avatar' style='display:none;'>				
-			</div>
-
-			<div class="w3-col l5 m6 w3-container w3-padding-12">
-
-				<div class='lineInput'><label><b>NOMBRE</b></label><input id='nombre' class='w3-input required' type='text' readonly></div><br/>
-				<div class='lineInput'><label><b>ID</b></label><input id='id' class='w3-input' type='text' readonly></div><br/>
-				<div class='lineInput'><label><b>EMAIL</b></label><input id='email' class='w3-input' type='text'><i class="fa fa-pencil edit" name='email' aria-hidden="true"></i></div><br/>
-				<div class='lineInput'><label><b>CONTRASE&Ntilde;A</b></label><input id='contrasena' class='w3-input' type='password'><i class="fa fa-pencil edit" name='contrasena' aria-hidden="true"></i></div><br/>
-				<div class='lineInput'><label><b>CONFIRM&Aacute; TU CONTRASE&Ntilde;A</b></label><input id='ccontrasena' class='w3-input' type='password' readonly></div><br/>
-
-				<div class='backers' style='display:none'>
-					<div class='lineInput'><label><b>PROFESI&Oacute;N</b></label><input id='profesion' class='w3-input' type='text'><i class="fa fa-pencil edit" name='profesion' aria-hidden="true"></i></div><br/>
-					<div class='lineInput'><label><b>TEL&Eacute;FONO</b></label><input id='telefono' class='w3-input' type='text'><i class="fa fa-pencil edit" name='telefono' aria-hidden="true"></i></div><br/>
+				<div class="w3-col l2 w3-container w3-padding-12">
+					<div id='userPhoto'><img src='img/avatar.png' class='w3-circle' width=128px></div>
+					<label for='fileInput'><H5 style="width:128px;text-align:center;">CAMBIA TU AVATAR</H5></label>
+					<input id="fileInput" class='noShow' type="file" name='avatar' style='display:none;'>				
 				</div>
 
-			</div>
+				<div class="w3-col l5 m6 w3-container w3-padding-12">
 
-			<div class="w3-col l5 m6 w3-container w3-padding-12">
+					<div class='lineInput'><label><b>NOMBRE</b></label><input id='nombre' class='w3-input required' type='text' readonly></div><br/>
+					<div class='lineInput'><label><b>ID</b></label><input id='id' class='w3-input' type='text' readonly></div><br/>
+					<div class='lineInput'><label><b>EMAIL</b></label><input id='email' class='w3-input' type='text'><i class="fa fa-pencil edit" name='email' aria-hidden="true"></i></div><br/>
+					<div class='lineInput'><label><b>CONTRASE&Ntilde;A</b></label><input id='contrasena' class='w3-input' type='password'><i class="fa fa-pencil edit" name='contrasena' aria-hidden="true"></i></div><br/>
+					<div class='lineInput'><label><b>CONFIRM&Aacute; TU CONTRASE&Ntilde;A</b></label><input id='ccontrasena' class='w3-input' type='password' readonly></div><br/>
 
-				<!--<div class='lineInput'><label><b>NACIMIENTO</b></label><input id="date" class='w3-input' data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="date"  type="text"></div>-->
-				<div class='lineInput'><label><b>NACIMIENTO</b></label>
-					<span id="date"></span>
-				</div><br/>
-				<div class='lineInput'><label><b>ESCUELA</b></label><input id='escuela' class='w3-input' type='text'><i class="fa fa-pencil edit" name='escuela' aria-hidden="true"></i></div><br/>
-				<div class='lineInput'><label><b>ESTADO</b></label><input id='estado' class='w3-input' type='text'><i class="fa fa-pencil edit" name='estado' aria-hidden="true"></i></div><br/>
-				<div class='lineInput'><label><b>CIUDAD</b></label><input id='ciudad' class='w3-input' type='text'><i class="fa fa-pencil edit" name='ciudad' aria-hidden="true"></i></div><br/>
+					<div class='backers' style='display:none'>
+						<div class='lineInput'><label><b>PROFESI&Oacute;N</b></label><input id='profesion' class='w3-input' type='text'><i class="fa fa-pencil edit" name='profesion' aria-hidden="true"></i></div><br/>
+						<div class='lineInput'><label><b>TEL&Eacute;FONO</b></label><input id='telefono' class='w3-input' type='text'><i class="fa fa-pencil edit" name='telefono' aria-hidden="true"></i></div><br/>
+					</div>
 
-				<div class='backers' style='display:none'>
-					<div class='lineInput'><label><b>CALLE</b></label><input id='calle' class='w3-input' type='text'><i class="fa fa-pencil edit" name='calle' aria-hidden="true"></i></div><br/>
-					<div class='lineInput'><label><b>NRO&nbsp;EXTERNO</b></label><input id='nro_externo' class='w3-input' type='text'><i class="fa fa-pencil edit" name='nro_externo' aria-hidden="true"></i></div><br/>
-					<div class='lineInput'><label><b>NRO&nbsp;INTERNO</b></label><input id='nro_interno' class='w3-input' type='text'><i class="fa fa-pencil edit" name='nro_interno' aria-hidden="true"></i></div><br/>
-					<div class='lineInput'><label><b>CP</b></label><input id='cp' class='w3-input' type='text'><i class="fa fa-pencil edit" name='cp' aria-hidden="true"></i></div><br/>
 				</div>
-			</div>		   
+
+				<div class="w3-col l5 m6 w3-container w3-padding-12">
+
+					<!--<div class='lineInput'><label><b>NACIMIENTO</b></label><input id="date" class='w3-input' data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="date"  type="text"></div>-->
+					<div class='lineInput'><label><b>NACIMIENTO</b></label>
+						<span id="date"></span>
+					</div><br/>
+					<div class='lineInput'><label><b>ESCUELA</b></label><input id='escuela' class='w3-input' type='text'><i class="fa fa-pencil edit" name='escuela' aria-hidden="true"></i></div><br/>
+					<div class='lineInput'><label><b>ESTADO</b></label><input id='estado' class='w3-input' type='text'><i class="fa fa-pencil edit" name='estado' aria-hidden="true"></i></div><br/>
+					<div class='lineInput'><label><b>CIUDAD</b></label><input id='ciudad' class='w3-input' type='text'><i class="fa fa-pencil edit" name='ciudad' aria-hidden="true"></i></div><br/>
+
+					<div class='backers' style='display:none'>
+						<div class='lineInput'><label><b>CALLE</b></label><input id='calle' class='w3-input' type='text'><i class="fa fa-pencil edit" name='calle' aria-hidden="true"></i></div><br/>
+						<div class='lineInput'><label><b>NRO&nbsp;EXTERNO</b></label><input id='nro_externo' class='w3-input' type='text'><i class="fa fa-pencil edit" name='nro_externo' aria-hidden="true"></i></div><br/>
+						<div class='lineInput'><label><b>NRO&nbsp;INTERNO</b></label><input id='nro_interno' class='w3-input' type='text'><i class="fa fa-pencil edit" name='nro_interno' aria-hidden="true"></i></div><br/>
+						<div class='lineInput'><label><b>CP</b></label><input id='cp' class='w3-input' type='text'><i class="fa fa-pencil edit" name='cp' aria-hidden="true"></i></div><br/>
+					</div>
+				</div>		   
+			</div>
 		</div>
-		</div>
-		
+
 		<div>
 
 			<div class="w3-center">
@@ -115,32 +115,24 @@
 		</div>
 
 	</div>
+</div>
 
-	<!-- Footer -->
+<!-- Footer -->
 
-	<footer class="w3-container w3-padding-32 w3-grey w3-center">
-		<div>
-			<div class='w3-col s2 m2 l2 left'>
-				<a href="contacto.html">CONTACTO</a>		
-			</div>
+<footer class="w3-container">
+	<img class='right' id="safe" src='img/safe.png'><br/>
+	<div class='left'>&#169;KUATES</div>
+	<div class='right'>Aviso de privacidad</div>
+</footer>
 
-			<h4 id='footTitle' class='w3-col s8 m8 l8'><b onclick="javascript:location.href='index.html'">KUATES</b></h4>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-			<div class='w3-col s2 m2 l2 right'>   
-				<a href="terminos.html">T&Eacute;RMINOS Y CONDICIONES</a>		
-			</div>
-		</div>
+<script src="js/main.js"></script>
+<script src="js/perfil.js"></script>
 
-	</footer>
+<script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<script src="js/main.js"></script>
-	<script src="js/perfil.js"></script>
-
-	<script>
-
-	</script>
+</script>
 
 </body>
 </html>

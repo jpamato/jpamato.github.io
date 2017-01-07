@@ -18,6 +18,10 @@
     src: url('../fonts/VAGRoundedStd-Thin.otf');
 }
 
+body{
+	font-family:VagBlack;
+}
+
 .left{
 	float:left;
 }
@@ -60,8 +64,35 @@
 	//position:absolute;
 	//width:90%;
 	text-align:center;
-	padding-top:5px;
-	font-family:VagBlack;
+	margin-top:-5px;	
+}
+#navTitle img{
+	width:150%;
+	margin-left:-25%;
+}
+
+.w3-btn.kButton{
+	font-size: 1vw;
+	letter-spacing: 3px;
+	padding-top: 13px;
+	padding-bottom:10px;
+	font-family:VagBold;
+}
+
+.w3-btn.blueButton{
+	background-color:#001782;
+	border:solid 2px #001782;
+}
+
+#crear button.w3-btn{
+	padding-left:25px;
+	padding-right:25px;
+}
+
+.w3-btn.alphaButton{
+	background-color:rgba(255,255,255,0.3);
+	color:#001782;
+	border:solid 2px #001782;	
 }
 
 .w3-btn.navButton{
@@ -73,11 +104,9 @@
 ul.topnav {
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 10px 5% 0px 5%;
 	overflow: hidden;
-	background-color: #aaa;
-	padding-left:5%;
-	padding-right:5%;
+	background-color: rgba(255,255,255,1.0);
 	z-index: 200;
 }
 
@@ -115,33 +144,44 @@ ul.topnav li.icon {display: none;}
 	vertical-align:middle;
 }
 #logged #imgCont{
-	width:30px;height:30px;overflow:hidden;
+	width:50px;height:50px;overflow:hidden;
+	border: solid 2px #ffdd42;
 }
 #logged img{
-	width:30px;
+	width:50px;
 }
 
-#logged button{
+#arrowMenu{
 	background-color: inherit;
-	border: none;
+	//border: none;
+	border: solid solid solid none;
 }
 
-#logged h6{
-	margin:0px 10px 0px 10px;
+#logged h5{
+	color:#001782;
+	margin:0px 0px 0px -20px;
+	border-style: solid solid solid none;    	
+    	border-color: #ffdd42;    	
+    	border-width: 2px;
+    	padding-top: 8px;
+	padding-left: 25px;
+	padding-right: 10px;
+	font-family:VagBold;
 }
 
 #userMenu{
     list-style-type: none;
     position: fixed;
-    background-color: #aaa;
-    color: black;
-    right: 5%;
-    width: 150px;
-    top: 20px;
+    background-color: #ffdd42;
+    color: #001782;
+    right: 5.5%;
+    width: 140px;
+    top: 50px;
     padding: 0px 10px 0px 10px;
     font-size: 0.8vw;
     line-height: 2;
-    z-index: 100;
+    z-index: 1000;
+    font-family:VagBold;
 }
 
 #userMenu li{
@@ -156,8 +196,18 @@ ul.topnav li.icon {display: none;}
 	//left:-8px;
 }
 
-footer{
-	margin-top:50px;
+footer.w3-container{
+	background-color:#001782;
+	color:white;
+	margin-top:40px;
+	padding: 0px 160px 16px 160px;
+	font-size: 10px;
+    	font-family: Arial;
+}
+
+#safe{
+	margin-top: -129px;
+	margin-right: -90px;
 }
 
 footer a{

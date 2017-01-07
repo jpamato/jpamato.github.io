@@ -18,36 +18,37 @@
 
 <!-- Links (sit on top) -->
 <ul class="w3-top topnav" id="myTopnav">
+	
+	<div class="w3-col s5 m5 l5">
+	<div class='left'>
+		<li class="icon">
+		<a href="javascript:void(0);" onclick="NavToggle()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+		</li>
+		<li id='crear'><button class="w3-btn kButton blueButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+		<li><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></li>		
+	</div>
+	</div>
+	
+
+	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><img src='img/logo.png'></div>
 
 	<div class="w3-col s5 m5 l5">
-		<div class='left'>
-			<li class="icon">
-			<a href="javascript:void(0);" onclick="NavToggle()">&#9776;</a>
-			</li>
-			<li id='crear'><button class="w3-btn navButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
-			<li><button class="w3-btn navButton" onclick="javascript:location.href='explorar.html'">EXPLORA</button></li>		
-		</div>
+	<div class='right'>   
+		<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
+		<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h5 onclick="toggleMenu()"><span id='loggedName'>Carola </span><span style="font-size:24px;margin-left: 7px;"><i class="fa fa-angle-down"></i></span></h5></span></li>
 	</div>
-
-
-	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><b>KUATES</b></div>
-
-	<div class="w3-col s5 m5 l5">
-		<div class='right'>   
-			<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
-			<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h6>Carola</h6><button onclick="toggleMenu()"><i class="fa fa-angle-down" style="font-size:18px"></i></button></span></li>
-		</div>
-	</div>
+</div>
 </ul>
+
 <ul id='userMenu' style='display:none;'>
-	<li><b>MI PERFIL</b></li>
-	<li><b>MENSAJES</b></li>
-	<li><b>MIS PROYECTOS</b></li>
-	<li><b>MIS FAVORITOS</b></li>
-	<li><b>SALIR</b></li>
+	<li onclick="javascript:location.href='perfil.html'"><b>Mi perfil</b></li>
+	<li><b>Mensajes</b></li>
+	<li onclick="misProyectos()"><b>Mis proyectos</b></li>
+	<li><b>Mis favoritos</b></li>
+	<li onclick="logOut()"><b>Salir</b></li>
 </ul>
 
-<div class="w3-content" style="max-width:1100px;margin-top:60px;margin-bottom:80px">
+<div class="w3-content" style="max-width:1100px;margin-top:100px;margin-bottom:80px">
 
 	<div class="w3-center">
 		<h5 id="categoria">categoria</h5>
@@ -64,15 +65,15 @@
 						<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1)">&#10095;</a>
 
 						<div id="photoContainer">
-						<div class="w3-display-container mySlides">
-							<img src="img/team1.jpg" style="width:100%">							
-						</div>
-						<div class="w3-display-container mySlides">
-							<img src="img/workbench.jpg" style="width:100%">							
-						</div>
-						<div class="w3-display-container mySlides">
-							<img src="img/sound.jpg" style="width:100%">						
-						</div>    
+							<div class="w3-display-container mySlides">
+								<img src="img/team1.jpg" style="width:100%">							
+							</div>
+							<div class="w3-display-container mySlides">
+								<img src="img/workbench.jpg" style="width:100%">							
+							</div>
+							<div class="w3-display-container mySlides">
+								<img src="img/sound.jpg" style="width:100%">						
+							</div>    
 						</div>
 						<div class="w3-center w3-section w3-xlarge w3-text-white w3-display-bottomleft" style="width:100%">
 
@@ -248,23 +249,14 @@
 
 	</div>
 </div>
-
+</div>
 
 <!-- Footer -->
 
-<footer class="w3-container w3-padding-32 w3-grey w3-center">
-	<div>
-		<div class='w3-col s2 m2 l2 left'>
-			<a href="contacto.html">CONTACTO</a>		
-		</div>
-
-		<h4 id='footTitle' class='w3-col s8 m8 l8'><b onclick="javascript:location.href='index.html'">KUATES</b></h4>
-
-		<div class='w3-col s2 m2 l2 right'>   
-			<a href="terminos.html">T&Eacute;RMINOS Y CONDICIONES</a>		
-		</div>
-	</div>
-
+<footer class="w3-container">
+<img class='right' id="safe" src='img/safe.png'><br/>
+<div class='left'>&#169;KUATES</div>
+<div class='right'>Aviso de privacidad</div>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
