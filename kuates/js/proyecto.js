@@ -53,7 +53,7 @@ $(function(){
 	$("#userName").html(changeSpecialCase(user["nombre"].toUpperCase(),true));
 	$("#userName").attr("href","usuario.html?userID="+user["userID"]);
 
-	$("#pDescrip").find('p').html(getCleanText(proyecto["descripcion"]));
+	$("#pDescrip").find('p').html(proyecto["descripcion"]);
 	if(proyecto["logros"]==null){
 		$("#cantLogros").html("0");
 		console.log("aca");
