@@ -44,18 +44,25 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 .w3-display-middle{
 	position:relative;
 }
-
+#proyectData{
+	font-family:Vagthin;
+	color:#001782;
+}
 #proyectData .w3-input{	
 	display:inline;
 	padding: 0px 10px 0px 10px;
-	border-width: 0px 0px 1px 0px;
+	border-width: 0px 0px 4px 0px;
 	border-style: solid;
-	width:350px;
+	border-color:#001782;
+	width:400px;
+	color: rgb(116, 219, 83);
+	font-size: 24px;
+	text-align: center;
 }
 
 #proyName{
-	margin-top:20px;
-	margin-bottom:20px;
+	margin-top:40px;
+	margin-bottom:40px;
 }
 
 #proyDesc{
@@ -66,23 +73,17 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 }
 
 #navButtons{
-	width: 150px;
+	width: 24vw;
 	height: 1px;;
 	margin: 50px auto 0px auto;
 }
 
 #navLeft{
 	float:left;
-	border:1px solid rgba(0,0,0,0.2);
-	background-color:white;
-	color:rgba(0,0,0,0.2);
 }
 
 #navRight{
 	float:right;
-	border:none;
-	background-color:grey;
-	color:white;
 }
 
 #stepCont_2 img{

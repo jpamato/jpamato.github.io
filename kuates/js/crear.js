@@ -5,6 +5,8 @@ $(function(){
 	$('#step1').css('color','#74db53');
 	$('#step1').find('.w3-circle').css('background-color','#74db53');
 	$('#step1').find('.w3-circle').css('color','white');
+	$('.holaNombre').html(changeSpecialCase(userReg["nombre"].split(" ")[0].toUpperCase(),true));
+	$('#navLeft').hide();
 });
 
 function getDateSelector(minYear,maxYear){
@@ -107,11 +109,9 @@ function setStep(stepChange){
 		navDone(lastStep,stepCount);
 	}
 	if(stepCount==1){
-		$("#navLeft").css('background-color','white');
-		$("#navLeft").css('color','rgba(0,0,0,0.2)');
+		$("#navLeft").hide();
 	}else if(stepCount==2){
-		$("#navLeft").css('background-color','grey');
-		$("#navLeft").css('color','white');
+		$("#navLeft").show();
 	}	
 }
 
