@@ -36,20 +36,37 @@ body{
 	top:0px;
 	width:100%;
 	height:1024px;
-	z-index:100;
-	background-color:rgba(0,0,0,0.5);
+	z-index: 1000;
+	background-color: rgba(254,222,79,0.0);
 }
 
 #dialog{
 	position:fixed;
 	z-index:1000;
 	color:black;
-	background-color:white;
+	background-color:rgba(254,222,79,0.9);
 	text-align:center;
 	top:100px;
 	left:35%;
 	width:30%;
 	height:300px;
+	font-family:Vagbold;
+}
+#dialogContent{
+	margin-top:80px;
+}
+#dialog ul li{
+	list-style-type: none;
+	padding:10px;
+	font-size:4vh;
+}
+#dialog ul li:hover{
+	color:rgb(254,222,79);
+	background-color:#001782;
+}
+
+#dialog span.w3-closebtn{
+	font-size:3vw;
 }
 .w3-input{	
 	display:inline;
@@ -134,6 +151,11 @@ ul.topnav li a:hover {
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {display: none;}
+
+#menuBars{
+	color:#ddd;
+	font-size:30px;
+}
 
 #logged{
 	//display:table-cell;

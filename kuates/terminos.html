@@ -21,11 +21,12 @@
 	
 	<div class="w3-col s5 m5 l5">
 	<div class='left'>
+		&nbsp;
 		<li class="icon">
 		<a href="javascript:void(0);" onclick="NavToggle()"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		</li>
 		<li id='crear'><button class="w3-btn kButton blueButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
-		<li><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></li>		
+		<li id='explorar'><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></li>		
 	</div>
 	</div>
 	
@@ -34,7 +35,7 @@
 
 	<div class="w3-col s5 m5 l5">
 	<div class='right'>   
-		<li id=toLog><button class="w3-btn navButton" onclick="ingresar()">INGRESA</button></li>
+		<li id='menuBars'><i class="fa fa-bars" aria-hidden="true"></i></li>
 		<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h5 onclick="toggleMenu()"><span id='loggedName'>Carola </span><span style="font-size:24px;margin-left: 7px;"><i class="fa fa-angle-down"></i></span></h5></span></li>
 	</div>
 </div>
@@ -47,7 +48,6 @@
 	<li><b>Mis favoritos</b></li>
 	<li onclick="logOut()"><b>Salir</b></li>
 </ul>
-
 
 <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
 

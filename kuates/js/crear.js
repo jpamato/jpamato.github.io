@@ -37,22 +37,22 @@ $("#navRight").unbind('click').click( function(){
 
 $("#scrollRight").unbind('click').click( function(){
 	var posx = Number(getTransforX('#thumbCont'));
-	console.log($('#thumbCont').width()+" : "+posx);
+	//console.log($('#thumbCont').width()+" : "+posx);
 	if(posx<0)
-		$('#thumbCont').css('transform',  'translateX(' + (posx+126) + 'px)');
+		$('#thumbCont').css('transform',  'translateX(' + (posx+115) + 'px)');
 });
 
 $("#scrollLeft").unbind('click').click( function(){	
 	var posx = Number(getTransforX('#thumbCont'));	
-	console.log(posx);
-	if($('#thumbCont').width()+posx>504)
-		$('#thumbCont').css('transform',  'translateX(' + (posx-126) + 'px)');
+	//console.log(($('#thumbCont').width()+posx)+" : "+($('#thumbnail-slider').width()-100));
+	if($('#thumbCont').width()+posx>$('#thumbnail-slider').width()-100)
+		$('#thumbCont').css('transform',  'translateX(' + (posx-115) + 'px)');
 });
 
 $(".categoria").unbind('click').click( function(){	
 	proyecto['categoria'] = $(this).attr('name');
-	$('.categoria').css('background-color','white');
-	$(this).css('background-color','red');
+	$('.categoria').css('background-color','#01c944');
+	$(this).css('background-color','#0069e9');
 });
 
 $(".thumbDelete").unbind('click').click( function(){
@@ -73,6 +73,9 @@ function getTransforX(element){
    			$(element).css("transform").split(/[()]/)[1];	
 	return currTrans.split(',')[4];
 }
+$("#portadaInput").change(function() {
+	$("#portadaFile").html(this.files[0].name);
+});
 
 $("#fileInput").change(function() {
 	archivos[this.files[0].name]=this.files[0];
@@ -231,28 +234,50 @@ function renderImage(file) {
 	//console.log(file.type);
 
 	if($.inArray(ext, ['gif','png','jpg','jpeg']) > -1) {  		
-			
-		html += '<li class="" title='+file.name+' style="display: inline-block; height: 90px; width: 120px; z-index: 0;">'+
-		'<div class="w3-panel" style="background-image: url('+fileURL+'); cursor: pointer;">'+
-		'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete">×</span></div></li>';
-		$('#thumbCont').html(html);
+
+			var img = new Image();
+    			img.onload = function(){
+			var w,h;
+			if(this.width>this.height){
+
+				var h = 100;
+				var w = this.width*h/this.height;
+
+				html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;">'+
+				'<div class="w3-panel" style="width:'+w+'px;height:'+h+'px; background-image: url('+fileURL+'); cursor: pointer;">'+
+				'<span onclick="deleteThumb(this)" style="margin-right:'+(w-85)+'px;" class="w3-closebtn w3-circle thumbDelete">×</span></div></li>';
+				$('#thumbCont').html(html);				
+			}else{
+				var w = 100;
+				var h = this.height*w/this.width;
+
+				html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;">'+
+				'<div class="w3-panel" style="width:'+w+'px;height:'+h+'px; background-image: url('+fileURL+'); cursor: pointer;">'+
+				'<span onclick="deleteThumb(this)" style="margin-right:'+(w-85)+'px;" class="w3-closebtn w3-circle thumbDelete">×</span></div></li>';
+				$('#thumbCont').html(html);				
+			}		
+		};
+		img.src = fileURL;	
 
 	}else if($.inArray(ext, ['mp4']) > -1) {
 
-		html += '<li class="" title='+file.name+' style="display: inline-block; height: 90px; width: 120px; z-index: 0;">'+
+		html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;">'+
 		'<div class="w3-panel" style="padding:0px">'+		
-		'<video width=120px height=90px src='+fileURL+' "video/mp4" controls></video>'+
-		'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete" style="position:absolute;right:15px">×</span></li>';
+		'<video width=100px height=100px src='+fileURL+' "video/mp4" controls></video>'+
+		//'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete" style="position:absolute;right:15px">×</span></li>';
+		'<span onclick="deleteThumb(this)" style="position:absolute;right:-1px;" class="w3-closebtn w3-circle thumbDelete">×</span></li>';
+		$('#thumbCont').html(html);
 
 	}else{
-		html += '<li class="" title='+file.name+' style="display: inline-block; height: 90px; width: 120px; z-index: 0;">'+
+		html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;">'+
 		'<div class="w3-panel" style="background-image: url(img/doc.png); cursor: pointer;">'+
-		'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete">×</span></div>'+
+		//'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete">×</span></div>'+
+		'<span onclick="deleteThumb(this)" style="margin-right:-17px;" class="w3-closebtn w3-circle thumbDelete">×</span></div>'+
 		'<span style="font-size: 10px;position: absolute;left: 0px;bottom: 0px;z-index: 1;width: 120px;color: white;background-color: rgba(0,0,0,0.5);">'+file.name+'</SPAN></li>';		
 		$('#thumbCont').html(html);
 	}
 
-	$('#thumbCont').html(html);
+	
 
 /*
   // generate a new FileReader object

@@ -3,11 +3,12 @@
 #thumbnail-slider {
     margin:0 auto; /*center-aligned*/
     width:100%;/*width:400px;*/
-    max-width:600px;
-    padding:20px;
-    background-color:#f2f1ea;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    box-sizing:border-box;
+    max-width:535px;
+    padding:25px 30px 20px 30px;
+    background-color:white;
+    border: solid 3px rgb(116,219,83);
+    //box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    //box-sizing:border-box;
     position:relative;
     -webkit-user-select: none;
     user-select:none;
@@ -19,7 +20,7 @@
     overflow:hidden;
     padding:2px 0;
     margin:0;
-    height: 100px;
+    height: 110px;
 }
 
  
@@ -40,9 +41,10 @@
 #thumbnail-slider ul li {
     display:inline-block;
     *display:inline!important; /*IE7 hack*/
-    border:3px solid black;
+    border:3px solid #001782;
+    border-radius:15px;
     margin:0;
-    margin-right:10px; /* Spacing between thumbs*/
+    margin-right:15px; /* Spacing between thumbs*/
     transition:border-color 0.3s;
     box-sizing:content-box;
     text-align:center;
@@ -55,6 +57,7 @@
     height: 90px;
     width: 120px;
     z-index: 0;
+    overflow:hidden;
 }
 
 #thumbnail-slider ul li div{
@@ -64,6 +67,7 @@
     height: 100%;
     cursor: pointer;
     margin: 0px !important;
+    //border-radius:15px;
 }
 
 .thumbDelete{
@@ -73,23 +77,29 @@
 }
 
 #scrollRight{
-    right: 0px;
-    top: 50px;
+    width: 33px;
+    padding-bottom: 27px;
+    padding-right: 5px;
+    right: -18px;
+    top: 60px;
     position: absolute;
     z-index: 10;
     color: white;
     border: 0px;
-    background-color: black;
+    background-color: #001782;
 }
 
 #scrollLeft{
-    left: 0px;
-    top: 50px;
+    width: 33px;
+    padding-bottom: 27px;
+    padding-left: 5px;
+    left: -18px;
+    top: 60px;
     position: absolute;
     z-index: 10;
     color: white;
     border: 0px;
-    background-color: black;
+    background-color: #001782;
 }
 
 #thumbnail-slider ul li.active {
