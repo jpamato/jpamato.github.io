@@ -3,11 +3,13 @@ var userIndex;
 var app = (function(){
 	//localStorage.clear();
 	//
-		
+	//
 	var logged = 0;
 	var user;
 	var userType;
-	var uID;
+	var uID;	
+
+	getVersion();
 
 	//localStorage.setItem("localSaved",0);
 	var localSaved = localStorage.getItem("localSaved");
@@ -85,6 +87,27 @@ var app = (function(){
 
 	};
 	var jsonDone = false;
+
+	function getVersion(){
+		$.getJSON( "data/version.json", function( data ) {
+			var ver = localStorage.getItem("version");
+			console.log("Version: "+ver);
+			if(ver!=null){
+				if(Number(data['version'])!=Number(ver)){
+					localStorage.clear();
+					localStorage.setItem("version",data['version']);
+					location.reload(true); 
+				}
+			}else{
+					localStorage.clear();
+					localStorage.setItem("version",data['version']);
+					location.reload(true);
+			}		
+  		});
+	}
+
+
+
 	function getU(){
 		users = [];
 		$.getJSON( "data/users.json", function( data ) {
@@ -224,7 +247,7 @@ function ingresar(){
 		"<a style='margin-left:25px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
 		"<H4 style='text-align:center;' onclick='logIn()'>ENTRAR</H4>"+
 		"<hr style='border-bottom: 1px dashed;'>"+
-		"<H4 style='text-align:center;'>¿NO TIENES USUARIO?</H4>"+
+		"<H4 style='text-align:center;'>&iquest;NO TIENES USUARIO?</H4>"+
 		"<H4 style='text-align:center;' onclick=location.href='sign.html'>REGISTRARME</H4>"+
 		"</form>";
 	$('#dialogContent').html(html);
