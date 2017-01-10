@@ -219,7 +219,7 @@ $("#menuBars").unbind('click').click( function(){
 			"<li onclick=location.href='explorar.html'>PROYECTOS DESTACADOS</li>"+
 			"<li>FAQS</li>"+
 			"<li>T&Eacute;RMINOS Y CONDICIONES</li>"+
-			"<li>AYUDA</li></ul>";
+			"<li>CONTACTO</li></ul>";
 	$('#dialogContent').html(html);
 	$('#dialog').show();
 	fullMaskToggle();

@@ -3,8 +3,8 @@
 <title>:Kuates:</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+<link rel="stylesheet" href="css/lib/font-awesome.min.css">
 
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/crear.css">
@@ -47,7 +47,7 @@
 	<li onclick="javascript:location.href='perfil.html'"><b>Mi perfil</b></li>
 	<li><b>Mensajes</b></li>
 	<li onclick="misProyectos()"><b>Mis proyectos</b></li>
-	<li><b>Mis favoritos</b></li>
+	<!--<li><b>Mis favoritos</b></li>-->
 	<li onclick="logOut()"><b>Salir</b></li>
 </ul>
 
@@ -129,7 +129,7 @@
                 
 		<button id='scrollLeft' class='w3-circle'><i class="fa fa-angle-left" style="font-size:20px"></i></button>
 		<div class="inner">			
-			<label for='fileInput' style='position: absolute;right: 0px;z-index: 1;background-color: white;height: 106px;width: 106px;border:solid 3px;border-radius:15px;padding-top:25px;font-size:1vw'><i class="fa fa-arrow-up" style="font-size:30px"></i><br><br>Elije un archivo</label>
+			<label for='fileInput' style='position: absolute;right: 0px;z-index: 1;background-color: white;height: 106px;width: 106px;border:solid 3px;/*border-radius:15px;*/padding-top:25px;font-size:1vw'><i class="fa fa-arrow-up" style="font-size:30px"></i><br><br>Elije un archivo</label>
 			<input id="fileInput" name='archivos' type="file" style='display:none;'>
 			<ul id="thumbCont">
 			<!--<li class="" style="display: inline-block; height: 90px; width: 120px; z-index: 0;">
@@ -180,7 +180,8 @@
 	<div class='right'>Aviso de privacidad</div>
 	</footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+	<script src="js/lib/jquery.min.js"></script>
 
 	<script src="js/main.js"></script>
 	<script src="js/crear.js"></script>
