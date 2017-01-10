@@ -27,6 +27,10 @@ select{
 	border: 3px solid #001782;
 }
 
+#userPhoto img{
+	height:128px;
+}
+
 .lineInput {    
     border-bottom: 3px solid #001782;
     margin-bottom:20px;
