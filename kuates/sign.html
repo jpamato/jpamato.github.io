@@ -112,7 +112,6 @@
 				</div>
 			</div>
 		</div>
-		<div>
 
 			<div class="w3-center">
 				<input id='submitButt' class="w3-btn kButton blueButton" type="submit" value="CREAR MI CUENTA">
@@ -121,15 +120,17 @@
 
 		<div id='signDone' style='display:none;'>
 			<div class="w3-center">
-				<p class="w3-xlarge w3-border-dark-grey w3-padding-16">Gracias <span class='user'>CAROLA</span><br/>por completar el formulario</p>
-				<p class="w3-xlarge w3-border-dark-grey w3-padding-16">Revisa tu correo electr&oacute;nico<br/>te hemos enviado un email para activar tu cuenta!</p>
+				<p class="w3-xlarge" style='border: solid 3px #81f15e;padding: 20px 10px 20px 10px;width: 400px;margin: 40px auto 60px auto;'>GRACIAS <span class='user' style='color:#81f15e;'>CAROLA</span> POR <br/>COMPLETAR EL FORMULARIO</p>
+				<p class="w3-medium">Revisa tu correo electr&oacute;nico, te hemos enviado <br/>un email para activar tu cuenta.</p>
 			</div>
 		</div>
 
 		<div id='signActivated' style='display:none;'>
 			<div class="w3-center">
-				<p class="w3-xlarge w3-border-dark-grey w3-padding-16"><span class='user'>CAROLA</span>, la activaci&oacute;n de tu cuenta<br/> se ha realizado con &eacute;xito</p>
-				<p class="w3-large w3-border-dark-grey w3-padding-16"><button id='toCrear' onclick="javascript:location.href='crear.html'">COMIENZA A CREAR PROYECTOS</button><button onclick="javascript:location.href='explorar.html'">EXPLORA PROYECTOS</button></p>
+
+				<div id='activSign'><hr style='float:left;margin: 0px 20px 0px 0px;'><i class="fa fa-hand-peace-o" aria-hidden="true"></i><hr style='margin: 0px 0px 0px 20px;'></div>
+				<p class="w3-xlarge" style='width:400px;margin:-8px auto 60px auto;border-style:none solid solid solid;border-color: #81f15e;padding:20px'><span class='user' style='color:#81f15e;'>CAROLA</span><span style='color:#019cde;'>:</span><br> la activaci&oacute;n de tu cuenta<br/> se ha realizado con &eacute;xito</p>
+				<p class="w3-large w3-border-dark-grey w3-padding-16"><button class="w3-btn kButton blueButton" id='toCrear' onclick="javascript:location.href='crear.html'">COMIENZA A CREAR PROYECTOS</button><button class="w3-btn kButton blueButton" onclick="javascript:location.href='explorar.html'">COMIENZA A EXPLORAR PROYECTOS</button></p>
 			</div>
 		</div>
 

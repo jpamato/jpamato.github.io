@@ -39,3 +39,29 @@ select{
 .w3-input{
 	color:#81f15e;
 }
+
+#signDone{
+	font-family: Vagbold;
+	color: #001782;
+}
+
+#signActivated{
+	font-family: Vagbold;
+	color: #001782;
+}
+
+#activSign{
+	display: inline-flex;
+	width: 400px;
+	margin: 40px auto -50px auto;
+}
+
+#activSign hr{
+	width: 170px;
+	border: solid #81f15e 1px;
+}
+#activSign i{
+	margin-top: -7px;
+	font-size: 24px;
+	color: #81f15e;
+}

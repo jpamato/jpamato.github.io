@@ -79,7 +79,7 @@ $(function(){
 			$('#backers').hide();
 			$('#submitButt').hide();
 			$('#signDone').show();
-			$('.user').html(registro['nombre'].toUpperCase());
+			$('.user').html(changeSpecialCase(registro["nombre"].split(" ")[0].toUpperCase(),true));
 		}
 		event.preventDefault();
 	});	
@@ -111,7 +111,8 @@ $("#signDone").unbind('click').click( function(){
 	$('#toLog').hide();
 	$('#logged').show();
 	$('#logged img').attr("src",registro['avatar']);
-	$('#logged H6').html(registro['nombre']);
+	$('#loggedName').html(registro['nombre']);
+	$('#menuBars').hide();
 	localStorage.setItem("user",registro['nombre']);
 	var userID = generateID();
 	localStorage.setItem("userID",userID);
@@ -157,7 +158,7 @@ $("#signDone").unbind('click').click( function(){
 	localStorage.setItem("logged",1);
 	app.log = 1;
 	$("#signActivated").show();
-	$('.user').html(registro['nombre'].toUpperCase());
+	$('.user').html(changeSpecialCase(registro["nombre"].split(" ")[0].toUpperCase(),true));
 });
 
 function incomplete(mess){
