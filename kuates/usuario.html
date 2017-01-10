@@ -52,25 +52,42 @@
 
 <div class="w3-content" style="max-width:1100px;margin-top:120px;margin-bottom:80px;display:flex;">
 
-	<div class="w3-col m4 l4" style="text-align:center;">
-		<img class='w3-center w3-circle' width=128px id="avatar" src='img/avatar.png'>
-		<br/>
-		<div id='stats'><a id="userName" href='#'>JUANCITO GOMEZ</a></br>
-			<span id='ciudad'>Ciudad</span><br/>
-			<span id='escuela'>Ciudad</span><br/>
-			<span id='birthday' style='display:inline-flex;'>Ciudad</span><br/>
+	<div class="w3-col m8 l8">
+		<h3 class='sectTitle'>PROYECTOS ACTIVOS</H3>
+		<div id="projectList"></div>
 
-			<H2 id="cantLogros" style="margin-top:50px;">LOGROS:0</H2>
-			<div id="logros" class="w3-center" style="width:75%;margin:auto;">
+		<h3 class='sectTitle'>PROYECTOS TERMINADOS</H3>
+		<div id="terminadosList"></div>
+	</div>
+
+	<div class="w3-col m4 l4" style="text-align:center;color:#001782;">
+		<div>
+			<div  id="avatar" class='w3-circle'><img src='img/avatar.png'></div>
+		</div>
+		<br/>
+		<div id='userData'>
+			<a id="userName" href='#'>JUANCITO GOMEZ</a></br>
+			<i class="fa fa-map-marker" aria-hidden="true">&nbsp;</i><span id='ciudad'>Ciudad</span><br/>
+			<hr style='margin-left:10%;width:35%;float:left;'><i style="margin-top: 10px;" class="fa fa-university" aria-hidden="true"></i><hr style='margin-right:10%;width:35%;float:right;'>
+			<span id='escuela'>Ciudad</span><br/>
+			<hr style='margin-left:auto;margin-right:auto;width:80%;'>
+			<i class="fa fa-birthday-cake" aria-hidden="true">&nbsp;&nbsp;</i><span id='birthday' style='display:inline-flex;'>Ciudad</span><br/>
+
+		</div>
+		<div id='stats'>	
+
+
+			<h3 id="logrosTit">LOGROS</h3>
+			<div id="logros" class="w3-center">
 				<div class='left' style='font-size:33px;margin-right:25px;'><i class="fa fa-trophy" aria-hidden="true"></i></div>
 				<h6 style="text-align:left;font-size:1vw;line-height:1.2;padding-top:11px;"><b>NOMBRE DEL PROYECTO POR EL CUAL LO GANASTE</b></h6>
 
 				<div class='left' style='font-size:33px;margin-right:25px;'><i class="fa fa-trophy" aria-hidden="true"></i></div>
 				<h6 style="text-align:left;font-size:1vw;line-height:1.2;padding-top:11px;"><b>NOMBRE DEL PROYECTO POR EL CUAL LO GANASTE</b></h6>
 			</div>
-
-			<H2 style="margin-top:50px;">VOTADOS</H2>
-			<div id="pVotados" class="w3-center" style="width:75%;margin:auto;">
+		
+			<H3 id="votadosTit">VOTADOS</H3>
+			<div id="pVotados" class="w3-center">
 				<div class='left' style='font-size:33px;margin-right:25px;'><i class="fa fa-thumbs-up" aria-hidden="true"></i></div>
 				<h6 style="text-align:left;font-size:1vw;line-height:1.2;padding-top:11px;"><a href='#'><b>NOMBRE DEL PROYECTO QUE VOTASTE</b></a></h6>
 
@@ -80,15 +97,6 @@
 
 		</div>
 	</div>
-
-	<div class="w3-col m8 l8">
-		<h3 style="padding-left:20px;">PROYECTOS ACTIVOS</H3>
-		<div id="projectList"></div>
-
-		<h3 style="padding-left:20px;">PROYECTOS TERMINADOS</H3>
-		<div id="terminadosList"></div>
-	</div>
-
 
 </div>
 

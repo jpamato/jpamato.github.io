@@ -33,7 +33,7 @@ $(function(){
 				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h4 style='font-family:Vagbold'>"+proyectos[i]['nombre']+"</h4></a>"+
 				  "</div>"+
 				  "<div class='creador'>"+
-				  "<div class='left'><div class='w3-circle' style='width:40px;height:40px;overflow:hidden;border:solid 3px #001782'><img src='"+user["avatar"]+"'></div></div>"+
+				  "<div class='left'><div class='w3-circle' style='width:50px;height:50px;overflow:hidden;border:solid 3px #001782'><img src='"+user["avatar"]+"'></div></div>"+
 					  "<div class='right'>por <a href='usuario.html?userID="+user["userID"]+"'>"+user["nombre"]+"</a></br>"+
 						  "<img src='img/medal.png' style='width:15px;margin-left:1px;'> <b>"+logros+"</b>"+
 					  "</div>"+

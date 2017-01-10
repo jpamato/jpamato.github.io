@@ -1,0 +1,71 @@
+.sectTitle{
+    padding-left: 20px;
+    Font-family: Vagbold;
+    color: #0069e9;
+    letter-spacing: 3px;
+}
+
+#userData{
+	background-color: rgb(254,222,79);	
+	padding-top: 70px;
+	margin-top: -83px;
+	padding-bottom: 20px;
+}
+
+#avatar{
+	width:128px;
+	height:128px;
+	overflow:hidden;
+	border:solid 3px rgb(254,222,79);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#avatar img{
+	width:128px;
+}
+
+#userName{
+	font-size:2vw;
+}
+
+#logrosTit{
+	margin-top: 50px;
+	font-family: Vagbold;
+	background-color: #001782;
+	color: #c0ecf9;
+	letter-spacing: 3px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#logros{
+	width: 100%;
+	/* margin: auto; */
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2px;
+	background-color: #c0ecf9;
+	margin-top: -10px;
+}
+
+#pVotados{
+	width: 100%;
+	/* margin: auto; */
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2px;
+	background-color: white;
+	margin-top: -10px;
+	margin-bottom: 50px;
+}
+
+#votadosTit{
+	margin-top: 50px;
+	font-family: Vagbold;
+	background-color: #019cde;
+	color: white;
+	letter-spacing: 3px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
