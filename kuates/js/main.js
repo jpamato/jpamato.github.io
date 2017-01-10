@@ -148,6 +148,7 @@ var app = (function(){
 
 	function checkLogin() {
 		var log = localStorage.getItem("logged");
+		console.log("Log: "+log);
 		if(log==null){
 			localStorage.setItem("logged",0);
 			log = 0;
@@ -170,6 +171,8 @@ var app = (function(){
 			$("#explorar").hide();
 		}
 	}
+
+	
 })();
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -207,6 +210,15 @@ function send(e){
 	e.parentElement.parentElement.parentElement.style.display='none';	
 	fullMaskToggle();
 }
+$("#crear2").unbind('click').click( function(){
+		console.log("Logged"+app.log);
+		if(app.log==1){
+			location.href='crear.html';
+		}else{
+			location.href='sign.html'
+		}
+	});
+
 
 $("#menuBars").unbind('click').click( function(){
 	$('#dialog').css("top","-16px");
