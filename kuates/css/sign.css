@@ -5,6 +5,12 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
 select{
 	border:none;
+	color:#81f15e;
+}
+
+#signForm{
+	font-family:Vagbold;
+	color:#001782;
 }
 
 #signActivated button{
@@ -16,4 +22,16 @@ select{
 	width:128px;
 	height:128px;
 	overflow:hidden;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #001782;
+}
+
+.lineInput {    
+    border-bottom: 3px solid #001782;
+    margin-bottom:20px;
+}
+
+.w3-input{
+	color:#81f15e;
 }
