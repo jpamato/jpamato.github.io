@@ -211,7 +211,6 @@ function send(e){
 	fullMaskToggle();
 }
 $("#crear2").unbind('click').click( function(){
-		console.log("Logged"+app.log);
 		if(app.log==1){
 			location.href='crear.html';
 		}else{
@@ -230,8 +229,8 @@ $("#menuBars").unbind('click').click( function(){
 	var html = "<ul><li onclick='ingresar()'>LOGIN/REGISTRO</li>"+
 			"<li onclick=location.href='explorar.html'>PROYECTOS DESTACADOS</li>"+
 			"<li>FAQS</li>"+
-			"<li>T&Eacute;RMINOS Y CONDICIONES</li>"+
-			"<li>CONTACTO</li></ul>";
+			"<li onclick=location.href='terminos.html'>T&Eacute;RMINOS Y CONDICIONES</li>"+
+			"<li onclick=location.href='contacto.html'>CONTACTO</li></ul>";
 	$('#dialogContent').html(html);
 	$('#dialog').show();
 	fullMaskToggle();

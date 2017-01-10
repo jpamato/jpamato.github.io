@@ -7,13 +7,20 @@ select{
 	border:none;
 }
 .lineInput{
-	margin-top:40px;
+	margin-top:30px;
+	border-bottom: 3px solid #001782;
 }
-
+#contactForm{
+	font-family:Vagbold;
+	color:#001782;
+}
 #contactMess{
 	width:480px;
 	height:100px;
 	//margin-top:40px;
-	border: rgba(0,0,0,0.5) solid 1px;
-	margin-top:
+	border-bottom: 3px solid #001782;
+	resize:none;
+}
+.w3-input{
+	color:#81f15e;
 }
