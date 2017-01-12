@@ -15,6 +15,7 @@ $(function(){
 	var user = $.grep(users, function(e){ return e.userID == userID; })[0];
 
 	console.log(proyecto);
+	$("#portada").attr('src',getFirstImage(proyecto["archivos"]));
 	$("#categoria").html(proyecto["categoria"]);
 	$("#pTitle").html(changeSpecialCase(proyecto["nombre"].toUpperCase(),true));
 
@@ -259,4 +260,11 @@ function saveFileData(){
 	console.log(keys);
 	if(keys.length>0)
 		readNew(keyIndex);
+}
+
+function getFirstImage(archivos){
+	for(var i=0;i<archivos.length;i++){
+		if(archivos[i].includes("data:image"))
+			return archivos[i];
+	}
 }

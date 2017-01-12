@@ -5,3 +5,9 @@ body{
 #logoHome{
 	height:70vh;
 }
+
+@media screen and (max-width:767px) {
+	#logoHome{
+		height:60vh;
+	}
+}

@@ -173,6 +173,10 @@ ul.topnav li.icon {display: none;}
 	width:50px;
 }
 
+#loggedArrow{
+	font-size:24px;margin-left: 7px;
+}
+
 #arrowMenu{
 	background-color: inherit;
 	//border: none;
@@ -222,7 +226,7 @@ footer.w3-container{
 	background-color:#001782;
 	color:white;
 	margin-top:40px;
-	padding: 0px 160px 16px 160px;
+	padding: 0px 15vw  16px 15vw;
 	font-size: 10px;
     	font-family: Arial;
 }
@@ -236,24 +240,68 @@ footer a{
 	text-decoration:none;
 }
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:767px) {
-
-}
-
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:767px) {
 
-	.w3-btn.navButton{
-		font-size: 2vw;
+	ul.topnav {
+    		padding: 10px 0px 0px 0px;
 	}
 
-	ul.topnav li:not(:first-child) {display: none;}
+	ul.topnav li {
+    		margin-right: 0.5vw;
+	}
+
+	.w3-btn.kButton {
+		font-size: 1.5vw;
+		padding: 10px 2vw;
+	}
+
+	#crear button.w3-btn {
+    		padding-left: 3vw;
+   		 padding-right: 3vw;
+	}
+	#navTitle {
+    		margin-top: 0px;
+	}
+
+	#logged #imgCont {
+   		width: 10vw;
+    		height: 10vw;
+    		margin-right: 5vw;
+	}
+
+	#logged img {
+    		width: 10vw;
+	}
+
+	#logged h5 {
+		display:inline-flex;
+    		margin: 0px 0px 0px -8vw;
+    		padding-top: 3vw;
+		padding-left: 5vw;
+		padding-bottom: 2vw;
+	}
+
+	#loggedName{
+		font-size:2.5vw;
+	}
+
+	#loggedArrow{
+		font-size:4vw;
+	}
+
+	#userMenu {		
+		right: 6.5%;
+		width: 23vw;
+		top: 10vw;
+		font-size: 1.5vw;
+	}
+
+	/*ul.topnav li:not(:first-child) {display: none;}
 	ul.topnav li.icon {
 		float: left;
 		display: inline-block;
 	}
-
 	ul.topnav.responsive {position: relative;}
 	ul.topnav.responsive li.icon {
 		position: absolute;
@@ -267,7 +315,12 @@ footer a{
 	ul.topnav.responsive li a {
 		display: block;
 		text-align: left;    
+	}*/
+
+
+	#safe {
+   		margin-top: -10vw;
+    		margin-right: -8vw;
+		height: 10vw;
 	}
-
-
 }
