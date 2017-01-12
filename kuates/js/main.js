@@ -61,7 +61,7 @@ var app = (function(){
 	});*/
 
 	if($(window).width()<768){
-		$('#explorar').html('<button class="w3-btn kButton alphaButton" onclick="javascript:location.href=explorar.html">PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button>');
+		$('#explorar').html('<button class="w3-btn kButton alphaButton" onclick="javascript:location.href=explorar.html">EXPLORAR</button>');
 	}else{
 		$('#explorar').html('<button class="w3-btn kButton alphaButton" onclick="javascript:location.href=explorar.html">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button>');
 	}
