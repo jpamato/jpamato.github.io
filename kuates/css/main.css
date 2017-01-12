@@ -291,10 +291,10 @@ footer a{
 	}
 
 	#userMenu {		
-		right: 6.5%;
+		right: 1%;
 		width: 23vw;
 		top: 10vw;
-		font-size: 1.5vw;
+		font-size: 2.5vw;
 	}
 
 	/*ul.topnav li:not(:first-child) {display: none;}
