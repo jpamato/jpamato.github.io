@@ -84,8 +84,10 @@ body{
 	margin-top:-5px;	
 }
 #navTitle img{
-	width:150%;
-	margin-left:-25%;
+	//width:150%;
+	//margin-left:-25%;
+	width: 30vw;
+	margin-left: -6vw;
 }
 
 .w3-btn.kButton{
