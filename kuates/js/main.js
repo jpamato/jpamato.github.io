@@ -260,7 +260,6 @@ function ingresar(){
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#001782");
 
-	$('#dialogContent').css("width","30%");
 	$('#dialogContent').css("margin-left","auto");
 	$('#dialogContent').css("margin-right","auto");
 	$('#dialogContent').css("margin-top","120px");
@@ -270,7 +269,7 @@ function ingresar(){
 		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;'></div>"+
 		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;'></div>"+		
 		"<div style='font-size:1vw'><input class='w3-check' type='checkbox' ><label>RECORDARME</label>"+
-		"<a style='margin-left:25px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
+		"<a style='float:right;margin-top:10px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
 		"<H4 style='text-align:center;' onclick='logIn()'>ENTRAR</H4>"+
 		"<hr style='border-bottom: 1px dashed;'>"+
 		"<H4 style='text-align:center;'>&iquest;NO TIENES USUARIO?</H4>"+
