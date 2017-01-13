@@ -76,7 +76,7 @@ body{
 	padding: 0px 10px 0px 10px;
 	border:none;
 	width:auto;
-	margin-bottom: -4vw;
+	//margin-bottom: -4vw;
 }
 .lineInput{
 	display:flex;width:100%;border-bottom: 2px solid #808080;

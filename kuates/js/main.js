@@ -266,8 +266,8 @@ function ingresar(){
 
 	var html = "<H4>INGRESAR</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;'></div>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;'></div>"+		
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;margin-bottom: -4vw;'></div>"+
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;margin-bottom: -4vw;'></div>"+		
 		"<div style='font-size:1vw'><input class='w3-check' type='checkbox' ><label>RECORDARME</label>"+
 		"<a style='float:right;margin-top:10px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
 		"<H4 style='text-align:center;' onclick='logIn()'>ENTRAR</H4>"+
@@ -353,7 +353,7 @@ function getPassword(){
 
 	var html = "<H4 style='margin:20px 0px 20px 0px;'>OLVID&Eacute; MI CONTRASE&Ntilde;A</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>EMAIL</b></label><input class='w3-input' type='text' style='background-color:inherit;'></div>"+
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>EMAIL</b></label><input class='w3-input' type='text' style='background-color:inherit;margin-bottom: -4vw;'></div>"+
 		"<H6 style='text-align:center;margin-top:20px;'>Te enviaremos un email con tu contrase&ntilde;a</H6>"+
 		"<H4 style='text-align:center;' onclick='send(this)'>RECUPERAR</H4>"+
 		"</form>";
