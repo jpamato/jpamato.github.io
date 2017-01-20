@@ -36,7 +36,7 @@ $(function(){
 				  "<div class='creador'>"+
 				  "<div class='left'><div class='w3-circle' style='width:50px;height:50px;overflow:hidden;'><img src='"+user["avatar"]+"'></div></div>"+
 					  "<div class='right'>por <a href='usuario.html?userID="+user["userID"]+"'>"+user["nombre"]+"</a></br>"+
-						  "<img src='img/medal.png' style='width:15px;margin-left:-60%;'> <b>"+logros+"</b>"+
+						  "<img src='img/medal.png' style='width:15px;'> <b>"+logros+"</b>"+
 					  "</div>"+
 				  "</div>"+
 				  "<hr>"+

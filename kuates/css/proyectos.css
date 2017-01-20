@@ -6,10 +6,10 @@
 	margin-bottom:30px;
 }
 #filters select{
-	border:solid 2px rgb(254,222,79);
+	border:solid 2px #00c1ec;
 	width:98%;
 	height:35px;
-	color:#001782;
+	color:#00c1ec;
 }
 #filters .w3-col{
 	text-align:center;
@@ -17,8 +17,8 @@
 .lineInput{
 	margin: 11px 0px 0px 1.5%;
 	width:97%;
-	border-color: #001782;
-	color:#001782;
+	border-color: #f19800;
+	color:#f19800;
 }
 .w3-input{	
 	margin-right: 1.5%;
