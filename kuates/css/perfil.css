@@ -2,6 +2,9 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 .mySlides {display:none}
 .w3-tag, .fa {cursor:pointer}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+body{
+	background-color:#dedede;
+}
 
 select{
 	border:none;
@@ -24,7 +27,7 @@ select{
 	overflow:hidden;
 	margin-left: auto;
 	margin-right: auto;
-	border: 3px solid #001782;
+	border: 3px solid #aaa;
 }
 
 #userPhoto img{
@@ -34,19 +37,27 @@ select{
 .lineInput {    
     border-bottom: 3px solid #001782;
     margin-bottom:20px;
+    color: #00c1ec;
 }
 
 .w3-input{
-	color:#0169e8;
+	color: black;
+    	font-family: Vagthin;
+	background-color: inherit;
 }
 
 #date{
 	display:inline-flex;
 	padding: 0px 10px 0px 10px;
+	color: black;
+    	font-family: Vagthin
 }
 
 .edit{
 	font-size: 1.8vw;
 	text-align:right;
 	width:100%;
+}
+footer{
+	background-color: inherit;
 }

@@ -35,17 +35,15 @@ $(function(){
 
 	$(".edit").unbind('click').click( function(){
 		var id = $(this).attr('name');
-		
 		$("#"+id).focus();
-		console.log("ACAAA");		
 	});
 
 	$(".w3-input").focusin(function(){		
-		$(this).css('color','#81f15e');
+		$(this).css('color','#f19800');
 	});
 
 	$(".w3-input").focusout(function(){		
-		$(this).css('color','#0169e8');
+		$(this).css('color','black');
 	});
 
 	$("#contrasena").change(function() {

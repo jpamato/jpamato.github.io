@@ -218,8 +218,9 @@ ul.topnav li.icon {display: none;}
 	max-width: 490px;
 	padding-left: 1%;
 	padding-right: 1%;
-	margin-top: -4px;
+	//margin-top: -4px;
 	z-index: 1000;
+	top:60px;
 }
 #userMenu{
     list-style-type: none;
