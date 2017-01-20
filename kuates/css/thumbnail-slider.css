@@ -4,9 +4,9 @@
     margin:0 auto; /*center-aligned*/
     width:100%;/*width:400px;*/
     max-width:535px;
-    padding:25px 30px 20px 30px;
-    background-color:white;
-    border: solid 3px rgb(116,219,83);
+    padding:20px 30px 20px 30px;
+    background-color:#eee;
+    border: solid 1px rgba(0,0,0,0.1);
     //box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     //box-sizing:border-box;
     position:relative;
@@ -41,7 +41,7 @@
 #thumbnail-slider ul li {
     display:inline-block;
     *display:inline!important; /*IE7 hack*/
-    border:3px solid #001782;
+    //border:3px solid #001782;
     //border-radius:15px;
     margin:0;
     margin-right:15px; /* Spacing between thumbs*/
@@ -81,12 +81,12 @@
     padding-bottom: 27px;
     padding-right: 5px;
     right: -18px;
-    top: 60px;
+    top: 130px;
     position: absolute;
     z-index: 10;
     color: white;
     border: 0px;
-    background-color: #001782;
+    background-color: #00c1ec;
 }
 
 #scrollLeft{
@@ -94,12 +94,12 @@
     padding-bottom: 27px;
     padding-left: 5px;
     left: -18px;
-    top: 60px;
+    top: 130px;
     position: absolute;
     z-index: 10;
     color: white;
     border: 0px;
-    background-color: #001782;
+    background-color: #00c1ec;
 }
 
 #thumbnail-slider ul li.active {

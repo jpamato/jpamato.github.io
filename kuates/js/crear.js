@@ -2,8 +2,8 @@ var proyecto = {};
 var archivos = [];
 var projectIndex = -1;
 $(function(){
-	$('#step1').css('color','#74db53');
-	$('#step1').find('.w3-circle').css('background-color','#74db53');
+	$('#step1').css('color','#f19800');
+	$('#step1').find('.w3-circle').css('background-color','#f19800');
 	$('#step1').find('.w3-circle').css('color','white');
 	$('.holaNombre').html(changeSpecialCase(userReg["nombre"].split(" ")[0].toUpperCase(),true));
 	$('#navLeft').hide();
@@ -51,8 +51,8 @@ $("#scrollLeft").unbind('click').click( function(){
 
 $(".categoria").unbind('click').click( function(){	
 	proyecto['categoria'] = $(this).attr('name');
-	$('.categoria').css('background-color','#01c944');
-	$(this).css('background-color','#0069e9');
+	$('.categoria').css('background-color','#00c1ec');
+	$(this).css('background-color','#f19800');
 });
 
 $(".thumbDelete").unbind('click').click( function(){
@@ -188,37 +188,37 @@ function SaveProject(){
 
 function navDone(last, actual){
 	if(last<actual){		
-		$('#step'+actual).css('color','#74db53');
-		$('#step'+actual).find('.w3-circle').css('background-color','#74db53');
+		$('#step'+actual).css('color','#f19800');
+		$('#step'+actual).find('.w3-circle').css('background-color','#f19800');
 		$('#step'+actual).find('.w3-circle').css('color','white');
 
-		/*$('#step'+last).css('color','rgba(116,219,83,0.1)');
-		$('#step'+last).find('.w3-circle').css('background-color','rgba(116,219,83,0.1)');
-		$('#step'+last).find('.w3-circle').css('border-color','rgba(116,219,83,0.1)');
-		$('#step'+last).find('.w3-circle').css('color','white');*/
-		$('#step'+last).css('color','#74db53');
+		$('#step'+last).css('color','rgba(0,0,0,0.4)');
+		$('#step'+last).find('.w3-circle').css('background-color','rgba(0,0,0,0.25)');
+		$('#step'+last).find('.w3-circle').css('border-color','rgba(0,0,0,0.0)');
+		$('#step'+last).find('.w3-circle').css('color','white');
+		/*$('#step'+last).css('color','#74db53');
 		$('#step'+last).find('.w3-circle').css('background-color','#74db53');
 		$('#step'+last).find('.w3-circle').css('border-color','#74db53');
-		$('#step'+last).find('.w3-circle').css('color','white');
+		$('#step'+last).find('.w3-circle').css('color','white');*/
 
 		if(actual>1)
-			$('#line'+actual).css('border-color','#74db53');
+			$('#line'+actual).css('border-color','rgba(0,0,0,0.2)');
 		if(last>1)
-			$('#line'+last).css('border-color','#74db53');
+			$('#line'+last).css('border-color','rgba(0,0,0,0.2)');
 	}else{
-		$('#step'+actual).css('color','#74db53');
-		$('#step'+actual).find('.w3-circle').css('background-color','#74db53');
+		$('#step'+actual).css('color','#f19800');
+		$('#step'+actual).find('.w3-circle').css('background-color','#f19800');
 		$('#step'+actual).find('.w3-circle').css('color','white');
 
-		$('#step'+last).css('color','rgba(116,219,83,0.3)');
-		$('#step'+last).find('.w3-circle').css('background-color','rgba(116,219,83,0.3)');
-		$('#step'+last).find('.w3-circle').css('border-color','rgba(116,219,83,0.3)');
+		$('#step'+last).css('color','rgba(0,0,0,0.1)');
+		$('#step'+last).find('.w3-circle').css('background-color','rgba(0,0,0,0.1)');
+		$('#step'+last).find('.w3-circle').css('border-color','rgba(0,0,0,0.0)');
 		$('#step'+last).find('.w3-circle').css('color','white');
 
 		if(actual>1)
-			$('#line'+actual).css('border-color','#74db53');
+			$('#line'+actual).css('border-color','rgba(0,0,0,0.2)');
 		if(last>1)
-			$('#line'+last).css('border-color','rgba(116,219,83,0.3)');
+			$('#line'+last).css('border-color','rgba(0,0,0,0.1)');
 	}
 }
 
@@ -253,7 +253,7 @@ function renderImage(file) {
 
 				html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;">'+
 				'<div class="w3-panel" style="width:'+w+'px;height:'+h+'px; background-image: url('+fileURL+'); cursor: pointer;">'+
-				'<span onclick="deleteThumb(this)" style="margin-right:'+(w-85)+'px;" class="w3-closebtn w3-circle thumbDelete">×</span></div></li>';
+				'<span onclick="deleteThumb(this)" style="margin-right:'+(w-84)+'px;" class="w3-closebtn w3-circle thumbDelete">×</span></div></li>';
 				$('#thumbCont').html(html);				
 			}		
 		};
@@ -265,15 +265,15 @@ function renderImage(file) {
 		'<div class="w3-panel" style="padding:0px">'+		
 		'<video width=100px height=100px src='+fileURL+' "video/mp4" controls></video>'+
 		//'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete" style="position:absolute;right:15px">×</span></li>';
-		'<span onclick="deleteThumb(this)" style="position:absolute;right:-1px;" class="w3-closebtn w3-circle thumbDelete">×</span></li>';
+		'<span onclick="deleteThumb(this)" style="position:absolute;right:0px;" class="w3-closebtn w3-circle thumbDelete">×</span></li>';
 		$('#thumbCont').html(html);
 
 	}else{
-		html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;">'+
+		html += '<li class="" title='+file.name+' style="display: inline-block; height: 100px; width: 100px; z-index: 0;background-color:white;">'+
 		'<div class="w3-panel" style="background-image: url(img/doc.png); cursor: pointer;">'+
 		//'<span onclick="deleteThumb(this)" class="w3-closebtn w3-grey thumbDelete">×</span></div>'+
-		'<span onclick="deleteThumb(this)" style="margin-right:-17px;" class="w3-closebtn w3-circle thumbDelete">×</span></div>'+
-		'<span style="font-size: 10px;position: absolute;left: 0px;bottom: 0px;z-index: 1;width: 120px;color: white;background-color: rgba(0,0,0,0.5);">'+file.name+'</SPAN></li>';		
+		'<span onclick="deleteThumb(this)" style="margin-right:-16px;" class="w3-closebtn w3-circle thumbDelete">×</span></div>'+
+		'<span style="font-size: 10px;position: absolute;left: 0px;bottom: 4px;z-index: 1;width: 100px;color:#00c1ec;/*background-color: rgba(0,0,0,0.5);*/">'+file.name+'</SPAN></li>';		
 		$('#thumbCont').html(html);
 	}
 
