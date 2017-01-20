@@ -211,20 +211,32 @@ ul.topnav li.icon {display: none;}
 	padding-right: 10px;
 	font-family:VagBold;
 }
-
+#uMenuCont{
+	position: fixed;
+	left: 50%;
+	width: 45%;
+	max-width: 490px;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-top: -4px;
+	z-index: 1000;
+}
 #userMenu{
     list-style-type: none;
-    position: fixed;
-    background-color: #ffdd42;
-    color: #00c1ec;
-    right: 5.5%;
-    width: 140px;
-    top: 50px;
+    //position: fixed;
+    float:right;
+    background-color: #eee;
+    color: #00c1ec;    
+    //width: 145px;
+    width: 32%;
     padding: 0px 10px 0px 10px;
     font-size: 0.8vw;
     line-height: 2;
-    z-index: 1000;
     font-family:VagBold;
+    margin-top:0px;
+    //z-index: 1000;
+    //top: 50px;
+    //right: 5.5%;    
 }
 
 #userMenu li{
