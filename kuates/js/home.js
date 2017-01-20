@@ -1,6 +1,9 @@
 var proyectos = [];
+var users = [];
 $(function(){
-	var proyectos = localStorage.getItem("projects");
+	proyectos = localStorage.getItem("projects");
+	users = localStorage.getItem("users");
+	users = JSON.parse(users);
 	if(proyectos!=null){
 		//console.log(proyectos);
 		proyectos = JSON.parse(proyectos);
@@ -11,9 +14,8 @@ $(function(){
 	/*proyectos.pop();
 	localStorage.setItem("projects",JSON.stringify(proyectos));*/
 	var html = "";
-	for(var i=0;i<proyectos.length;i++){
-		var users = localStorage.getItem("users");	
-		users = JSON.parse(users);
+	for(var i=0;i<3;i++){	
+		
 		var result = $.grep(users, function(e){ return e.userID == proyectos[i]["userID"]; });
 		var user = result[0];
 
@@ -21,7 +23,7 @@ $(function(){
 		if(proyectos[i]["logros"]!=null)
 			logros = proyectos[i]["logros"];
 
-		getFirstImage(proyectos[i]['archivos']);
+		//getFirstImage(proyectos[i]['archivos']);
 		//console.log(user);
 		html+="<div class='w3-col l4 m6 w3-container w3-padding-12'>"+
 			"<div class='proyecto'>"+
@@ -58,6 +60,20 @@ $(function(){
 	
 	$("#projectList").html(html);
 
+	$("#favBox li").unbind('click').click( function(){
+		console.log("ACA");
+		$("#favBox li").css("color","#193462");
+		$("#favBox li").css("background-color","white");
+		$(this).css("background-color","#f19800");
+		$(this).css("color","white");
+		var index = parseInt(Math.random()*proyectos.length,10);
+		setProyImg(index);
+		setProyDesc(index);
+	});
+
+	setProyImg(0);
+	setProyDesc(0);
+
 });
 
 function getFirstImage(archivos){
@@ -65,6 +81,44 @@ function getFirstImage(archivos){
 		if(archivos[i].includes("data:image"))
 			return archivos[i];
 	}
+}
+
+function setProyImg(i){
+		var html= "<div style='width:100%;height:1px;padding-bottom:65%;overflow:hidden;'><img src="+getFirstImage(proyectos[i]['archivos'])+" style='width:100%;margin:0px;margin-right: 10px;'></div>";			  
+		$("#favImg").html(html);
+}
+
+function setProyDesc(i){
+	var result = $.grep(users, function(e){ return e.userID == proyectos[i]["userID"]; });
+	var user = result[0];
+
+	var logros=0;
+	if(proyectos[i]["logros"]!=null)
+		logros = proyectos[i]["logros"];
+
+	var html = "<div class='titleCont'>"+
+				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h6 style='font-family:Vagbold'>"+proyectos[i]['nombre']+"</h6></a>"+
+				  "</div>"+
+				  "<div class='creador'>"+
+				  "<div class='left'><div class='w3-circle' style='width:20px;height:20px;overflow:hidden; margin-top:-5px;'><img src='"+user["avatar"]+"'></div></div>"+
+				  	"<div style='display:flex;'>por </br><a href='usuario.html?userID="+user["userID"]+"'>"+user["nombre"]+"</a></div>"+
+					  "<div class='right'><img src='img/medal.png' style='width:15px;margin-left:1px;margin-top:-5px;'> <b>"+logros+"</b>"+
+					  "</div>"+
+				  "</div>"+
+				  "</div>"+
+				  "<div class='pDesc'><p style='margin:0px;font-size:0.8vw;'>"+proyectos[i]['descripcion']+"</p></div>"+
+				  "<div class='bottomCont' >"+
+				  "<div class='pEstado left' style='width:100%;'>"+
+				  "<div class='tortaFrame'>"+
+				  "<div class='w3-circle completo'>&nbsp;</div>"+
+				  "<div class='quarter-circle incompleto'>&nbsp;</div>"+
+				  "<div class='w3-circle interior'>75%</div>"+				  
+				  "</div></div>"+
+				  "<div class='pEstado right' style='width:100%;text-align:center;padding-top:15px;'><span style='color: #00c1ea;font-family: Vagbold;font-size: 0.9vw;margin-left:-60%;'>9 d&iacute;as restantes</span></div>"+
+				  "<br>"+
+				  
+				  "</div>";
+	$("#favDesc").html(html);
 }
 
 function getCategoria(cat){

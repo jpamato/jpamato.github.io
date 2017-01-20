@@ -44,7 +44,7 @@ body{
 	position:fixed;
 	z-index:1000;
 	color:black;
-	background-color:rgba(254,222,79,0.9);
+	background-color:#ebebeb;
 	text-align:center;
 	top:100px;
 	left:35%;
@@ -64,8 +64,8 @@ body{
 	font-size:4vh;
 }
 #dialog ul li:hover{
-	color:rgb(254,222,79);
-	background-color:#001782;
+	color:white;
+	background-color:#db9600;
 }
 
 #dialog span.w3-closebtn{
@@ -90,8 +90,8 @@ body{
 #navTitle img{
 	//width:150%;
 	//margin-left:-25%;
-	width: 30vw;
-	margin-left: -6vw;
+	width: 12vw;
+	//margin-left: -6vw;
 }
 
 .w3-btn.kButton{
@@ -103,8 +103,8 @@ body{
 }
 
 .w3-btn.blueButton{
-	background-color:#001782;
-	border:solid 2px #001782;
+	background-color:#00c1ec;
+	border:solid 2px #00c1ec;
 }
 
 #crear button.w3-btn{
@@ -114,8 +114,8 @@ body{
 
 .w3-btn.alphaButton{
 	background-color:rgba(255,255,255,0.3);
-	color:#001782;
-	border:solid 2px #001782;	
+	color:#00c1ec;
+	border:solid 2px #00c1ec;	
 }
 
 .w3-btn.navButton{
@@ -158,6 +158,14 @@ ul.topnav li a:hover {
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {display: none;}
 
+#ingresar{
+	color:#db9600;
+	font-size:1vw;
+	padding: 13px 16px 10px 16px;
+	font-family:Vagbold;
+	letter-spacing: 3px;
+}
+
 #menuBars{
 	color:#ddd;
 	font-size:30px;
@@ -173,7 +181,8 @@ ul.topnav li.icon {display: none;}
 }
 #logged #imgCont{
 	width:50px;height:50px;overflow:hidden;
-	border: solid 2px #ffdd42;
+	border: solid 2px #f19800;
+	z-index: 10;
 }
 #logged img{
 	width:50px;
@@ -190,11 +199,13 @@ ul.topnav li.icon {display: none;}
 }
 
 #logged h5{
-	color:#001782;
+	color:#f19800;
+	background-color:#ececec;
 	margin:0px 0px 0px -20px;
-	border-style: solid solid solid none;    	
-    	border-color: #ffdd42;    	
-    	border-width: 2px;
+	//border-style: solid solid solid none;    	
+    	//border-color: #ffdd42;    	
+    	//border-width: 2px;
+	border:none;
     	padding-top: 8px;
 	padding-left: 25px;
 	padding-right: 10px;
@@ -205,7 +216,7 @@ ul.topnav li.icon {display: none;}
     list-style-type: none;
     position: fixed;
     background-color: #ffdd42;
-    color: #001782;
+    color: #00c1ec;
     right: 5.5%;
     width: 140px;
     top: 50px;
@@ -228,13 +239,22 @@ ul.topnav li.icon {display: none;}
 	//left:-8px;
 }
 
-footer.w3-container{
-	background-color:#001782;
-	color:white;
+footer{
+	background-color:white;
+	color:grey;
 	margin-top:40px;
-	padding: 0px 15vw  16px 15vw;
+	//padding: 0px 15vw  16px 15vw;
 	font-size: 10px;
     	font-family: Arial;
+}
+
+#footerMenu{
+	margin-top:0px;
+}
+
+#footerMenu li{
+	display:inline;
+	margin-right: 1vw;
 }
 
 #safe{
@@ -244,6 +264,7 @@ footer.w3-container{
 
 footer a{
 	text-decoration:none;
+	color:#00adf9;
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */

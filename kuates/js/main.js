@@ -177,13 +177,15 @@ var app = (function(){
 			this.user = localStorage.getItem("user");
 			this.uID = localStorage.getItem("userID");
 			$('#loggedName').html(this.user);
-			$("#crear").show();
-			$("#explorar").show();
+			//$("#crear").show();
+			//$("#explorar").show();
+			$("#ingresar").hide();
 		}else{
 			$('#menuBars').show();
 			$('#logged').hide();
-			$("#crear").hide();
-			$("#explorar").hide();
+			//$("#crear").hide();
+			//$("#explorar").hide();
+			$("#ingresar").show();
 		}
 	}
 
@@ -240,7 +242,7 @@ $("#menuBars").unbind('click').click( function(){
 	$('#dialog').css("width","100%");
 	$('#dialog').css("height","100%");
 	$('#dialog').css("padding","0px 4%");
-	$('#dialog').css("color","#001782");
+	$('#dialog').css("color","#00c1ea");
 	var html = "<ul><li onclick='ingresar()'>LOGIN/REGISTRO</li>"+
 			"<li onclick=location.href='explorar.html'>PROYECTOS DESTACADOS</li>"+
 			"<li>FAQS</li>"+
@@ -251,8 +253,8 @@ $("#menuBars").unbind('click').click( function(){
 	fullMaskToggle();
 	});
 
-function ingresar(){
-	fullMaskToggle();
+function ingresar(val=true){
+	if(val)fullMaskToggle();
 	$('#dialog').css("top","-16px");
 	$('#dialog').css("left","-16px");
 	$('#dialog').css("width","100%");
@@ -266,8 +268,8 @@ function ingresar(){
 
 	var html = "<H4>INGRESAR</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;margin-bottom: -4vw;'></div>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;margin-bottom: -4vw;'></div>"+		
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;'></div>"+
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;'></div>"+		
 		"<div style='font-size:1vw'><input class='w3-check' type='checkbox' ><label>RECORDARME</label>"+
 		"<a style='float:right;margin-top:10px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
 		"<H4 style='text-align:center;' onclick='logIn()'>ENTRAR</H4>"+
@@ -283,6 +285,7 @@ function ingresar(){
 function logIn(){
 	if(checkUsers($('#email').val(),$('#pass').val())){
 		$('#menuBars').hide();
+		$('#ingresar').hide();
 		$('#logged').show();
 		$('#dialog').hide();
 		$('#logged img').attr("src",localStorage.getItem("avatar"));
@@ -351,11 +354,11 @@ function getPassword(){
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#001782");
 
-	var html = "<H4 style='margin:20px 0px 20px 0px;'>OLVID&Eacute; MI CONTRASE&Ntilde;A</H4>"+
+	var html = "<H4 style='margin:20px 0px 20px 0px;font-family: Vagbold;'>OLVID&Eacute; MI CONTRASE&Ntilde;A</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>EMAIL</b></label><input class='w3-input' type='text' style='background-color:inherit;margin-bottom: -4vw;'></div>"+
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label style='color:#00c1ea;'><b>EMAIL</b></label><input class='w3-input' type='text' style='background-color:inherit; color:#db9600;'></div>"+
 		"<H6 style='text-align:center;margin-top:20px;'>Te enviaremos un email con tu contrase&ntilde;a</H6>"+
-		"<H4 style='text-align:center;' onclick='send(this)'>RECUPERAR</H4>"+
+		"<div style='width:100%;text-align:center;'><button class='w3-btn kButton blueButton' onclick='send(this)'>RECUPERAR</button></div>"+
 		"</form>";
 	$('#dialogContent').html(html);
 	$('#dialog').show();

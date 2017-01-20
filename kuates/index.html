@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/proyectos.css">
 
 
 <body>
@@ -17,29 +18,32 @@
 	<div id='dialogContent'>&nbsp;</div>
 </div>
 
-<!-- Links (sit on top) -->
-<ul class="w3-top topnav" id="myTopnav" style='background-color:rgba(0,0,0,0.0);'>
+<ul class="w3-top topnav" id="myTopnav">
 	
-	<div class="w3-col s5 m5 l5">
+<!--<div class="w3-col s5 m5 l5">-->
+	<div class="w3-content">
 	<div class='left'>
-		&nbsp;
+		<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'"><img src='img/logo.png'></div>
+	
+	</div>
+	<!--</div>-->
+	
+
+
+	<!--<div class="w3-col s5 m5 l5">-->
+	<div class='right'>   
+			&nbsp;
 		<li class="icon">
 		<a href="javascript:void(0);" onclick="NavToggle()"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		</li>
-		<!--<li id='crear'><button class="w3-btn kButton blueButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
-		<li id='explorar'><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></li>-->
-	</div>
-	</div>
-	
-
-	<div id='navTitle' class="w3-col s2 m2 l2" onclick="javascript:location.href='index.html'">&nbsp;</div>
-
-	<div class="w3-col s5 m5 l5">
-	<div class='right'>   
+		<li id='crear'><button class="w3-btn kButton blueButton" onclick="javascript:location.href='crear.html'">CREA</button></li>
+		<li id='explorar'><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></li>		
+		<li id='ingresar' onclick="ingresar(false)">INGRESA <i class="fa fa-user" aria-hidden="true"></i></li>
 		<li id='menuBars'><i class="fa fa-bars" aria-hidden="true"></i></li>
 		<li id=logged style='display:none;'><span><div id='imgCont' class='w3-circle'><img src='img/avatar.png'></div><h5 onclick="toggleMenu()"><span id='loggedName'>Carola </span><span id='loggedArrow'><i class="fa fa-angle-down"></i></span></h5></span></li>
 	</div>
-</div>
+	</div>
+	<!--</div>-->
 </ul>
 
 <ul id='userMenu' style='display:none;'>
@@ -50,32 +54,121 @@
 	<li onclick="logOut()"><b>Salir</b></li>
 </ul>
 
+<div id='banner'>
+	<img src='img/banner.jpg'>
+</div>
 
-  <div class="w3-content" style="max-width:1100px;margin-top:50px;">
-	  <div class='w3-center'><img id='logoHome' src='img/logo_home.png'><br/>
-	 		
-		  <span style='display:inline-flex'>
-		  <div id='crear2'><button class="w3-btn kButton blueButton">CREA</button></div>&nbsp;
-		<div><button class="w3-btn kButton alphaButton" onclick="javascript:location.href='explorar.html'">DESCUBRE PROYECTOS <i class="fa fa-search" aria-hidden="true"></i></button></div>		
-	</span>
-	  	
+  <div class="w3-content" style="max-width:1100px;text-align:center;">
+	
+
+	  <div id='queEs'>
+		  <div class='left' style='width:70%;padding-left:10px;'>
+			  <span style='text-align:left;display:inline-flex;'><img src='img/tuercas.png' style="height: 7vw;opacity: 0.5;filter: alpha(opacity=50);">
+				<h2 style='font-family:Vagbold;color:#db9600;margin-top:15%;'>&iquest;QU&Eacute; ES KUATES?</h2></span>
+				<p style='text-align:left;color:#444;padding-left:30%;margin-top:-12px;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dapibus nunc. Phasellus porttitor dui in risus rutrum faucibus. Phasellus posuere, nibh</p>
+				<div style='text-align:right;'>
+					<button class='w3-btn kButton blueButton'>CREA TU PROYECTO</button>
+				</div>
+
+
+		  </div>
+		  <div class='right'>
+			<img src='img/antena.png' style='width:100%;'>
+		  </div>	
 	  </div>
+
+	  
+	  <div id='favoritos'>
+		  <h5 style='font-family:Vagbold;color:#193462;text-align:left;'>LOS FAVORITOS</h5>
+		  <div id='favBox'>
+			<div class="w3-col s2 m2 l2" style='text-align:left;'>
+				<ul>
+					<li style='background-color:#f19800;color:white;'>Tecnolog&iacute;a</li>
+					<li>Art&iacute;stico</li>
+					<li>Sustentable</li>
+					<li>Social</li>
+				</ul>
+
+			</div>
+
+			<div id="favImg" class="w3-col s6 m6 l6" style='text-align:center;'>
+				<div style='width: 100%;height: 1px;padding-bottom: 56.25%;overflow: hidden;'>
+					<img src='img/workbench.jpg' style='width: 100%;margin: 0px;margin-right: 10px;'>
+				</div>
+
+			</div>
+
+			<div id="favDesc" class="w3-col s4 m4 l4" style='text-align:center;'>
+
+			</div>
+		  </div>
+
+	  </div>
+	  <br>
+
+	<div id='otros'>
+		<h5>OTROS PROYECTOS POPULARES</h5>
+		<div id="projectList">
+
+		</div>
+	</div>
+	 		
 		
 	 	 
   </div>
 
 <!-- Footer -->
 
-<footer class="w3-container">
-	<img class='right' id="safe" src='img/safe.png'><br/>
+<footer>
+	<div class="w3-content">
+	<!--<img class='right' id="safe" src='img/safe.png'><br/>-->
 	<div class='left'>&#169;KUATES</div>
-	<div class='right'>Aviso de privacidad</div>
+	<ul id='footerMenu' class='right'>
+		<li>Contacto</li>
+		<li>Faqs</li>
+		<li>Ayuda</li>
+		<li>T&eacute;rminos y Condiciones</li>
+		<li>Aviso de privacidad</li>
+	</ul>
+	</div>
+	</div>
+	</br>
+	<hr style='width:100%;border: solid 3px #00d59b;margin-bottom:0px;'>
+
+	<div style='padding-top: 20px;padding-bottom:20px;background-color: #383c3e;color:white;display: flex;font-size: 1vw;font-family: Verdana, Geneva, sans-serif;'>
+		<div class="w3-content" style='width:100%;'>
+			<div class="w3-col s4 m4 l4">
+				</br>
+				</br>
+				<img src='img/logoSep.png' style='width: 150px;'>
+			</div>
+
+			<div class="w3-col s4 m4 l4" style='text-align:center;'>
+				Reforma 122, piso 1, Colonia Ju&aacute;rez, C.P.06600</br>
+				Delegaci&oacute;n Cuauht&eacute;moc, Ciudad de M&eacute;xico.</br>
+				<a href="mailto:aprende20_contacto@nube.sep.gob.mx">aprende20_contacto@nube.sep.gob.mx</a></br>
+				<a href="www.gob.mx/aprendemx">www.gob.mx/aprendemx</a></br>
+				<a href="#">Accesibilidad</a></br>
+				<a href="#">Política de privacidad</a></br>
+			</div>
+
+			<div class="w3-col s4 m4 l4" style='text-align:right;'>
+				</br>
+				</br>
+				</br>
+				COORDINACI&Oacute;N GENERAL<br/>
+				@<b>prende.mx</b>
+			</div>
+
+		</div>
+	</div>
 </footer>
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <script src="js/lib/jquery.min.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/home.js"></script>
 
 <script>
 
