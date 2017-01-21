@@ -94,6 +94,10 @@ body{
 	//margin-left: -6vw;
 }
 
+.w3-btn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
 .w3-btn.kButton{
 	font-size: 1vw;
 	letter-spacing: 3px;
