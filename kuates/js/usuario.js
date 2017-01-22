@@ -30,8 +30,8 @@ $(function(){
 		var logro = 0;	
 		if(proyectos[i]["logros"]!=null){
 			logro = proyectos[i]["logros"];
-			logros+="<div class='left' style='font-size:33px;margin-right:25px;margin-left:5%;'><img src='img/medal.png' style='width:25px;margin-top:20px;'></div>"+
-				"<h6 style='text-align:left;font-size:1vw;line-height:1.2;padding-top:15px;font-family:Vagbold;'>"+proyectos[i]['nombre']+"</h6><br/><hr style='margin:0px'>";
+			logros+="<div class='left' style='font-size:33px;margin-right:25px;margin-left:5%;'><img src='img/medal_2.png' style='width:25px;margin-top:20px;'></div>"+
+				"<h6 style='text-align:left;font-size:1vw;line-height:1.2;padding-top:15px;font-family:Vagthin;'>"+proyectos[i]['nombre']+"</h6><br/><hr style='margin:0px'>";
 			cantLogros++;
 		}
 		
@@ -72,7 +72,7 @@ $(function(){
 	
 	$("#projectList").html(html);
 	$("#logros").html(logros);
-	//$("#cantLogros").html("LOGROS:"+cantLogros);
+	$("#logrosTit").html("LOGROS: <b style='color:#001782;'>"+cantLogros+"</b>");
 
 	var votados = "";
 	if(user["votados"]!=null){
@@ -82,8 +82,11 @@ $(function(){
 		for(var i=0;i<user["votados"].length;i++){
 			proyecto = $.grep(proyectos, function(e){ return e.projectID == user["votados"][i]; })[0];
 			votados+="<div class='left' style='font-size:33px;margin-right:25px;margin-left:5%;'><img src='img/like.png' style='width:25px;margin-top:20px;'></div>"+
-				"<h6 style='text-align:left;font-size:1vw;line-height:1.2;padding-top:11px;'><a href='proyecto.html?projectID="+user['votados'][i]+"'><b>"+proyecto['nombre']+"</b></a></h6><br/><hr style='border-color:blue;margin:0px'>";
+				"<h6 style='text-align:left;font-size:1vw;line-height:1.2;padding-top:11px;'><a href='proyecto.html?projectID="+user['votados'][i]+"'><b>"+proyecto['nombre']+"</b></a></h6><br/>";
+			if(i<user["votados"].length-1)
+				votados+="<hr style='border-color:inherit;margin:0px'>";
 		}
+		$("#votadosTit").html("VOTADOS: <b style='color:#001782;'>"+user["votados"].length+"</b>");
 	}
 	$("#pVotados").html(votados);
 });

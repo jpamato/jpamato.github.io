@@ -1,24 +1,26 @@
 .sectTitle{
     padding-left: 20px;
     Font-family: Vagbold;
-    color: #0069e9;
+    color: #0598ff;
     letter-spacing: 3px;
 }
 
 #userData{
-	background-color: rgb(254,222,79);	
+	background-color: #eee;	
 	padding-top: 70px;
-	margin-top: -83px;
+	margin-top: -88px;
 	padding-bottom: 20px;
+	border: solid 1px #aaa;
 }
 
 #avatar{
 	width:128px;
 	height:128px;
 	overflow:hidden;
-	border:solid 3px rgb(254,222,79);
+	border:solid 3px #aaa;
 	margin-left:auto;
 	margin-right:auto;
+	display:inline-block;
 }
 
 #avatar img{
@@ -27,16 +29,23 @@
 
 #userName{
 	font-size:2vw;
+	color:#00c1ec;
 }
-
+#ciudad{
+	color:#f19800;
+}
+#stats{
+	text-align:left;
+}
 #logrosTit{
 	margin-top: 50px;
 	font-family: Vagbold;
-	background-color: #001782;
-	color: #c0ecf9;
+	background-color: #00d59b;
+	color: white;
 	letter-spacing: 3px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	padding-left: 35px;
 }
 
 #logros{
@@ -45,8 +54,10 @@
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-top: 2px;
-	background-color: #c0ecf9;
+	background-color: #eee;
+	color: #444;
 	margin-top: -10px;
+	border:solid 1px #aaa;
 }
 
 #pVotados{
@@ -58,14 +69,17 @@
 	background-color: white;
 	margin-top: -10px;
 	margin-bottom: 50px;
+	border:solid 1px #aaa;
+	color:#777;
 }
 
 #votadosTit{
 	margin-top: 50px;
 	font-family: Vagbold;
-	background-color: #019cde;
+	background-color: #00c1ec;
 	color: white;
 	letter-spacing: 3px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	padding-left: 35px;
 }
