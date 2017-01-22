@@ -8,19 +8,22 @@ select{
 }
 .lineInput{
 	margin-top:30px;
-	border-bottom: 3px solid #001782;
+	border-bottom: 3px solid #aaa;
 }
 #contactForm{
 	font-family:Vagbold;
-	color:#001782;
+	color:#00c1ec;
+	letter-spacing: 2px;
 }
 #contactMess{
 	width:480px;
 	height:100px;
 	//margin-top:40px;
-	border-bottom: 3px solid #001782;
+	border-bottom: 3px solid #aaa;
 	resize:none;
 }
 .w3-input{
-	color:#81f15e;
+	color:#f19800;
+	font-family: Vagthin;
+	margin-top: -4px;
 }

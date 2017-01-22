@@ -83,7 +83,7 @@ function getCategoria(cat){
 		text = "<h6>ALGO "+changeSpecialCase(cat.toUpperCase(),true)+"</h6>";
 	}else if(cat=="ayude"){
 		//text = "<img src='img/ayude.png'><h6>Algo que "+cat+"</h6>";
-		text = "<h6>ALGO que "+changeSpecialCase(cat.toUpperCase(),true)+"</h6>";
+		text = "<h6>ALGO QUE "+changeSpecialCase(cat.toUpperCase(),true)+"</h6>";
 	}else if(cat=="inspirador"){
 		//text = "<img src='img/inspirador.png'><h6>Algo "+cat+"</h6>";
 		text = "<h6>ALGO "+changeSpecialCase(cat.toUpperCase(),true)+"</h6>";

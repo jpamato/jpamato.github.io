@@ -16,7 +16,7 @@ $(function(){
 
 	console.log(proyecto);
 	$("#portada").attr('src',getFirstImage(proyecto["archivos"]));
-	$("#categoria").html(proyecto["categoria"]);
+	$("#categoria").html(getCategoria(proyecto["categoria"]));
 	$("#pTitle").html(changeSpecialCase(proyecto["nombre"].toUpperCase(),true));
 
 	if(app.log!=1){
@@ -50,7 +50,7 @@ $(function(){
 	}
 
 	$("#avatar").attr('src',user['avatar']);
-	$("#ciudad").html(user["ciudad"]);
+	$("#ciudad").html(changeSpecialCase(user["ciudad"].toUpperCase(),true));
 	$("#userName").html(changeSpecialCase(user["nombre"].toUpperCase(),true));
 	$("#userName").attr("href","usuario.html?userID="+user["userID"]);
 
@@ -267,4 +267,34 @@ function getFirstImage(archivos){
 		if(archivos[i].includes("data:image"))
 			return archivos[i];
 	}
+}
+
+function getCategoria(cat){
+	var text = "";
+	if(cat=='invento'){
+		//text = "<img src='img/invento.png'><h6>Un "+cat+"</h6>";
+		text = "UN "+changeSpecialCase(cat.toUpperCase(),true);
+	}else if(cat=='soluci&#243;n'){
+		//text = "<img src='img/solucion.png'><h6>Una "+cat+"</h6>";
+		text = "UNA "+changeSpecialCase(cat.toUpperCase(),true);
+	}else if(cat=="fant&#225;stico"){
+		//text = "<img src='img/fantastico.png'><h6>Algo "+cat+"</h6>";
+		text = "ALGO "+changeSpecialCase(cat.toUpperCase(),true);
+	}else if(cat=="divertido"){
+		//text = "<img src='img/divertido.png'><h6>Algo "+cat+"</h6>";
+		text = "<h6>ALGO "+changeSpecialCase(cat.toUpperCase(),true);
+	}else if(cat=="ayude"){
+		//text = "<img src='img/ayude.png'><h6>Algo que "+cat+"</h6>";
+		text = "ALGO QUE "+changeSpecialCase(cat.toUpperCase(),true);
+	}else if(cat=="inspirador"){
+		//text = "<img src='img/inspirador.png'><h6>Algo "+cat+"</h6>";
+		text = "ALGO "+changeSpecialCase(cat.toUpperCase(),true);
+	}else if(cat=="m&#250;sica"){
+		//text = "<img src='img/musica.png'><h6>Musical"+"</h6>";
+		text = "MUSICAL";
+	}else if(cat=="art&#237;stico"){
+		//text = "<img src='img/artistico.png'><h6>Art&#237;stico"+"</h6>";
+		text = "ART&#237;STICO";
+	}
+	return text;
 }

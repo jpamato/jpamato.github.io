@@ -8,12 +8,20 @@ select{
 }
 
 #categoria{
-	background-color: black;
-	color: white;
-	width: 150px;
-	text-align: center;
-	margin: auto;
-	margin-bottom:30px;
+	background-color: #f19800;
+    	color: white;
+    	/* width: 150px; */
+    	/* text-align: center; */
+    	margin-bottom: 30px;
+    	/* width: 40%; */
+    	padding: 10px 20px;
+    	font-family: VAgbold;
+    	letter-spacing: 2px;
+}
+#pTitle{
+    margin-top: 20px;
+    font-family: Vagbold;
+    color:#001783;
 }
 
 .mySlides {
@@ -23,7 +31,7 @@ select{
     
     text-align: center;  /* align the inline(-block) elements horizontally */
     font: 0/0 a;         /* remove the gap between inline(-block) elements */
-    background-color: grey;
+    background-color: white;
 }
 
 .mySlides:before {      /* create a full-height inline block pseudo-element */
@@ -41,7 +49,19 @@ select{
     padding: 5px;
     //border: 2px solid black;
 }
-
+.w3-btn-floating {
+	background-color:rgba(0,0,0,0.2);
+	//color:black;
+}
+.w3-btn-floating:hover {
+    box-shadow: none;
+}
+.w3-display-right {
+	right:1%
+}
+.w3-display-left {
+	left:1%
+}
 .barraLlena{
 	float:left;
 	background-color:#eee;
@@ -59,28 +79,108 @@ select{
 }
 
 #creador img{
-	margin-bottom:-15%;
+	//margin-bottom:-15%;
 }
 
 #stats{
-	background-color: #ccc;
-	padding-top: 50px;
+	background-color: #eee;
+	padding-top: 70px;
 	padding-bottom: 20px;
+	margin-top:-60px;
+	border: solid 1px #aaa;
+	color: #001783;	
 }
-#creador button{
+#stats p{
+	font-family:Vagbold;
+	line-height:10px;
+	font-size:0.8vw;margin-top:0px;text-align:center;
+}
+.statNumber{
+	font-family:Vagbold;
+	font-size:16px;
+}
+#userName{
+	font-family:Vagbold;
+	color:#00c1ec;
+	letter-spacing: 3px;
+	font-size: 1.5vw;
+}
+#ciudad{
+	color:#f19800;
+	font-family: Vagbold;
+	letter-spacing: 1px;
+	font-size: 1vw;
+}
+
+.logradoCont{
+	margin-top:20px;
+	display:inline-block;
+}
+
+.tortaFrame{
+	width: 80px;
+    height: 80px;
+    //margin: auto;
+    float: right;
+}
+.quarter-circle {
+    background-color:#c06;
+    height:100%;
+    width: 100%;
+    -moz-border-radius: 100% 0 0 0;
+    border-radius: 100% 0 0 0;
+}
+
+.tortaFrame .completo{
+    width: 80px;
+    height: 80px;
+    background-color: #001783;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tortaFrame .incompleto{
+    background-color: #00c1ea;
+    width: 40px;
+    height: 40px;
+    margin-top: -80px;
+    margin-left: 0px;	
+}
+
+.tortaFrame .interior{
+    width: 50px;
+    height: 50px;
+    border: solid 3px white;
+    padding: 10px 0px 0px 2px;
+    background-color: white;
+    margin-top: -25px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-family: Vagbold;
+    color: #001783;
+}
+
+/*#creador button{
 	font-size: 1.5vw;
 	width: 100%;
 	margin-top: 15px;
 	background-color: white;
-}
+}*/
 #pFiles p{
 	font-size:0.8vw;
 }
 #pDescrip{
-	text-align:left;
-	font-size:1.25vw;
+	text-align: left;
+	font-size: 1.25vw;
+	color: #555;
+	font-family: Vagthin;
 }
-
+#pDescrip h6{
+	font-Family: Vagbold;
+	font-size: 1vw;
+	color: #aaa;
+	letter-spacing: 1px;
+}
 #feedback{
 	display: flex;
 	background-color: grey;
