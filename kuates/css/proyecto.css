@@ -183,35 +183,61 @@ select{
 }
 #feedback{
 	display: flex;
-	background-color: grey;
-	color: white;
+	background-color: white;
+	color: #444;
 	padding-left: 15px;
 	height:100%;
-	padding: 30px 50px 30px 50px;
+	padding: 30px 50px 30px 35px;
 }
 
 #comentarios{
 	padding-right:50px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-color:#eee;
+	border: solid 1px #aaa;
 }
 
 .comment .avatar{
 	text-align: left;
-	margin-right: 20px;
+	//margin-right: 20px;
+}
+
+.comment hr{
+	width: 99%;
+	border: solid 1px #444;
+	margin-top: 5px;
+	margin-left: 4%;
 }
 
 .comment p{
 	margin-top: 5px;
 	line-height: 1;
+	font-family:Vagthin;
+	color:#555;
+	margin-bottom: 5px;
+}
+.comment .w3-container{
+	padding-right:0px;
+}
+
+.likeComm{
+	color:white;
+	background-color:#00c1ec;
+	padding: 10px 0px;
+	font-size: 1.5vw;
+	margin-top: 15px;
 }
 
 #toComment{
-	background-color:#ddd;
+	///background-color:#ddd;
 	padding-top: 7px;
 }
 
 #toComment textarea{
 	width:100%;
 	resize:none;
+	height: 100px;
 }
 
 #thumbCont{
@@ -225,9 +251,51 @@ select{
 	list-style-type: none;
 	margin-right: 10px;
 }
+.commentName{
+	font-family: Vagbold;
+	color: #001783;
+}
+.denunciar{
+	font-family: Vagbold;
+	color: rgba(0,0,0,0.2);
+	font-size: 1.1vw;
+}
 
 .thumbDelete{
     padding-left: 5px;
     padding-right: 5px;
     margin-right: -15px;
+}
+#backers{
+	padding-left:35px;
+}
+#backers h3{
+	background-color: #00c1ec;
+	color: white;
+	font-family: Vagbold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: solid 1px #aaa;
+	border-style: solid solid none solid;
+}
+#backers hr{
+	width: 95%;
+	border: solid 1px;
+	margin: 15px auto 0px auto;
+}
+.backer{
+	border: solid 1px #aaa;
+	border-style: none solid none solid;
+	padding: 15px;
+}
+.addFiles{
+	color:white;
+	padding-top: 15px;
+}
+
+.addFiles label{
+    background-color: #00c1ec;
+    /* text-align: center; */
+    padding: 7px;
+    margin-right: 5px;
 }
