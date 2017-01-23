@@ -227,7 +227,7 @@ function send(e){
 	e.parentElement.parentElement.parentElement.style.display='none';	
 	fullMaskToggle();
 }
-$("#crear2").unbind('click').click( function(){
+$("#crear").unbind('click').click( function(){
 		if(app.log==1){
 			location.href='crear.html';
 		}else{
@@ -243,6 +243,7 @@ $("#menuBars").unbind('click').click( function(){
 	$('#dialog').css("height","100%");
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#00c1ea");
+	$('#dialogContent').css("width","50%");
 	var html = "<ul><li onclick='ingresar()'>LOGIN/REGISTRO</li>"+
 			"<li onclick=location.href='explorar.html'>PROYECTOS DESTACADOS</li>"+
 			"<li>FAQS</li>"+
@@ -266,16 +267,16 @@ function ingresar(val=true){
 	$('#dialogContent').css("margin-right","auto");
 	$('#dialogContent').css("margin-top","120px");
 
-	var html = "<H4>INGRESAR</H4>"+
+	var html = "<H4 style='font-family:Vagbold;letter-spacing:2px;'>LOGIN</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;'></div>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;'></div>"+		
-		"<div style='font-size:1vw'><input class='w3-check' type='checkbox' ><label>RECORDARME</label>"+
-		"<a style='float:right;margin-top:10px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div>"+
-		"<H4 style='text-align:center;' onclick='logIn()'>ENTRAR</H4>"+
-		"<hr style='border-bottom: 1px dashed;'>"+
-		"<H4 style='text-align:center;'>&iquest;NO TIENES USUARIO?</H4>"+
-		"<H4 style='text-align:center;' onclick=location.href='sign.html'>REGISTRARME</H4>"+
+		"<div style='display:flex;width:100%;border-bottom: 3px solid #808080;padding-bottom:5px;margin-bottom:10px;'><label><b>CORREO</b></label><input id='email' class='w3-input' type='text' style='background-color:inherit;color:#f19800;'></div>"+
+		"<div style='display:flex;width:100%;border-bottom: 3px solid #808080;padding-bottom:5px;margin-bottom:10px;'><label><b>CONTRASE&Ntilde;A</b></label><input id='pass' class='w3-input' type='text' style='background-color:inherit;color:#f19800;'></div>"+		
+		"<div style='font-size:1vw'><input class='w3-check' type='checkbox' ><label style='color:rgba(0,0,0,0.2);'>RECORDARME</label>"+
+		"<a style='float:right;margin-top:10px;color:rgba(0,0,0,0.2);letter-spacing:2px;' href='#' onclick='getPassword()'>OLVID&Eacute; MI CONTRASE&Ntilde;A</a></div><br>"+
+		"<button class='w3-btn kButton blueButton' style='width:100%;' onclick='logIn()'>ENTRAR</button><br>"+
+		"<hr style='width:100%;border:solid 1px #aaa'>"+
+		"<H4 style='text-align:center;font-family:Vagbold;'>&iquest;NO TIENES USUARIO?</H4>"+
+		"<button class='w3-btn kButton blueButton' style='width:100%;' onclick=location.href='sign.html'>REGISTRARME</button>"+
 		"</form>";
 	$('#dialogContent').html(html);
 	$('#dialog').show();
@@ -356,9 +357,9 @@ function getPassword(){
 
 	var html = "<H4 style='margin:20px 0px 20px 0px;font-family: Vagbold;'>OLVID&Eacute; MI CONTRASE&Ntilde;A</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
-		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label style='color:#00c1ea;'><b>EMAIL</b></label><input class='w3-input' type='text' style='background-color:inherit; color:#db9600;'></div>"+
-		"<H6 style='text-align:center;margin-top:20px;'>Te enviaremos un email con tu contrase&ntilde;a</H6>"+
-		"<div style='width:100%;text-align:center;'><button class='w3-btn kButton blueButton' onclick='send(this)'>RECUPERAR</button></div>"+
+		"<div style='display:flex;width:100%;border-bottom: 2px solid #808080;'><label style='color:#00c1ea;letter-spacing:2px;'><b>EMAIL</b></label><input class='w3-input' type='text' style='background-color:inherit; color:#db9600;'></div>"+
+		"<H6 style='text-align:center;margin-top:20px;margin-bottom:30px;color:rgba(0,0,0,0.5);'>Te enviaremos un email con tu contrase&ntilde;a</H6>"+
+		"<div style='width:100%;text-align:center;'><button class='w3-btn kButton blueButton' style='width:100%;' onclick='send(this)'>RECUPERAR</button></div>"+
 		"</form>";
 	$('#dialogContent').html(html);
 	$('#dialog').show();
