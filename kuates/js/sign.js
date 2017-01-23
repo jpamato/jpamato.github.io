@@ -157,6 +157,7 @@ $("#signDone").unbind('click').click( function(){
 	console.log(registro);		
 	localStorage.setItem("logged",1);
 	app.log = 1;
+	$("#ingresar").hide()
 	$("#signActivated").show();
 	$('.user').html(changeSpecialCase(registro["nombre"].split(" ")[0].toUpperCase(),true));
 });

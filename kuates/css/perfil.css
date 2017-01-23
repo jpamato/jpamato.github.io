@@ -3,7 +3,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 .w3-tag, .fa {cursor:pointer}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
 body{
-	background-color:#dedede;
+	background-color:#efefef;
 }
 
 select{
@@ -35,7 +35,7 @@ select{
 }
 
 .lineInput {    
-    border-bottom: 3px solid #001782;
+    border-bottom: 3px solid #aaa;
     margin-bottom:20px;
     color: #00c1ec;
 }

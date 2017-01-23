@@ -2,10 +2,13 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 .mySlides {display:none}
 .w3-tag, .fa {cursor:pointer}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-
+body{
+	background-color:#efefef;
+}
 select{
 	border:none;
-	color:#81f15e;
+	color: #f19800;
+    	background-color: inherit;
 }
 
 #signForm{
@@ -15,7 +18,7 @@ select{
 
 #signActivated button{
 	border:none;
-	margin:10px;
+	margin-right: 10px;
 }
 
 #userPhoto{
@@ -24,7 +27,7 @@ select{
 	overflow:hidden;
 	margin-left: auto;
 	margin-right: auto;
-	border: 3px solid #001782;
+	border: 3px solid #aaa;
 }
 
 #userPhoto img{
@@ -32,28 +35,37 @@ select{
 }
 
 .lineInput {    
-    border-bottom: 3px solid #001782;
+    border-bottom: 3px solid #aaa;
     margin-bottom:20px;
+}
+label{
+	color:rgba(0,0,0,0.2);
+}
+.lineInput label{
+	color:#00c1ec;
 }
 
 .w3-input{
-	color:#81f15e;
+	color:#f19800;
+	font-family: Vagthin;
+	background-color: inherit;
 }
 
 #signDone{
 	font-family: Vagbold;
 	color: #001782;
+	letter-spacing:2px;
 }
 
 #signActivated{
 	font-family: Vagbold;
-	color: #001782;
+	color: #00c1ec;
+	//margin-top: 50px;
+	letter-spacing:2px;
 }
 
 #activSign{
-	display: inline-flex;
-	width: 400px;
-	margin: 40px auto -50px auto;
+	
 }
 
 #activSign hr{
@@ -62,6 +74,6 @@ select{
 }
 #activSign i{
 	margin-top: -7px;
-	font-size: 24px;
-	color: #81f15e;
+	font-size: 40px;
+	color: #444;
 }

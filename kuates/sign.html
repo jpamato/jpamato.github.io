@@ -61,14 +61,14 @@
 		<!-- Grid -->
 		<div class="w3-row w3-container">
 
-			<div class="w3-center">
+			<div style='text-align:left;padding-left: 4%;margin-bottom: 10px; letter-spacing:2px;'>
 				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">CREA TU CUENTA</span>
-			</div>
+			</div>		
 			
 			<div class='campos'>
 			<div class="w3-col l2 w3-container w3-padding-12">
 				<div id='userPhoto' class='w3-circle'><img src='img/avatar.png'></div>
-				<label for='fileInput'><H5 style="font-family:Vagbold;text-align:center;border:solid 3px #001782;font-size: 13px;padding-top: 10px;padding-bottom: 10px;">CAMBIA TU AVATAR</H6></label>
+				<label for='fileInput'><H5 style="font-family:Vagbold;text-align:center;border:solid 3px #00c1ec;color:#00c1ec;font-size: 13px;padding-top: 10px;padding-bottom: 10px;">CAMBIA TU AVATAR</H6></label>
 				<input id="fileInput" type="file" name='avatar' style='display:none;'>				
 			</div>
 
@@ -124,19 +124,19 @@
 			</div>
 		</form>
 
-		<div id='signDone' style='display:none;'>
-			<div class="w3-center">
-				<p class="w3-xlarge" style='border: solid 3px #81f15e;padding: 20px 10px 20px 10px;width: 400px;margin: 40px auto 60px auto;'>GRACIAS <span class='user' style='color:#81f15e;'>CAROLA</span> POR <br/>COMPLETAR EL FORMULARIO</p>
-				<p class="w3-medium">Revisa tu correo electr&oacute;nico, te hemos enviado <br/>un email para activar tu cuenta.</p>
+		<div id='signDone' class='w3-container' style='display:none;'>
+			<div style='text-align:left;padding-left:4%;'>
+				<p class="w3-xlarge" style='margin: 40px auto 60px auto;color:#00c1ec;'>GRACIAS<br><span class='user' style='color:#f19800;'>CAROLA</span> <br>POR COMPLETAR EL FORMULARIO</p>
+				<p class="w3-small" style='color:#777;letter-spacing:initial;'>Revisa tu correo electr&oacute;nico, te hemos enviado un email para activar tu cuenta.</p>
 			</div>
 		</div>
 
-		<div id='signActivated' style='display:none;'>
-			<div class="w3-center">
-
-				<div id='activSign'><hr style='float:left;margin: 0px 20px 0px 0px;'><i class="fa fa-hand-peace-o" aria-hidden="true"></i><hr style='margin: 0px 0px 0px 20px;'></div>
-				<p class="w3-xlarge" style='width:400px;margin:-8px auto 60px auto;border-style:none solid solid solid;border-color: #81f15e;padding:20px'><span class='user' style='color:#81f15e;'>CAROLA</span><span style='color:#019cde;'>:</span><br> la activaci&oacute;n de tu cuenta<br/> se ha realizado con &eacute;xito</p>
-				<p class="w3-large w3-border-dark-grey w3-padding-16"><button class="w3-btn kButton blueButton" id='toCrear' onclick="javascript:location.href='crear.html'">COMIENZA A CREAR PROYECTOS</button><button class="w3-btn kButton blueButton" onclick="javascript:location.href='explorar.html'">COMIENZA A EXPLORAR PROYECTOS</button></p>
+		<div id='signActivated' class='w3-container' style='display:none;'>
+			<div style='text-align:left;padding-left:4%;'>
+				
+				<p class="w3-xlarge" style=''><span class='user' style='color:#f19800;'>CAROLA</span><br>LA ACTIVACI&Oacute;N DE TU CUENTA<br/> SE HA REALIZADO CON &Eacute;XITO</p>
+				<div id='activSign'><i class="fa fa-hand-peace-o" aria-hidden="true"></i></div>
+				<p class="w3-large w3-padding-16"><button class="w3-btn kButton blueButton" id='toCrear' onclick="javascript:location.href='crear.html'">COMIENZA A CREAR PROYECTOS</button><button class="w3-btn kButton blueButton" onclick="javascript:location.href='explorar.html'">COMIENZA A EXPLORAR PROYECTOS</button></p>
 			</div>
 		</div>
 
@@ -146,7 +146,7 @@
 
 <!-- Footer -->
 
-<footer>
+<footer style='background-color:#efefef;'>
 	<div class="w3-content">
 	<!--<img class='right' id="safe" src='img/safe.png'><br/>-->
 	<div class='left'>&#169;KUATES</div>
@@ -190,7 +190,7 @@
 		</div>
 	</div>
 </footer>
-
+ 
 
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 	<script src="js/lib/jquery.min.js"></script>
