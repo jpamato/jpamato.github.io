@@ -42,3 +42,133 @@ select{
 	resize:none;
 	width:100%;	
 }
+
+#thumbsCol{
+	border: solid 1px #aaa;
+	height: 400px;
+	overflow: auto;
+}
+
+.messThumb{
+	display:flex;
+	padding: 10px;
+	background-color: white;
+	height: 100px;
+	overflow: hidden;
+	background-color: #efefef;
+}
+.messThumb .right{
+	padding: 5px 0px 5px 10px;
+	line-height: 1vw;
+	overflow: hidden;
+}
+.messThumb img{
+	margin-left:-25%;
+}
+.messThumb h6{
+	margin: 5px 0px;
+    	font-family: Vagbold;
+	font-size: 1vw;
+}
+
+.messThumb p{
+	margin:0px;
+	font-size:0.9vw;
+}
+
+#messCol{
+	border: solid 1px #aaa;
+	height: 400px;
+	overflow: hidden;
+	position:relative;
+}
+.comment{
+	margin-top:20px;
+}
+.comment .avatar{
+	text-align: left;
+	//margin-right: 20px;
+}
+
+.comment hr{
+	width: 99%;
+	border: solid 1px #444;
+	margin-top: 5px;
+	margin-left: 4%;
+}
+
+.comment p{
+	margin-top: 5px;
+	line-height: 1;
+	font-family:Vagthin;
+	color:#555;
+	margin-bottom: 5px;
+}
+.comment .w3-container{
+	padding-right:0px;
+}
+.comment .thumbs{
+	display: inline-block;
+	margin-top: -25px;
+	margin-left: 5px;
+        width: 100%;
+}
+
+.likeComm{
+	color:white;
+	background-color:#00c1ec;
+	padding: 10px 0px;
+	font-size: 1.5vw;
+	margin-top: 15px;
+}
+
+#chatCont{
+	position:absolute;
+	bottom:165px;
+	overflow-y: auto;
+	height: 235px;
+	padding-bottom:20px;
+}
+
+#toComment{
+	///background-color:#ddd;
+	position:absolute;
+	padding-top: 7px;
+	bottom:-10px;
+	width: 100%;
+	background-color: #eee;
+}
+
+#toComment textarea{
+	width:100%;
+	resize:none;
+	height: 75px;
+	border: solid 1px rgba(0,0,0,0.5);
+}
+
+#thumbCont{
+    padding-left: 0px;
+    display: inline-flex;
+    width: 100%;
+    margin-top: 0px;
+}
+
+#thumbCont li{
+	list-style-type: none;
+	margin-right: 10px;
+}
+.commentName{
+	font-family: Vagbold;
+	color: #001783;
+}
+.addFiles{
+	color:white;
+	padding-top: 15px;
+}
+
+.addFiles label{
+    background-color: #00c1ec;
+    /* text-align: center; */
+    padding: 7px;
+    margin-right: 5px;
+}

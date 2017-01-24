@@ -56,28 +56,204 @@
 </div>
 
 
-<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+<div class="w3-content" style="max-width:980px;margin-top:120px;margin-bottom:80px;color:#001782;">
 
-			<div class="w3-center">
-				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">MENSAJES</span><br/>
-				<div class='right'><button>NUEVO MENSAJE</button></div><br/>
-				<div class="w3-row w3-container" style="display:flex;margin-top:20px;">
-				<div class='w3-col s4 m4 l4'>
+			<div style='text-align:left;margin-bottom: 10px; letter-spacing:2px;font-family:Vagbold;'>
+				<span class="w3-xlarge w3-border-dark-grey w3-padding-16">MENSAJES</span>
+			</div>
 
-				</div>
-				<div class='w3-col s8 m8 l8'>
-					<div id='messageTo'>
-						<div class='lineInput'><label><b>PARA:</b></label><input class='w3-input required text-input'  id="filter" type='text'></div>
-					<ul id="destSel"></ul>
+			<!--<div class='right'><button>NUEVO MENSAJE</button></div><br/>-->
+
+			<div class="w3-row w3-container" style="display:flex;margin-top:20px;padding: 0px;">
+				<div class='w3-col s4 m4 l4' id='thumbsCol'>
+					
+					<div class="messThumb odd">
+						<div class="left">
+							<div style="width:80px;height:80px;overflow:hidden;">
+								<img src="img/linterna.jpg" style='height:80px;'>
+							</div>
+						</div>
+						<div class="right"><a href="usuario.html?userID=1482788521776"><b>Carlos Sacan</b></a><br>
+							<h6>AHUYENTA MONSTRUOS</h6>
+							<p>Dos primeras lineas del ultimo mensaje enviado/recibido</p>							
+						</div>
 					</div>
-					<form id="messageForm">
-						<textarea></textarea>
-					</form>
+
+					<div class="messThumb even" style='background-color:white;'>
+						<div class="left">
+							<div style="width:80px;height:80px;overflow:hidden;">
+								<img src="img/marionetas.jpg" style='height:80px;'>
+							</div>
+						</div>
+						<div class="right"><a href="usuario.html?userID=1482788521776"><b>Carlos Sacan</b></a><br>
+							<h6>MARIONETAS DE TELA</h6>
+							<p>Dos primeras lineas del ultimo mensaje enviado/recibido</p>							
+						</div>
+					</div>
+
+					<div class="messThumb odd" style=''>
+						<div class="left">
+							<div style="width:80px;height:80px;overflow:hidden;">
+								<img src="img/metegol.jpg" style='height:80px;'>
+							</div>
+						</div>
+						<div class="right"><a href="usuario.html?userID=1482788521776"><b>Carlos Sacan</b></a><br>
+							<h6>METEGOL CON CAJAS</h6>
+							<p>Dos primeras lineas del ultimo mensaje enviado/recibido</p>							
+						</div>
+					</div>
+
+					<div class="messThumb even" style='background-color:white;'>
+						<div class="left">
+							<div style="width:80px;height:80px;overflow:hidden;">
+								<img src="img/coche.jpg" style='height:80px;'>
+							</div>
+						</div>
+						<div class="right"><a href="usuario.html?userID=1482788521776"><b>Carlos Sacan</b></a><br>
+							<h6>AUTOS Y CAMIONES RECICLADOS</h6>
+							<p>Dos primeras lineas del ultimo mensaje enviado/recibido</p>							
+						</div>
+					</div>
+
+					<div class="messThumb odd" style=''>
+						<div class="left">
+							<div style="width:80px;height:80px;overflow:hidden;">
+								<img src="img/robot.jpg" style='height:80px;margin-left:0px;'>
+							</div>
+						</div>
+						<div class="right"><a href="usuario.html?userID=1482788521776"><b>Carlos Sacan</b></a><br>
+							<h6>ROBOT DE CART&Oacute;N</h6>
+							<p>Dos primeras lineas del ultimo mensaje enviado/recibido</p>							
+						</div>
+					</div>
+
+					<div class="messThumb even" style='background-color:white;'>
+						<div class="left">
+							<div style="width:80px;height:80px;overflow:hidden;">
+								<img src="img/avion.jpg" style='height:80px;margin-left:10px'>
+							</div>
+						</div>
+						<div class="right"><a href="usuario.html?userID=1482788521776"><b>Carlos Sacan</b></a><br>
+							<h6>AVIONES DECORATIVOS</h6>
+							<p>Dos primeras lineas del ultimo mensaje enviado/recibido</p>							
+						</div>
+					</div>
+
+					
 
 				</div>
+				<div class='w3-col s8 m8 l8' id='messCol'>
+					<div id='messageTo' style='display:none;'>
+						<div class='lineInput'><label><b>PARA:</b></label><input class='w3-input required text-input'  id="filter" type='text'></div>
+						<ul id="destSel"></ul>
+					</div>					
+					<div id='chatCont'>
+						<div id='conv1'>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<!--<div class="w3-col l1 m1 s1">&nbsp;</div>-->
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding: 10px 5px;'>
+									<div style='border:solid 1px #aaa;width:98%;background-color: #eee;padding: 0px 5px 0px 10px;'>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+								<div class="w3-col l1 m1 s1 avatar ownAvatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src=""></div></div>
+							</div>
+						</div>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<div class="w3-col l1 m1 s1 avatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src="img/team1.jpg"></div></div>
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding-left: 10px;'>
+									<div style='border:solid 1px #aaa;width:98%;padding: 0px 5px 0px 10px;'>
+									<a href='#' class='commentName'>JUANCITO GOMEZ</a>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<!--<div class="w3-col l1 m1 s1">&nbsp;</div>-->
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding: 10px 5px;'>
+									<div style='border:solid 1px #aaa;width:98%;background-color: #eee;padding: 0px 5px 0px 10px;'>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+								<div class="w3-col l1 m1 s1 avatar ownAvatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src=""></div></div>
+							</div>
+						</div>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<div class="w3-col l1 m1 s1 avatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src="img/team1.jpg"></div></div>
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding-left: 10px;'>
+									<div style='border:solid 1px #aaa;width:98%;padding: 0px 5px 0px 10px;'>
+									<a href='#' class='commentName'>JUANCITO GOMEZ</a>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id='conv2' style='display:none'>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<!--<div class="w3-col l1 m1 s1">&nbsp;</div>-->
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding: 10px 5px;'>
+									<div style='border:solid 1px #aaa;width:98%;background-color: #eee;padding: 0px 5px 0px 10px;'>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+								<div class="w3-col l1 m1 s1 avatar ownAvatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src=""></div></div>
+							</div>
+						</div>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<div class="w3-col l1 m1 s1 avatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src="img/team2.jpg"></div></div>
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding-left: 10px;'>
+									<div style='border:solid 1px #aaa;width:98%;padding: 0px 5px 0px 10px;'>
+									<a href='#' class='commentName'>JUANCITO GOMEZ</a>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='comment'>
+							<div class="w3-row w3-container">
+								<!--<div class="w3-col l1 m1 s1">&nbsp;</div>-->
+								<div class="w3-col l10 m10 s10" style='text-align:left;padding: 10px 5px;'>
+									<div style='border:solid 1px #aaa;width:98%;background-color: #eee;padding: 0px 5px 0px 10px;'>
+									<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac.</p>
+									</div>
+								</div>
+								<div class="w3-col l1 m1 s1 avatar ownAvatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src=""></div></div>
+							</div>
+						</div>
+					</div>
+					</div>
+
+					<div class="comment" id="toComment">
+						<div class="w3-row w3-container">
+							<div class="w3-col l1 m1 s1 avatar ownAvatar"><div class="w3-circle left" style="width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;"><img width="50px" src=""></div></div>
+							<div class="w3-col l10 m10 s10" style="text-align:left;padding:10px 10px 0px 10px;">
+								<textarea placeholder="Escribe cómo podrías ayudar a hacer realidad este proyecto"></textarea>	
+								<div class="left addFiles">						
+									<input id="inputPhoto" name="archivos" type="file" style="display:none;">
+									<label for="inputPhoto"><i class="fa fa-camera" aria-hidden="true"></i></label>
+									<input id="inputVideo" name="archivos" type="file" style="display:none;">
+									<label for="inputVideo"><i class="fa fa-film" aria-hidden="true"></i></label>
+									<input id="inputDoc" name="archivos" type="file" style="display:none;">
+									<label for="inputDoc" style="padding-left:8px;padding-right:5px;"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;</label>
+								</div>
+								<div class="right"><button class="w3-btn kButton blueButton" id="comentar">ENVIAR</button></div>
+								<ul id="thumbCont"></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 
-			</div>
 </div>
 
 	<!-- Footer -->
