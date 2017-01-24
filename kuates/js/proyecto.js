@@ -270,6 +270,7 @@ function getFirstImage(archivos){
 }
 
 function getCategoria(cat){
+	console.log("cat: "+cat);
 	var text = "";
 	if(cat=='invento'){
 		//text = "<img src='img/invento.png'><h6>Un "+cat+"</h6>";
@@ -282,7 +283,7 @@ function getCategoria(cat){
 		text = "ALGO "+changeSpecialCase(cat.toUpperCase(),true);
 	}else if(cat=="divertido"){
 		//text = "<img src='img/divertido.png'><h6>Algo "+cat+"</h6>";
-		text = "<h6>ALGO "+changeSpecialCase(cat.toUpperCase(),true);
+		text = "ALGO "+changeSpecialCase(cat.toUpperCase(),true);
 	}else if(cat=="ayude"){
 		//text = "<img src='img/ayude.png'><h6>Algo que "+cat+"</h6>";
 		text = "ALGO QUE "+changeSpecialCase(cat.toUpperCase(),true);
