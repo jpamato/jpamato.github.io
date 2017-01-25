@@ -200,6 +200,9 @@ body{
 }
 
 @media screen and (max-width:767px) {
+	#banner{
+		margin-top: 10vw;
+	}
 
 	#favoritos{
 		width:100%;
