@@ -26,7 +26,7 @@ select{
 
 .mySlides {
     //width:500px;
-    height:500px;
+    //height:500px;
     //border-style:solid;
     
     text-align: center;  /* align the inline(-block) elements horizontally */
@@ -159,6 +159,9 @@ select{
     font-family: Vagbold;
     color: #001783;
 }
+#dias{
+	color: #00c1ea;font-family: Vagbold;font-size: 1vw;margin-top: -5px;
+}
 
 /*#creador button{
 	font-size: 1.5vw;
@@ -168,6 +171,12 @@ select{
 }*/
 #pFiles p{
 	font-size:0.8vw;
+}
+#pFiles .file{
+	padding-left:10px;padding-right:10px;padding-bottom:10px;
+}
+#pFiles .fileCont{
+	border:solid 2px #00c1ec;color:#00c1ec;
 }
 #pDescrip{
 	text-align: left;
@@ -182,7 +191,7 @@ select{
 	letter-spacing: 1px;
 }
 #feedback{
-	display: flex;
+	//display: flex;
 	background-color: white;
 	color: #444;
 	padding-left: 15px;
@@ -288,6 +297,23 @@ select{
 	border-style: none solid none solid;
 	padding: 15px;
 }
+.backer .backCont{
+	padding-left:0px;
+	padding-right:0px;
+}
+.backer .avatar img{
+	width:100%;
+}
+.backer .backName{
+	text-align:left;padding-left:10px;
+}
+.backer .backChat{
+	color:white;background-color:#00c1ec;padding: 0.5vw 3vw 0.5vw 1vw;/*margin-right: 5px;*/
+}
+.backer .backChat i{
+	font-size:2vw;
+}
+
 .addFiles{
 	color:white;
 	padding-top: 15px;
@@ -298,4 +324,72 @@ select{
     /* text-align: center; */
     padding: 7px;
     margin-right: 5px;
+}
+
+@media screen and (max-width:767px) {
+	#pDescrip{
+		font-size:11px;
+	}
+	#pDescrip h6{
+		font-size:11px;
+	}
+	#creador{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	#stats .w3-container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#stats p{
+		font-size:0.9vw;
+	}
+
+	#dias{
+		font-size: 1.5vw;
+	}
+
+	.likeCom{
+		padding: 0.75vw 0px;
+		font-size: 2vw;
+	}
+}
+
+@media screen and (max-width:600px) {
+	/*#pDescrip{
+		font-size:2vw;
+	}
+	#pDescrip h6 {
+		font-size:2vw;
+	}*/
+
+	#userName{
+		font-size:2vw;
+	}
+
+	#stats p, #ciudad{
+		font-size: 8px;
+	}
+
+	#pFiles .fileCont{
+		padding:1vw 0px;
+	}
+
+	#pFiles p{
+		font-size:1vw;
+	}
+
+	.likeComm{
+		font-size: 2vw;
+	}
+
+	#backers{
+		padding-left: 0px;
+ 		padding-top: 30px;
+	}
+
+	.backer .backChat i{
+		font-size:4vw;
+	}	
 }

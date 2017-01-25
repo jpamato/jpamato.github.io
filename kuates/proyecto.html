@@ -120,7 +120,7 @@
 						</div>						  
 					</div>
 				</div>
-				<div class="logradoCont"><div class="pEstado left" style="width:40%;"><div class="tortaFrame"><div class="w3-circle completo">&nbsp;</div><div class="quarter-circle incompleto">&nbsp;</div><div class="w3-circle interior">75%</div></div></div><div class="pEstado right" style="width:60%;padding-top:20px;float:left;text-align:left;padding-left:20px;color:#001783"><h4 style='margin:0px;font-family:Vagbold;'>LOGRADO</h4><div style="color: #00c1ea;font-family: Vagbold;font-size: 1vw;margin-top: -5px;">9 d&iacute;as restantes</div></div><br></div>
+				<div class="logradoCont"><div class="pEstado left" style="width:40%;"><div class="tortaFrame"><div class="w3-circle completo">&nbsp;</div><div class="quarter-circle incompleto">&nbsp;</div><div class="w3-circle interior">75%</div></div></div><div class="pEstado right" style="width:60%;padding-top:20px;float:left;text-align:left;padding-left:20px;color:#001783"><h4 style='margin:0px;font-family:Vagbold;'>LOGRADO</h4><div id="dias">9 d&iacute;as restantes</div></div><br></div>
 				<br>
 				<hr>
 				<div style='width:100%'><img src="img/like.png" style="width:40px;margin-bottom:-10px;"><span style='font-family:Vagbold;color:#00c1ec;margin-left:10px;margin-right:20px;font-size:2vw;'>586</span><button id="votar" class="w3-btn kButton blueButton">DALE LIKE</button></div>
@@ -131,8 +131,8 @@
 
 	<div id='pFiles' style='margin-top: 10px;'>
 		<div class="w3-row w3-container">
-			<div class="w3-col l2 m2 s2" style='padding-left:10px;padding-right:10px;padding-bottom:10px;'>
-				<div style='border:solid 2px #00c1ec;color:#00c1ec;'> <img class='left' src='img/doc.png' style='width:25%;margin-top:-3px;'><p style='text-align:left;'>Nombre del archivo.txt</p></div>
+			<div class="w3-col l2 m2 s3 file">
+				<div class='fileCont'> <img class='left' src='img/doc.png' style='width:25%;margin-top:-3px;'><p style='text-align:left;'>Nombre del archivo.txt</p></div>
 			</div>
 			
 						
@@ -147,7 +147,7 @@
 
 		<div class='comment' id='toComment'>
 			<div class="w3-row w3-container">
-				<div class="w3-col l1 m1 s1 avatar"><div class='w3-circle left' style='width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;'><img width=50px src='img/avatar.png'></div></div>
+				<div class="w3-col l1 m2 s2 avatar"><div class='w3-circle left' style='width:50px;height:50px;overflow: hidden;margin:auto;margin-top:6px;'><img width=50px src='img/avatar.png'></div></div>
 				<div class="w3-col l10 m10 s10" style='text-align:left;padding:10px 10px 0px 10px;'>
 					<textarea placeholder='Escribe c&oacute;mo podr&iacute;as ayudar a hacer realidad este proyecto'></textarea>	
 					<div class='left addFiles'>						
@@ -158,7 +158,7 @@
 						<input id="inputDoc" name='archivos' type="file" style='display:none;'>
 						<label for='inputDoc' style='padding-left:8px;padding-right:5px;'><i class="fa fa-file" aria-hidden="true"></i>&nbsp;</label>
 					</div>
-					<div class='right'><button class="w3-btn kButton blueButton" id="comentar">COLABORA</button></div>
+					<div class='right' style='padding-top:10px;'><button class="w3-btn kButton blueButton" id="comentar">COLABORA</button></div>
 					<ul id="thumbCont"></ul>
 				</div>
 			</div>
@@ -168,8 +168,8 @@
 
 		<div class='comment'>
 			<div class="w3-row w3-container">
-				<div class="w3-col l1 m1 s1 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l10 m10 s10" style='text-align:left;padding-left: 20px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=100% src='img/avatar.png'></div>
+				<div class="w3-col l9 m9 s9" style='text-align:left;padding-left: 20px;padding-right: 5px;'>
 					<a href='#' class='commentName'>JUANCITO GOMEZ</a>
 					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac. <b><i style='color:#00c1ec;font'>16 likes</i></b></p>
 					<a href='#' class='denunciar'>DENUNCIAR</a>
@@ -181,82 +181,81 @@
 
 		<div class='comment'>
 			<div class="w3-row w3-container">
-				<div class="w3-col l1 m1 s1 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l10 m10 s10" style='text-align:left;padding-left: 20px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=100% src='img/avatar.png'></div>
+				<div class="w3-col l9 m9 s9" style='text-align:left;padding-left: 20px;padding-right: 5px;'>
 					<a href='#' class='commentName'>JUANCITO GOMEZ</a>
-					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac. <b><i style='color:#00c1ec;font'>56 likes</i></b>
-					</p>
+					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac. <b><i style='color:#00c1ec;font'>16 likes</i></b></p>
 					<a href='#' class='denunciar'>DENUNCIAR</a>
 				</div>
 				<div class="w3-col l1 m1 s1 likeComm"><i class="fa fa-thumbs-up" aria-hidden="true"></i></div>
 			</div>
 			<hr>
-		</div>	
+		</div>
 
 		<div class='comment'>
 			<div class="w3-row w3-container">
-				<div class="w3-col l1 m1 s1 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l10 m10 s10" style='text-align:left;padding-left: 20px;'>
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=100% src='img/avatar.png'></div>
+				<div class="w3-col l9 m9 s9" style='text-align:left;padding-left: 20px;padding-right: 5px;'>
 					<a href='#' class='commentName'>JUANCITO GOMEZ</a>
-					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac. <b><i style='color:#00c1ec;font'>24 likes</i></b></p>
+					<p>Donec imperdiet libero vel neque scelerisque dignissim. Sed fringilla nulla dolor, pulvinar gravida enim congue ac. <b><i style='color:#00c1ec;font'>16 likes</i></b></p>
 					<a href='#' class='denunciar'>DENUNCIAR</a>
 				</div>
 				<div class="w3-col l1 m1 s1 likeComm"><i class="fa fa-thumbs-up" aria-hidden="true"></i></div>
 			</div>
 			<hr>
-		</div>	
+		</div>
 
-		<button class="w3-btn kButton blueButton">CARGAR M&Aacute;S COMENTARIOS</BUTTON>
+		<button class="w3-btn kButton blueButton" style='margin-left: 50px;'>CARGAR M&Aacute;S COMENTARIOS</BUTTON>
 	</div>
 
 	<div id='backers' class="w3-col l4 m4">
 		<h3>BACKERS</h3>
 		<div class='backer'>
-			<div class="w3-row w3-container" style='padding-left:0px;'>
-				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l8 m8 s8" style='text-align:left;padding-left:10px'><a href='#'>Juancito G&oacute;mez</a><br/>
+			<div class="w3-row w3-container backCont">
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' src='img/avatar.png'></div>
+				<div class="w3-col l7 m7 s7 backName"><a href='#'>Juancito G&oacute;mez</a><br/>
 					<img src="img/medal_3.png" style="width:15px;opacity:0.8;"> <b>5</b></div>
-				<div class="w3-col l1 m1 s1" style='color:white;background-color:#00c1ec;padding:7px 30px 7px 7px;margin-right: 5px;'><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+				<div class="w3-col l1 m1 s1 backChat"><i class="fa fa-comments" aria-hidden="true"></i></div>
 			</div>
 			<hr>
 		</div>
 
 		<div class='backer'>
-			<div class="w3-row w3-container" style='padding-left:0px;'>
-				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l8 m8 s8" style='text-align:left;padding-left:10px'><a href='#'>Juancito G&oacute;mez</a><br/>
+			<div class="w3-row w3-container backCont">
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' src='img/avatar.png'></div>
+				<div class="w3-col l7 m7 s7 backName"><a href='#'>Juancito G&oacute;mez</a><br/>
 					<img src="img/medal_3.png" style="width:15px;opacity:0.8;"> <b>5</b></div>
-				<div class="w3-col l1 m1 s1" style='color:white;background-color:#00c1ec;padding:7px 30px 7px 7px;margin-right: 5px;'><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+				<div class="w3-col l1 m1 s1 backChat"><i class="fa fa-comments" aria-hidden="true"></i></div>
 			</div>
 			<hr>
 		</div>
 
 		<div class='backer'>
-			<div class="w3-row w3-container" style='padding-left:0px;'>
-				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l8 m8 s8" style='text-align:left;padding-left:10px'><a href='#'>Juancito G&oacute;mez</a><br/>
+			<div class="w3-row w3-container backCont">
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' src='img/avatar.png'></div>
+				<div class="w3-col l7 m7 s7 backName"><a href='#'>Juancito G&oacute;mez</a><br/>
 					<img src="img/medal_3.png" style="width:15px;opacity:0.8;"> <b>5</b></div>
-				<div class="w3-col l1 m1 s1" style='color:white;background-color:#00c1ec;padding:7px 30px 7px 7px;margin-right: 5px;'><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+				<div class="w3-col l1 m1 s1 backChat"><i class="fa fa-comments" aria-hidden="true"></i></div>
 			</div>
 			<hr>
 		</div>
 
 		<div class='backer'>
-			<div class="w3-row w3-container" style='padding-left:0px;'>
-				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l8 m8 s8" style='text-align:left;padding-left:10px'><a href='#'>Juancito G&oacute;mez</a><br/>
+			<div class="w3-row w3-container backCont">
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' src='img/avatar.png'></div>
+				<div class="w3-col l7 m7 s7 backName"><a href='#'>Juancito G&oacute;mez</a><br/>
 					<img src="img/medal_3.png" style="width:15px;opacity:0.8;"> <b>5</b></div>
-				<div class="w3-col l1 m1 s1" style='color:white;background-color:#00c1ec;padding:7px 30px 7px 7px;margin-right: 5px;'><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+				<div class="w3-col l1 m1 s1 backChat"><i class="fa fa-comments" aria-hidden="true"></i></div>
 			</div>
 			<hr>
 		</div>
 
-		<div class='backer' style='border-style:none solid solid solid;'>
-			<div class="w3-row w3-container" style='padding-left:0px;'>
-				<div class="w3-col l2 m2 s2 avatar"><img class='left' width=50px src='img/avatar.png'></div>
-				<div class="w3-col l8 m8 s8" style='text-align:left;padding-left:10px'><a href='#'>Juancito G&oacute;mez</a><br/>
+		<div class='backer' style='border-style: none solid solid solid;'>
+			<div class="w3-row w3-container backCont">
+				<div class="w3-col l2 m2 s2 avatar"><img class='left' src='img/avatar.png'></div>
+				<div class="w3-col l7 m7 s7 backName"><a href='#'>Juancito G&oacute;mez</a><br/>
 					<img src="img/medal_3.png" style="width:15px;opacity:0.8;"> <b>5</b></div>
-				<div class="w3-col l1 m1 s1" style='color:white;background-color:#00c1ec;padding:7px 30px 7px 7px;margin-right: 5px;'><i class="fa fa-comments" aria-hidden="true" style='font-size:2vw;'></i></div>
+				<div class="w3-col l1 m1 s1 backChat"><i class="fa fa-comments" aria-hidden="true"></i></div>
 			</div>
 		</div>
 
