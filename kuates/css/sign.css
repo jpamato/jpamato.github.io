@@ -77,3 +77,10 @@ label{
 	font-size: 40px;
 	color: #444;
 }
+
+@media screen and (max-width:600px) {
+	.backCol{
+		padding:12px 0px;
+	}
+
+}

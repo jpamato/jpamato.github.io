@@ -54,10 +54,15 @@ select{
 }
 
 .edit{
-	font-size: 1.8vw;
+	font-size: 20px;
 	text-align:right;
-	width:100%;
+	//width:100%;
 }
 footer{
 	background-color: inherit;
 }
+
+@media screen and (max-width:767px) {
+	.edit {
+ 	//	font-size: 3vw;
+	}

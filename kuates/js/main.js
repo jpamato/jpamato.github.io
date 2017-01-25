@@ -243,7 +243,6 @@ $("#menuBars").unbind('click').click( function(){
 	$('#dialog').css("height","100%");
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#00c1ea");
-	$('#dialogContent').css("width","50%");
 	var html = "<ul><li onclick='ingresar()'>LOGIN/REGISTRO</li>"+
 			"<li onclick=location.href='explorar.html'>PROYECTOS DESTACADOS</li>"+
 			"<li>FAQS</li>"+
@@ -263,9 +262,9 @@ function ingresar(val=true){
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#001782");
 
-	$('#dialogContent').css("margin-left","auto");
+	/*$('#dialogContent').css("margin-left","auto");
 	$('#dialogContent').css("margin-right","auto");
-	$('#dialogContent').css("margin-top","120px");
+	$('#dialogContent').css("margin-top","120px");*/
 
 	var html = "<H4 style='font-family:Vagbold;letter-spacing:2px;'>LOGIN</H4>"+
 		"<form class='w3-container' style='text-align:left;'>"+
