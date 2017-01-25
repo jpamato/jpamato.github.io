@@ -25,14 +25,14 @@ $(function(){
 
 		//getFirstImage(proyectos[i]['archivos']);
 		//console.log(user);
-		html+="<div class='w3-col l4 m6 w3-container w3-padding-12'>"+
+		html+="<div class='w3-col m6 l4 w3-container w3-padding-12'>"+
 			"<div class='proyecto'>"+
 				  "<div>"+
 				  "<div style='width:100%;height:1px;padding-bottom:50%;overflow:hidden;'><img src="+getFirstImage(proyectos[i]['archivos'])+"></div>"+
 				"<div class='categoria'>"+getCategoria(proyectos[i]['categoria'])+"</div>"+
 				  "</div>"+
 				  "<div class='titleCont'>"+
-				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h4 style='font-family:Vagbold;font-size: 1.5vw;'>"+proyectos[i]['nombre']+"</h4></a>"+
+				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h4>"+proyectos[i]['nombre']+"</h4></a>"+
 				  "</div>"+
 				  "<hr>"+
 				  "<div class='creador'>"+
@@ -48,7 +48,7 @@ $(function(){
 				  "<div class='w3-circle completo'>&nbsp;</div>"+
 				  "<div class='quarter-circle incompleto'>&nbsp;</div>"+
 				  "<div class='w3-circle interior'>75%</div>"+
-				  "<div style='text-align:center;padding-top:20px;'>LOGRADO<br><span style='color: #00c1ea;'>9 d&Iacute;as<br>restantes</span></div>"+
+				  "<div style='text-align:center;padding-top:20px;'>LOGRADO<br><span style='color: #00c1ea;'>9 d&iacute;as<br>restantes</span></div>"+
 				  "</div>"+
 				  "</div>"+
 				  "<div class='pDesc right'><p class='right' style='margin:0px;'>"+proyectos[i]['descripcion']+"</p></div>"+
@@ -97,7 +97,7 @@ function setProyDesc(i){
 		logros = proyectos[i]["logros"];
 
 	var html = "<div class='titleCont'>"+
-				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h6 style='font-family:Vagbold'>"+proyectos[i]['nombre']+"</h6></a>"+
+				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h6 style='font-family:Vagbold;margin-bottom:0px;'>"+proyectos[i]['nombre']+"</h6></a>"+
 				  "</div>"+
 				  "<div class='creador'>"+
 				  "<div class='left'><div class='w3-circle' style='width:20px;height:20px;overflow:hidden; margin-top:-5px;'><img src='"+user["avatar"]+"'></div></div>"+
@@ -106,7 +106,7 @@ function setProyDesc(i){
 					  "</div>"+
 				  "</div>"+
 				  "</div>"+
-				  "<div class='pDesc'><p style='margin:0px;font-size:0.8vw;'>"+proyectos[i]['descripcion']+"</p></div>"+
+				  "<div class='pDesc'><p>"+proyectos[i]['descripcion']+"</p></div>"+
 				  "<div class='bottomCont' >"+
 				  "<div class='pEstado left' style='width:100%;'>"+
 				  "<div class='tortaFrame'>"+
@@ -119,6 +119,13 @@ function setProyDesc(i){
 				  
 				  "</div>";
 	$("#favDesc").html(html);
+	//resetFavDescH();
+}
+
+function resetFavDescH(){
+	var h = $("#favImg").find("div").height();
+	console.log(h);
+	$("#favDesc").css("height",h+"px");
 }
 
 function getCategoria(cat){

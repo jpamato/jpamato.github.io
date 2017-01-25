@@ -30,7 +30,7 @@ $(function(){
 				"<div class='categoria'>"+getCategoria(proyectos[i]['categoria'])+"</div>"+
 				  "</div>"+
 				  "<div class='titleCont'>"+
-				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h4 style='font-family:Vagbold;font-size: 1.5vw;'>"+proyectos[i]['nombre']+"</h4></a>"+
+				  "<a href='proyecto.html?projectID="+proyectos[i]["projectID"]+"'><h4>"+proyectos[i]['nombre']+"</h4></a>"+
 				  "</div>"+
 				  "<hr>"+
 				  "<div class='creador'>"+
@@ -46,7 +46,7 @@ $(function(){
 				  "<div class='w3-circle completo'>&nbsp;</div>"+
 				  "<div class='quarter-circle incompleto'>&nbsp;</div>"+
 				  "<div class='w3-circle interior'>75%</div>"+
-				  "<div style='text-align:center;padding-top:20px;'>LOGRADO<br><span style='color: #00c1ea;'>9 d&Iacute;as<br>restantes</span></div>"+
+				  "<div style='text-align:center;padding-top:20px;'>LOGRADO<br><span style='color: #00c1ea;'>9 d&iacute;as<br>restantes</span></div>"+
 				  "</div>"+
 				  "</div>"+
 				  "<div class='pDesc right'><p class='right' style='margin:0px;'>"+proyectos[i]['descripcion']+"</p></div>"+

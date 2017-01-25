@@ -293,7 +293,7 @@ footer a{
 @media screen and (max-width:767px) {
 
 	ul.topnav {
-    		padding: 10px 0px 0px 0px;
+    		padding: 10px 1px 0px 10px;
 	}
 
 	ul.topnav li {
@@ -304,13 +304,21 @@ footer a{
 		font-size: 1.5vw;
 		padding: 10px 2vw;
 	}
+	
+	#logged {
+    		margin-top: -1vw;
+	}
 
 	#crear button.w3-btn {
+		//margin-top:5%;
     		padding-left: 3vw;
-   		 padding-right: 3vw;
+   		padding-right: 3vw;
+	}
+	#explorar button.w3-btn {
+		//margin-top:5%;
 	}
 	#navTitle {
-    		margin-top: 0px;
+    		//margin-top: 5%;
 	}
 
 	#logged #imgCont {

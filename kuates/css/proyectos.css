@@ -75,6 +75,10 @@
 	text-decoration: none;
 }
 
+.proyecto .titleCont h4{
+	font-family:Vagbold;font-size: 2vw;
+}
+
 .proyecto .creador{
 	display:table-cell;
 	padding: 10px 20px 10px 20px;
@@ -144,7 +148,7 @@
 	/* padding-bottom: 15px; */
 	padding-right: 10px;
 	padding-left: 10px;
-	font-size: 0.9vw;
+	font-size: 1.4vw;
 	text-align: left;
 	color: #444;
 	font-family: Vagthin;
@@ -172,4 +176,21 @@
 .barra{
 	display:block;
 	margin-bottom:35px;
+}
+
+@media screen and (max-width:767px) {
+	.proyecto .pDesc{
+		font-size: 2vw;
+	}
+	.proyecto .titleCont h4{
+		font-size: 3vw;
+	}
+}
+@media screen and (max-width:600px) {
+	.proyecto .pDesc{
+		font-size: 3vw;
+	}
+	.proyecto .titleCont h4{
+		font-size: 4vw;
+	}
 }
