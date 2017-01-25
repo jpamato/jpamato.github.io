@@ -289,6 +289,13 @@ footer a{
 	color:#00adf9;
 }
 
+#instituFoot{
+	padding-top: 20px;padding:20px;background-color: #383c3e;color:white;display: flex;font-size: 1vw;font-family: Verdana, Geneva, sans-serif;
+}
+#instituFoot img{
+	width:150px;
+}
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:767px) {
 
@@ -405,6 +412,14 @@ footer a{
 
 @media screen and (max-width:600px) {
 	#footerMenu{
-		padding-left:0px;
+		padding-left: 0px;
+		padding-top: 10px;
+		width: 100%;
+		float: right;
+		text-align: right;
+		margin-bottom: 2px;
+	}
+	#instituFoot img{
+	    width: 80%;
 	}
 }
