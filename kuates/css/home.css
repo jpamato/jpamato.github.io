@@ -233,6 +233,9 @@ body{
 }
 
 @media screen and (max-width:600px) {
+	#queEs button{
+		margin-left:80%;
+	}
 	#favBox{
 		display: block;
 		margin: auto;

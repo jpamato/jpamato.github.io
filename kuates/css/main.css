@@ -420,6 +420,12 @@ footer a{
 }
 
 @media screen and (max-width:600px) {
+	#logged {
+    		margin-top: 0px;
+	}
+	#dialog ul li {
+		font-size:4vw;
+	}
 	#footerMenu{
 		padding-left: 0px;
 		padding-top: 10px;
