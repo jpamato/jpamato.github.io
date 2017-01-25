@@ -178,7 +178,7 @@
 	margin-bottom:35px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:767px) {	
 	.proyecto .pDesc{
 		font-size: 2vw;
 	}

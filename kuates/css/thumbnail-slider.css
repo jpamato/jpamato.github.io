@@ -14,6 +14,18 @@
     user-select:none;
 }
 
+#thumbnail-slider div.inner label{
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+	background-color: #00c1ec;
+	color: white;
+	height: 106px;
+	width: 106px;
+	padding-top: 25px;
+	font-size: 12px;
+}
+
 #thumbnail-slider div.inner {
     /*the followings should not be changed */
     position:relative;
@@ -75,31 +87,29 @@
 	padding-right:5px;
 	margin-right:-15px;
 }
-
-#scrollRight{
-    width: 33px;
-    padding-bottom: 27px;
-    padding-right: 5px;
-    right: -18px;
-    top: 130px;
-    position: absolute;
-    z-index: 10;
-    color: white;
-    border: 0px;
-    background-color: #00c1ec;
+#thumbnail-slider .w3-circle{
+	height: 28px;
+	padding: 8px;
+	margin: auto;
+	font-family: Vagbold;
+	font-size: 14px;
+	width: 33px;
+  	padding-bottom: 27px;
+	 padding-left: 5px;
+ 	
+    	top: 130px;
+    	position: absolute;
+    	z-index: 10;
+    	color: white;
+	border: 0px;
+    	background-color: #00c1ec;
+}
+#scrollRight{    
+    right: -18px;    
 }
 
 #scrollLeft{
-    width: 33px;
-    padding-bottom: 27px;
-    padding-left: 5px;
-    left: -18px;
-    top: 130px;
-    position: absolute;
-    z-index: 10;
-    color: white;
-    border: 0px;
-    background-color: #00c1ec;
+   left: -18px;
 }
 
 #thumbnail-slider ul li.active {
@@ -183,7 +193,7 @@
 /*Responsive settings*/
 @media only screen and (max-width:736px){
 
-    #thumbnail-slider {padding:10px 26px;}
+    #thumbnail-slider {width:90%;}
 
     #thumbnail-slider-prev {left:0px;}
 

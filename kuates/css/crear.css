@@ -28,7 +28,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 	font-size:10px;
 }
 
-.w3-content .w3-circle{
+.w3-content .step .w3-circle{
 	border:1px solid rgba(0,0,0,0.0);
 	//border:1px solid rgba(116,219,83,0.3);
 	background-color: rgba(0,0,0,0.1);
@@ -67,9 +67,17 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
 .catCont{
 	padding:15px;
+	position:relative;
 }
 .catTitle{
-	margin-top: -25px;color: white;font-size:11px;
+	//margin-top: -25px;color: white;font-size:11px;
+    	color: white;
+    	font-size: 11px;
+    	position: absolute;
+    	bottom: 18px;
+    	margin: auto;    	
+	width: 100%;
+    	margin-left: -12px;
 }
 .categoria{
 	background-color: #00c1ec;
@@ -87,6 +95,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
 #navButtons{
 	width: 24vw;
+	min-width: 250px;
 	height: 1px;;
 	margin: 50px auto 0px auto;
 }
@@ -118,12 +127,22 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 	margin-bottom:15px;
 	margin-top:20px;
 }
+#portadaCont label{
+	background-color: #00c1ec;
+	color: white;
+	font-family: Vagbold;
+	float: right;
+	padding: 7px 10px 7px 9px;
+	margin-left: 5%;
+	font-size: 1vw;
+	letter-spacing: 3px;
+}
 #portadaFile{
 	background-color:white;
 	margin-left: 15px;
 	padding: 5px 10px 5px 10px;
 	width: 60%;
-	font-size: 1vw;
+	font-size: 14px;
 	font-family: Vagbold;
 }
 #portadaInput label{
@@ -160,4 +179,33 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-top: -20px;
+}
+
+@media screen and (max-width:767px) {
+	#portadaCont label{
+		font-size: 1.5vw;
+		padding-top: 2.5vh;
+	}
+
+}
+
+@media screen and (max-width:600px) {
+	.catTitle{
+		font-size: 3vw;
+		bottom: 3vw;		
+	}
+
+	#proyectData .w3-input {
+		width:90%;
+	}
+
+	p{
+		padding-left:1%;
+		padding-right:1%;
+	}
+
+	#portadaFile,#portadaCont label{
+		font-size: 2vw;
+		padding-top: 3vh;
+	}
 }
