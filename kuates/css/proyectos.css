@@ -76,7 +76,7 @@
 }
 
 .proyecto .titleCont h4{
-	font-family:Vagbold;font-size: 2vw;
+	font-family:Vagbold;font-size: 19px;
 }
 
 .proyecto .creador{
@@ -148,7 +148,7 @@
 	/* padding-bottom: 15px; */
 	padding-right: 10px;
 	padding-left: 10px;
-	font-size: 1.4vw;
+	font-size: 14px;
 	text-align: left;
 	color: #444;
 	font-family: Vagthin;
@@ -183,7 +183,7 @@
 		font-size: 2vw;
 	}
 	.proyecto .titleCont h4{
-		font-size: 3vw;
+		//font-size: 3vw;
 	}
 }
 @media screen and (max-width:600px) {
