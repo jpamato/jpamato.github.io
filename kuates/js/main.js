@@ -303,7 +303,8 @@ function logIn(){
 		$('#loggedName').html(app.user);
 		fullMaskToggle();
 		
-		location.reload(true); 
+		//location.reload(true); 
+		location.href='index.html';
 	}
 }
 function checkUsers(email,pass){
