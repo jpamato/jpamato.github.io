@@ -76,6 +76,12 @@ select{
 	font-size:0.9vw;
 }
 
+.messThumb .imgCont{
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+}
+
 #messCol{
 	border: solid 1px #aaa;
 	height: 400px;
@@ -171,4 +177,39 @@ select{
     /* text-align: center; */
     padding: 7px;
     margin-right: 5px;
+}
+
+@media screen and (max-width:767px) {
+	.messThumb p{
+		display:none;
+	}
+
+	.messThumb .right {
+	    padding-left: 4px;
+	}
+	
+	.messThumb .right a{
+	    font-size:2.25vw;
+	}
+
+	.messThumb h6{
+		margin-top:10px;
+		font-size:8px;
+	}
+}
+
+@media screen and (max-width:600px) {
+	.messThumb .right {
+	    display:none;
+	}
+
+	.messThumb .left {
+	    text-align:center;
+	    width:100%;
+	}
+
+	.messThumb .imgCont{
+		margin:auto;
+	}
+
 }
