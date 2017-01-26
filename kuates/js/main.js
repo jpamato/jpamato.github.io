@@ -215,6 +215,12 @@ function fullMaskToggle(){
 	else{
 		$('#fullMask').show();
 		$('#fullMask').css("height",$(document).height()+"px");
+		var h = $(window).height();
+		/*if($(window).height()<350)
+			$('#dialogContent').css('margin-top','10%');
+		else
+			$('#dialogContent').css('margin-top','120px');*/
+		$('#dialog').css('height',h+"px");
 	}
 }
 
@@ -240,7 +246,7 @@ $("#menuBars").unbind('click').click( function(){
 	$('#dialog').css("top","-16px");
 	$('#dialog').css("left","-16px");
 	$('#dialog').css("width","100%");
-	$('#dialog').css("height","100%");
+	//$('#dialog').css("height","100%");
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#00c1ea");
 	var html = "<ul><li onclick='ingresar()'>LOGIN/REGISTRO</li>"+
@@ -258,7 +264,7 @@ function ingresar(val=true){
 	$('#dialog').css("top","-16px");
 	$('#dialog').css("left","-16px");
 	$('#dialog').css("width","100%");
-	$('#dialog').css("height","100%");
+	//$('#dialog').css("height","100%");
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#001782");
 
@@ -350,7 +356,7 @@ function getPassword(){
 	$('#dialog').css("top","-16px");
 	$('#dialog').css("left","-16px");
 	$('#dialog').css("width","100%");
-	$('#dialog').css("height","100%");
+	//$('#dialog').css("height","100%");
 	$('#dialog').css("padding","0px 4%");
 	$('#dialog').css("color","#001782");
 
