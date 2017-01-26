@@ -24,6 +24,10 @@ $(function(){
 	var html = "";
 	var logros = "";
 	var cantLogros = 0;
+	var delProy="";
+	if(Number(userID)==Number(app.userID))
+		var delProy = "<div class='w3-circle trash' onclick='checkBorrar()'><i class='fa fa-trash-o' aria-hidden='true'></i></div>";
+
 	for(var i=0;i<proyectos.length;i++){
 		if(proyectos[i]["userID"]==userID){
 		//console.log(user);
@@ -36,7 +40,7 @@ $(function(){
 		}
 		
 		html+="<div class='w3-col l6 m6 w3-container w3-padding-12'>"+
-			"<div class='proyecto'>"+
+			"<div class='proyecto'>"+delProy+
 				  "<div>"+
 				  "<div style='width:100%;height:1px;padding-bottom:56.25%;overflow:hidden;'><img src="+getFirstImage(proyectos[i]['archivos'])+"></div>"+
 				"<div class='categoria'>"+getCategoria(proyectos[i]['categoria'])+"</div>"+
@@ -91,6 +95,25 @@ $(function(){
 	$("#pVotados").html(votados);
 });
 
+function checkBorrar(){
+	console.log("ACA");
+	$('#dialog').css("top","-16px");
+	$('#dialog').css("left","-16px");
+	$('#dialog').css("width","100%");
+	//$('#dialog').css("height","100%");
+	$('#dialog').css("padding","0px 4%");		
+	$('#dialog').css("color","#04167a");
+	var html = "<div style='background-color:#00d59b;padding:20px;';><p>&iquest;Est&aacute;s seguro de eliminar el proyecto?<br><br><span style='color:#eee;'>Si lo borras, todo lo que has logrado se perder&aacute;</span><br><br>"+			
+			"<span><button onclick='borrar(this)' style='padding:10px 20px;background-color:#eee;color:#00d59b;margin-right:20px;border:none;'>NO BORRAR</button><button onclick='borrar(this)' style='padding:10px 20px;background-color:#eee;color:#00d59b;margin-right:20px;border:none;'>BORRAR</button></span></div>";
+	$('#dialogContent').html(html);
+	$('#dialog').show();
+	fullMaskToggle();
+}
+
+function borrar(e){
+	e.parentElement.parentElement.parentElement.parentElement.parentElement.style.display='none';	
+	fullMaskToggle();
+}
 
 function GetUrlValue(varsearch){
 	var searchstring = window.location.search.substring(1);

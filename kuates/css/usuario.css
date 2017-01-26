@@ -86,3 +86,16 @@
 	padding-bottom: 15px;
 	padding-left: 35px;
 }
+.proyecto {
+    position: relative;
+}
+
+.trash{
+	color:white;
+	background-color:#00c1ec;
+	position:absolute;
+	top:5px;
+	right:5px;
+	padding: 3px 10px;
+	font-size: 20px;
+}

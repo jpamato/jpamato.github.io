@@ -168,6 +168,26 @@ function votado(){
 	$("#votar").html('<i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;PROYECTO VOTADO</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
 }
 
+$(".denunciar").unbind('click').click( function(){
+	$('#dialog').css("top","-16px");
+	$('#dialog').css("left","-16px");
+	$('#dialog').css("width","100%");
+	//$('#dialog').css("height","100%");
+	$('#dialog').css("padding","0px 4%");		
+	$('#dialog').css("color","#04167a");
+	var html = "<div style='background-color:#00d59b;padding:20px;';><p>Si consideras inapropiado<br><span style='color:#eee;'>este comentario</span><br>"+
+			"lo daremos de baja luego de una revisi&oacute;n</p>"+
+			"<span><button onclick='denunciar(this)' style='padding:10px 20px;background-color:#eee;color:#00d59b;margin-right:20px;border:none;'>NO DENUNCIAR</button><button onclick='denunciar(this)' style='padding:10px 20px;background-color:#eee;color:#00d59b;margin-right:20px;border:none;'>DENUNCIAR</button></span></div>";
+	$('#dialogContent').html(html);
+	$('#dialog').show();
+	fullMaskToggle();
+	});
+
+function denunciar(e){
+	e.parentElement.parentElement.parentElement.parentElement.style.display='none';	
+	fullMaskToggle();
+}
+
 function renderImage(file,type) {
     	var fileURL = URL.createObjectURL(file);
 	var ext =file.name.split('.').pop().toLowerCase();
