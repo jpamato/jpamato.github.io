@@ -2,7 +2,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 90%;	
-	font-family:Vagbold;
+	font-family:Vagthin;
 	margin-bottom:30px;
 }
 #filters select{
@@ -84,6 +84,11 @@
 	padding: 10px 20px 10px 20px;
     	background-color:white;
 	color: #00c1ea;
+        font-family: Vagthin;
+}
+.creador a{
+	text-decoration:none;
+	font-weight: 600;
 }
 .proyecto .creador .left{
 	margin-right:8px;

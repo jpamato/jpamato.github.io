@@ -210,9 +210,10 @@ function toggleMenu() {
 }
 
 function fullMaskToggle(){
-	if($('#fullMask').is(":visible") == true)
+	if($('#fullMask').is(":visible") == true){
 		$('#fullMask').hide();
-	else{
+		$('footer').css('position','relative');		
+	}else{
 		$('#fullMask').show();
 		$('#fullMask').css("height",$(document).height()+"px");
 		var h = $(window).height();
@@ -221,6 +222,13 @@ function fullMaskToggle(){
 		else
 			$('#dialogContent').css('margin-top','120px');*/
 		$('#dialog').css('height',h+"px");
+
+		if($(window).height()>600){
+			$('footer').css('position','fixed');
+			$('footer').css('bottom','0px');
+			$('footer').css('width','100%');
+			$('footer').css('z-index','999');
+		}
 	}
 }
 

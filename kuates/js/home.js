@@ -48,7 +48,7 @@ $(function(){
 				  "<div class='w3-circle completo'>&nbsp;</div>"+
 				  "<div class='quarter-circle incompleto'>&nbsp;</div>"+
 				  "<div class='w3-circle interior'>75%</div>"+
-				  "<div style='text-align:center;padding-top:20px;'>LOGRADO<br><span style='color: #00c1ea;'>9 d&iacute;as<br>restantes</span></div>"+
+				  "<div style='text-align:center;padding-top:20px;'><span style='color: #00c1ea;'>9 d&iacute;as<br>restantes</span></div>"+
 				  "</div>"+
 				  "</div>"+
 				  "<div class='pDesc right'><p class='right' style='margin:0px;'>"+proyectos[i]['descripcion']+"</p></div>"+

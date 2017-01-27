@@ -46,6 +46,8 @@ body{
 	color:#193462;
 	margin-bottom: 4%;
 	padding-left: 10%;
+        padding-top: 5%;
+	padding-bottom: 5%;
 }
 
 
@@ -248,7 +250,9 @@ body{
 	}
 	
 	#favBox li {
-		margin-bottom:0px;
+		margin-bottom:0px;		
+        	padding-top: 0%;
+		padding-bottom: 0%;
 	}
 	#favBox .bottomCont {
 		display:none;
