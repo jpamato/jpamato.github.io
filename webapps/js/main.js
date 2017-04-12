@@ -15,7 +15,7 @@ window.requestAnimFrame = (function(){
 })();
 
 
-var netPath = 'https://dl.dropboxusercontent.com/u/58838894/web/';
+var netPath = 'https://jpamato.github.io/u/webapps/';
 //var netPath = '';
 var gl;
 var audioCtx;
