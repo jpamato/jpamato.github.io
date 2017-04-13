@@ -12,7 +12,7 @@ var requiredRevision = 0;
 
 // -----------------------------------------------------------------------------
 
-var audioFolder = "http://dl.dropbox.com/u/58838894/audio/"
+var audioFolder = "http://jpamato.github.io/audio/"
 
 function audioplayer(){
 
