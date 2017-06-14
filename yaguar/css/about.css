@@ -1,0 +1,32 @@
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.about .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about h2 {
+  font-weight: normal;
+}
+.about .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.about .role{
+	background-color:#aaa;
+	text-align:center;
+	border-radius: 25px;
+	width:80%;
+	margin-left:10%;
+	padding-top:5%;
+	padding-bottom:5%;
+}
+
+#about{
+	text-align:center;
+	margin-bottom:50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
