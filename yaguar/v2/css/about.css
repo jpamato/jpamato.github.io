@@ -1,0 +1,42 @@
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.about {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#about{
+	background-color:#e2e2e2;
+	text-align:center;
+	margin-bottom:50px;
+	margin-top:-10px;
+	padding:40px;
+	//margin-left: 10%;
+	//margin-right: 10%;
+}
+
+.about h3 {	
+	text-align: left;
+	max-width: 1024px;
+	margin-left: 15px;
+	margin-right: 38%;
+}
+
+.about h2 {
+	font-weight: normal;
+}
+.about p {
+	margin: 10px;
+}
+
+.about .role{
+	background-color:#aaa;
+	text-align:center;
+	border-radius: 25px;
+	width:80%;
+	margin-left:10%;
+	padding-top:5%;
+	padding-bottom:5%;
+}

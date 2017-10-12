@@ -1,0 +1,49 @@
+#gallery_items{
+    margin-bottom: 50px;
+}
+
+#gallery_items .row{
+	margin-bottom:10px;
+}
+
+.gal_item{
+	background-color: white;
+	color:#666;
+	margin-top:15px;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);	
+}
+[class^="w3-col"]
+{
+	padding-right: 	7px;
+	padding-left: 	7px;
+}
+
+/*==================================================
+ * Drop shadow effect with box-shadow
+ * ===============================================*/
+.css3-shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+
+.item_img{
+	width:100%;
+}
+.item_caption {
+	margin : 	10px;
+	height: 	80px;
+}
+.item_caption  p {
+	color:#ACACAC;
+}
