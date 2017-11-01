@@ -140,7 +140,7 @@ footer{
 @media screen and (max-width:767px) {
 	
 	header {
-    		height: 80px;
+    		height: 120px;
 	}
 	ul.topnav{
 		position:absolute;
