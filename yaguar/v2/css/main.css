@@ -111,20 +111,29 @@ ul.topnav li.icon,ul.topnav li.search {display: none;}
 	float:right;
 }
 
+.btn.btn-webs{
+    background-color: #0099ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8%;
+    padding: 6px 40px;
+    font-size: 2em;
+}
+
 footer{
-	margin-top:50px;
-	background:black;
-	position:fixed;
+	//margin-top:50px;
+	background:#eeeeee;
+	//position:fixed;
 	bottom:0px;
 	width:100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	//padding-top: 10px;
+	//padding-bottom: 10px;
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:1100px) {
 	.container{
-		margin:10vw;
+		//margin:10vw;
 	}
 }
 

@@ -10,13 +10,35 @@
 	background-color: white;
 	color:#666;
 	margin-top:15px;
--webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);	
+	//-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    //box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);	
+    display:flex;
 }
 [class^="w3-col"]
 {
 	padding-right: 	7px;
 	padding-left: 	7px;
+}
+
+.work-img{
+	float:left;
+}
+
+.work-img img{
+	width:inherit;
+}
+
+.work-content{
+	float:right;
+	padding:0px 15px;
+	color:black;
+}
+
+.work-links{
+	display:inline-flex;
+}
+.work-links a{
+	margin:10px 3px;
 }
 
 /*==================================================
