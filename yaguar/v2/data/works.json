@@ -2,7 +2,7 @@
 	{
 		"title":"Liga Combate Space",
 		"roles":"desarrollo integral",
-		"img":"img/works/box.jpg",
+		"img":"img/works/CombateSpace.jpg",
 		"desc":"Juego mobile 360 desarrollado para el 25 aniversario de programa Combate Space.",
 		"client":"Banzai Films",
 		"clientUrl":"https://www.banzaifilms.tv/",
@@ -16,7 +16,91 @@
 	{
 		"title":"Groovles photo safari",
 		"roles":"desarrollo integral",
-		"img":"img/works/box.jpg",
+		"img":"img/works/Groovles.PNG",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"clientUrl":"http://www.tipitap.com/",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+	{
+		"title":"Groovles photo safari",
+		"roles":"desarrollo integral",
+		"img":"img/works/DinoSightwords.PNG",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"clientUrl":"http://www.tipitap.com/",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+	{
+		"title":"Groovles photo safari",
+		"roles":"desarrollo integral",
+		"img":"img/works/Proyectate.jpg",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"clientUrl":"http://www.tipitap.com/",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+	{
+		"title":"Groovles photo safari",
+		"roles":"desarrollo integral",
+		"img":"img/works/YPF.jpg",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"clientUrl":"http://www.tipitap.com/",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+	{
+		"title":"Groovles photo safari",
+		"roles":"desarrollo integral",
+		"video":"https://player.vimeo.com/video/226374033",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"clientUrl":"http://www.tipitap.com/",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+	{
+		"title":"Groovles photo safari",
+		"roles":"desarrollo integral",
+		"video":"https://player.vimeo.com/video/244144164",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"clientUrl":"http://www.tipitap.com/",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+		{
+		"title":"Groovles photo safari",
+		"roles":"desarrollo integral",
+		"video":"https://player.vimeo.com/video/133807066",
 		"desc":"Juego multiplayer mobile para niños.",
 		"client":"Tipitap",
 		"clientUrl":"http://www.tipitap.com/",

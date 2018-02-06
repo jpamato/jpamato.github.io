@@ -84,7 +84,7 @@ $.getJSON( "data/works.json", function( data ) {
 		if(data[index]['img']!==undefined)
 			html+="<img src="+data[index]['img']+" alt="+data[index]['title']+" title="+data[index]['title']+">";
 		if(data[index]['video']!==undefined)
-			html+="<div class='video'><iframe width='285' height='206' src="+data[index]['video']+" frameborder='0' allowfullscreen></iframe></div>";
+			html+="<div class='video'><iframe width='100%' src="+data[index]['video']+" frameborder='0' allowfullscreen></iframe></div>";
 
 		html+="</div><div class='work-content'><h3><b>"+data[index]['title']+"</b></h3>"+
 			"<h6><b>"+data[index]['roles']+"</b></h6>"+
