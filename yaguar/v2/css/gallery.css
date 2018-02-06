@@ -21,6 +21,7 @@
 }
 
 .work-img{
+	width:100%;
 	float:left;
 }
 
@@ -29,9 +30,14 @@
 }
 
 .work-content{
+	width:80%;
 	float:right;
 	padding:0px 15px;
 	color:black;
+}
+
+.work-content h3{
+	color:#2baae3;
 }
 
 .work-links{

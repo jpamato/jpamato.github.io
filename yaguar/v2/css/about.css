@@ -7,8 +7,24 @@
 	text-align: center;
 }
 
+#about1{
+	background-color:#f5f5f5;
+	text-align:center;
+	margin-bottom:50px;
+	margin-top:-10px;
+	padding:40px;
+	//margin-left: 10%;
+	//margin-right: 10%;
+}
+
+#about1 h6{
+	line-height:16px;
+	text-align:left;
+	font-weight:400;
+}
+
 #about{
-	background-color:#e2e2e2;
+	background-color:#f5f5f5;
 	text-align:center;
 	margin-bottom:50px;
 	margin-top:-10px;
@@ -21,11 +37,12 @@
 	text-align: left;
 	max-width: 1024px;
 	margin-left: 15px;
-	margin-right: 38%;
+	//margin-right: 38%;
 }
 
 .about h2 {
 	font-weight: normal;
+	color: #2baae3;
 }
 .about p {
 	margin: 10px;
@@ -39,6 +56,10 @@
 	margin-left:10%;
 	padding-top:5%;
 	padding-bottom:5%;
+}
+
+.personal-link{
+	text-decoration:none;
 }
 
 @media screen and (max-width:767px) {

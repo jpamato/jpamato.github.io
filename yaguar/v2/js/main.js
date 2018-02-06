@@ -73,3 +73,37 @@ function enviarConsulta(){
 $('.buscarSubmit').click(function() { 
     console.log('Buscando: '+$('#buscar').val());
 });
+
+
+$.getJSON( "data/works.json", function( data ) {
+	var html = "";
+	$.each( data, function(index) {
+
+		html+="<div class='w3-col m6 l6'><div class='inner-content gal_item'><div class='work-img' >";
+
+		if(data[index]['img']!==undefined)
+			html+="<img src="+data[index]['img']+" alt="+data[index]['title']+" title="+data[index]['title']+">";
+		if(data[index]['video']!==undefined)
+			html+="<div class='video'><iframe width='285' height='206' src="+data[index]['video']+" frameborder='0' allowfullscreen></iframe></div>";
+
+		html+="</div><div class='work-content'><h3><b>"+data[index]['title']+"</b></h3>"+
+			"<p><div>"+data[index]['desc']+"</div>";
+
+		html+="<div class='work-links'>";
+		
+		if(data[index]['playStore']!==undefined)
+			html+="<a href="+data[index]['playStore']+" target='_blank'><img src='img/works/icon-google.png' alt=''  /></a>";
+
+		if(data[index]['itunes']!==undefined)
+			html+="<a href="+data[index]['itunes']+" target='_blank'><img src='img/works/icon-appstore.png' alt=''  /></a>";
+
+		if(data[index]['link']!==undefined)
+			html+= "<a href="+data[index]['link']+" target='_blank'><img src='img/works/icon-link.png' alt=''  /></a>";
+		
+		if(data[index]['videoLink']!==undefined)
+			html+="<a href="+data[index]['videoLink']+" target='_blank'><img src='img/works/icon-video.png' alt=''  /></a>";
+
+		html+="</div></div></div></div>";
+  	});
+	$("#gallery-row").html(html);
+});

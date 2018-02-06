@@ -1,0 +1,26 @@
+[
+	{
+		"title":"Liga Combate Space",
+		"img":"img/works/box.jpg",
+		"desc":"Juego mobile 360 desarrollado para el 25 aniversario de programa Combate Space.",
+		"client":"Cliente: Banzai Films",
+		"credits":"Agustín Pontura, Juan Pablo Amato, Darío Georges, Carola Lucía",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	},
+
+	{
+		"title":"Groovles photo safari",
+		"img":"img/works/box.jpg",
+		"desc":"Juego multiplayer mobile para niños.",
+		"client":"Tipitap",
+		"credits":"Agustín Pontura, Darío Georges",		
+		"playStore":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"itunes":"https://itunes.apple.com/us/app/liga-combate-space/id1166632237?mt=8",
+		"link":"https://play.google.com/store/apps/details?id=com.space.turner.combatespace&hl=es_419",
+		"videoLink":"https://youtu.be/VclFN6ZLaYc"
+	}
+
+]
