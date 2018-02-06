@@ -40,6 +40,13 @@
 	color:#2baae3;
 }
 
+.work-content h6{
+	padding-top:0px;
+	margin-top:-10px;
+	color:#aaaaaa;
+	font-size:12px;
+}
+
 .work-links{
 	display:inline-flex;
 }

@@ -87,7 +87,17 @@ $.getJSON( "data/works.json", function( data ) {
 			html+="<div class='video'><iframe width='285' height='206' src="+data[index]['video']+" frameborder='0' allowfullscreen></iframe></div>";
 
 		html+="</div><div class='work-content'><h3><b>"+data[index]['title']+"</b></h3>"+
-			"<p><div>"+data[index]['desc']+"</div>";
+			"<h6><b>"+data[index]['roles']+"</b></h6>"+
+			"<p>"+data[index]['desc']+"</p>"+
+			"<p>Cliente: ";
+
+		if(data[index]['clientUrl']!==undefined)
+			html+="<a href='"+data[index]['clientUrl']+"'>"+data[index]['client']+"</a></p>";
+		else
+			html+=""+data[index]['client']+"</p>";
+
+		html+="<p>"+data[index]['credits']+"</p>";
+
 
 		html+="<div class='work-links'>";
 		
