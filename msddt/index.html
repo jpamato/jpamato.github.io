@@ -239,6 +239,16 @@ $( "#pause" ).unbind('click').click( function(){
 		$( "#play" ).show();
 		});
 
+$( "#container" ).mouseout(function() {
+	$("body").css("cursor","none");
+	$("#control").css("opacity","0");
+});
+
+$( "#container" ).mouseover(function() {
+	$("body").css("cursor","visible");
+	$("#control").css("opacity","1");
+});
+
 
 </script>
 </body>
