@@ -1,0 +1,20 @@
+body{
+	//cursor:none;
+}
+#player1{
+	float:left;
+	//margin-left: 100px;
+	width:40%;
+}
+#player2{
+	/*position:absolute;left:195px;top:100px;*/
+	float:right;
+	//margin-right: 100px;
+	width:40%;
+}
+#control{
+	//opacity:0;	
+}
+#control:hover{
+	//opacity:1;	
+}
