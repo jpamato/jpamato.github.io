@@ -1,5 +1,9 @@
 body{
-	//cursor:none;
+	cursor:false;
+}
+
+#container:hover{
+	cursor:true;
 }
 #player1{
 	float:left;

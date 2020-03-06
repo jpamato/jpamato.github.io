@@ -1,46 +1,3 @@
-<!DOCTYPE html>
-<html style="background-color:black;">
-<head>
-<title>Medio Siglo del Di Tella </title>
-<style>
-body{
-	//cursor:none;
-	overflow:hidden;
-}
-#player1{
-	float:left;
-	//margin-left: 100px;
-	width:40%;
-}
-#player2{
-	/*position:absolute;left:195px;top:100px;*/
-	float:right;
-	//margin-right: 100px;
-	width:40%;
-}
-#control{
-	//opacity:0;	
-}
-#control:hover{
-	//opacity:1;	
-}
-#show{
-	margin-top:-50px;
-}
-</style>
-</head>
-<body style="text-align:center;">
-<script   src="https://code.jquery.com/jquery-1.10.2.min.js"   integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="   crossorigin="anonymous"></script>
-<div id="container" style="display:inline-block;width:100%;background-color:black;padding-top:50px;max-width:1280px;margin:auto;">
-	<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-	<div id="player1"></div>
-
-	<div id="player2"></div>
-	<div id="control" style="text-align:center;width:100%;float:left;"><span><img id="show" src="img/show.png"/ width="100px"><span><img id="play" style="display:none;" src="img/play.gif"/ width="50px"><img id="pause" style="display:none;" src="img/pause.png"/ width="50px"></span></div>
-
-</div>
-
-<script>
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -226,16 +183,6 @@ function toggleFullScreen() {
 	}
 }
 
-$( "#show" ).unbind('click').click( function(){
-		player2.playVideo();
-		$( "#show" ).hide();
-		$( "#play" ).show();
-		if(!isFullscreen){
-			toggleFullScreen();
-			isFullscreen = true;
-		}    
-});
-
 $( "#play" ).unbind('click').click( function(){
 		player2.playVideo();
 		$( "#play" ).hide();
@@ -251,23 +198,3 @@ $( "#pause" ).unbind('click').click( function(){
 		$( "#pause" ).hide();
 		$( "#play" ).show();
 		});
-
-$( "#container" ).mouseout(function() {
-	$("body").css("cursor","none");
-	$("#control").css("opacity","0");
-});
-
-$( "#container" ).mouseover(function() {
-	$("body").css("cursor","default");
-	$("#control").css("opacity","1");
-});
-
-$(document).bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
-    var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
-    isFullscreen = state;   
-});
-
-
-</script>
-</body>
-</html>
