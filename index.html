@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juan Pablo Amato - Desarrollo de experiencias lúdicas, educativas y tecnológicas. Gamificación | Web Development | Innovación Digital">
+    <meta property="og:title" content="Portafolio Juan Pablo Amato - Experiencias Digitales Interactivas">
+    <meta property="og:description" content="Gamificación Educativa | Soluciones Web Tecnológicas | Premios Caife Gold & COMKIDS">
+    <meta property="og:type" content="website">
+    <title>Juan Pablo Amato | Portafolio de Desarrollo Digital Interactivo</title>
+    
+    <!-- Optimización Performance: Prefetch + Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Google Fonts (Space Grotesk + Inter) - Mix para estilo gamificado [1] -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Inline para carga instantánea y SEO [1] -->
+    <style>
+        /* ========================================
+           VARIABLES CSS - NEON TECH DYNAMIC (Dark Mode por defecto)
+           Inspirado en Rafael Caferati + Pierre Nel [1]
+           */
+        :root {
+            /* Paleta Neon Dark (Gamificación/Tech Style) */
+            --bg-primary: #03071A;          /* Fondo casi negro profundo (tech/gaming look) */
+            --bg-secondary: #0D1120;        /* Sección secundaria con gradiente suave */
+            --bg-tertiary: #1A1F35;         /* Hover effects colorido */
+            
+            --text-primary: #E8EBF0;         /* Blanco casi puro para máximo contraste [1] */
+            --text-secondary: #94A3B8;       /* Gris medio para legibilidad */
+            
+            /* NEON ACCENT (Similar al azul tech de los portafolios [1]) */
+            --primary-accent: #6366F1;      /* Indigo vibrante */
+            --secondary-accent: #10B981;    /* Verde gaming moderno */
+            --accent-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            
+            /* Tallas Tipográficas (Responsive) */
+            --font-size-xs: 0.75rem;          /* 12px */
+            --font-size-sm: 0.875rem;         /* 14px */
+            --font-size-base: 1rem;           /* 16px (base) */
+            --font-size-lg: 1.125rem;          /* 18px */
+            --font-size-xl: 1.25rem;           /* 20px */
+            --font-size-2xl: 1.5rem;           /* 24px */
+            --font-size-3xl: 1.875rem;         /* 30px */
+            --font-size-4xl: 2.25rem;          /* 36px */
+            --font-size-5xl: 3rem;             /* 48px */
+            
+            /* Espaciado + Radius (Gamification Feel) */
+            --spacing-xs: 0.25rem;             /* 4px */
+            --spacing-sm: 0.5rem;              /* 8px */
+            --spacing-md: 1rem;                /* 16px */
+            --spacing-lg: 1.5rem;              /* 24px */
+            --spacing-xl: 3rem;                /* 48px (más aire para gaming) */
+            
+            /* Bordes + Radius */
+            --border-radius-sm: 0.375rem;       /* 6px */
+            --border-radius-md: 0.75rem;        /* 12px */
+            --border-radius-lg: 1rem;          /* 16px */
+            --border-radius-xl: 1.5rem;        /* 24px */
+            --border-radius-full: 9999px;       /* Púrpura completo */
+            
+            /* Sombra + Glow Effects (Performance-optimized) */
+            --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+            --shadow-lg: 0 15px 30px rgba(0,0,0,0.6);
+            
+            /* Transiciones (Smooth animations like Pierre Nel [1]) */
+            --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: 200ms ease;
+        }
+
+        /* ========================================
+           RESET + BASE STYLES (Playful Gaming Style [1])
+           */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%; /* 1rem = 16px: los tamaños de las variables coinciden con sus comentarios */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden; /* Evita scroll horizontal */
+        }
+
+        a { text-decoration: none; color: inherit; transition: opacity var(--transition-fast); }
+        ul { list-style: none; }
+        
+        /* ========================================
+           HEADER / NAV (Hover Effects + Neon Style [1])
+           */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: rgba(3, 7, 26, 0.9);
+            backdrop-filter: blur(10px); /* Blur effect moderno */
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: var(--font-size-lg);
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .logo span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Efecto de neón sutil en la logo */
+        .logo::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+            border-radius: var(--border-radius-full);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            position: relative;
+        }
+
+        /* Hover effect con borde animado (estilo Pierre Nel [1]) */
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+            transition: width var(--transition-fast);
+        }
+
+        .nav-links a:hover::before {
+            width: calc(100% + 4px);
+        }
+
+        /* ========================================
+           HERO SECTION (Interactive Style [1])
+           */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: var(--spacing-xl);
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Efecto de partículas/de fondo sutil (opcional para más gamification) */
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                linear-gradient(to bottom right, var(--bg-primary), #03050a);
+            z-index: -1;
+        }
+
+        .tagline {
+            font-family: 'Space Grotesk', monospace;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            color: var(--primary-accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-4xl);
+            line-height: 1.1;
+            font-weight: 700;
+            max-width: 800px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-gradient);
+            opacity: 0.5;
+            margin-top: var(--spacing-sm);
+        }
+
+        .hero-value {
+            font-size: var(--font-size-base);
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        /* CTA Button con Glow effect */
+        .cta-button {
+            position: relative;
+            padding: var(--spacing-md) var(--spacing-xl);
+            background: var(--accent-gradient);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            border-radius: var(--border-radius-full);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, var(--primary-accent), #8B5CF6);
+            z-index: -1;
+            border-radius: calc(var(--border-radius-full) + 2px);
+            opacity: 0.9;
+            transition: opacity var(--transition-fast);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); /* Glow effect */
+        }
+
+        .cta-button:hover::before {
+            opacity: 1;
+        }
+
+        /* ========================================
+           SECCIÓN 1: WHO I AM + VALUE PROPOSITION (Card Grid con Animaciones [1])
+           */
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .whoIam {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Título con gradiente animado */
+        .value-section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-xl);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Cards con hover animaciones estilo gaming [1] */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .area-card {
+            background: linear-gradient(145deg, rgba(31, 41, 55, 0.8) 0%, rgba(13, 17, 32, 1) 100%);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efecto de borde animado (Hover) */
+        .area-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--border-radius-lg);
+            padding: 2px;
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.3), transparent, rgba(16, 185, 129, 0.3));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .area-card:hover::before {
+            opacity: 1;
+        }
+
+        .area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .area-icon {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-md);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animación de entrada en cascada */
+        .area-card.animate-on-load {
+            animation: fadeIn 500ms ease forwards;
+            opacity: 0;
+        }
+
+        .area-card:nth-child(1) { animation-delay: 0.1s; }
+        .area-card:nth-child(2) { animation-delay: 0.2s; }
+        .area-card:nth-child(3) { animation-delay: 0.3s; }
+        .area-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========================================
+           SECCIÓN 2: CASE STUDIES (Card estilo Gaming [1])
+           */
+        .cases-section {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+	    width: 800px;
+	    margin: auto;
+        }
+
+        /* Card con fondo más dramático */
+        .case-card {
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, #16192A 100%);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .case-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Hover en borde animado */
+        .case-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none; /* capa decorativa: no debe bloquear los clics en los links */
+            z-index: 3;
+            border-radius: var(--border-radius-lg);
+            padding: 3px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(16, 185, 129, 0.4));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .case-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Imagen placeholder con gradiente */
+        .case-image {
+            position: relative;
+            height: 280px;
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--text-secondary);
+            overflow: hidden;
+        }
+
+        /* Efecto de gradiente animado en imagen placeholder */
+        .case-image::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(99, 102, 241, 0.1) 50%, transparent 100%);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .case-content {
+            padding: var(--spacing-xl);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Badge con efecto neon */
+        .badge-neon {
+            position: relative;
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: var(--border-radius-md);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            color: var(--primary-accent);
+        }
+
+        .badge-neon::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: var(--border-radius-md);
+            padding: 2px;
+            background: linear-gradient(90deg, var(--primary-accent), #8B5CF6, var(--secondary-accent));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .case-card:hover .badge-neon::after {
+            opacity: 1;
+        }
+
+        /* ========================================
+           SECCIÓN 3: FULL PORTFOLIO (Grid con Hover Effects [1])
+           */
+        .portfolio-section {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-xl);
+        }
+
+        /* Filtros con efecto de borde animado */
+        .filters {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: rgba(31, 41, 55, 0.6);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: var(--border-radius-md);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-accent);
+            border-color: var(--primary-accent);
+            color: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        /* Card proyecto con hover interactivo */
+        .project-card {
+            background: linear-gradient(180deg, rgba(31, 41, 55, 0.8) 0%, rgba(13, 17, 32, 1) 100%);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Badge nivel con efecto */
+        .level-badge {
+            position: relative;
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: var(--border-radius-md);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            color: var(--primary-accent);
+        }
+
+        .level-badge::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: var(--border-radius-md);
+            padding: 2px;
+            background: linear-gradient(90deg, var(--primary-accent), #8B5CF6, var(--secondary-accent));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .project-card:hover .level-badge::after {
+            opacity: 1;
+        }
+
+        /* ========================================
+           TESTIMONIALS + SOCIAL PROOF (Grid con gradientes [1])
+           */
+        .testimonials-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .metric-card {
+            background: linear-gradient(145deg, rgba(31, 41, 55, 0.8) 0%, rgba(13, 17, 32, 1) 100%);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        /* Números grandes con gradiente */
+        .metric-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* ========================================
+           FOOTER + CONTACTO (Sticky Effect)
+           */
+        .footer {
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, #03050a 100%);
+            margin-top: var(--spacing-xl);
+        }
+
+        .contact-email {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-xl);
+            color: var(--primary-accent);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           RESPONSIVE (Mobile-First como recomendaciones [1])
+           */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Mobile menu to be implemented */
+            
+            .hero-title { font-size: var(--font-size-2xl); }
+            
+            .cases-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========================================
+           PERFORMANCE OPTIMIZATIONS (Reduce Motion) [1]
+           */
+        @media (prefers-reduced-motion: reduce) {
+            * { scroll-behavior: auto; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+
+        /* Animaciones para elementos no críticos */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-load { animation: fadeIn 500ms ease forwards; }
+
+        /* ========================================
+           IMÁGENES + LINKS DE PROYECTOS (yaguar.xyz)
+           */
+        .cases-grid {
+            width: auto;
+            max-width: 1100px;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .case-card { position: relative; }
+
+        .case-image img,
+        .project-thumb img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .case-card:hover .case-image img,
+        .project-card:hover .project-thumb img {
+            transform: scale(1.06);
+        }
+
+        .case-image::after { z-index: 1; pointer-events: none; }
+
+        .case-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .case-description {
+            color: var(--text-secondary);
+            font-size: var(--font-size-base);
+            margin-top: var(--spacing-md);
+        }
+
+        .case-content .badge-neon { align-self: flex-start; }
+
+        .image-credit {
+            position: absolute;
+            right: var(--spacing-sm);
+            bottom: var(--spacing-sm);
+            z-index: 2;
+            font-size: var(--font-size-xs);
+            color: rgba(232, 235, 240, 0.8);
+            background: rgba(3, 7, 26, 0.6);
+            padding: 2px var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-top: auto;
+            padding-top: var(--spacing-lg);
+        }
+
+        .project-links a {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--border-radius-full);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: var(--text-primary);
+            transition: background var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .project-links a:hover {
+            background: var(--primary-accent);
+            border-color: var(--primary-accent);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .portfolio-header .value-section-title { margin-bottom: 0; }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .project-card.is-hidden { display: none; }
+
+        .project-thumb {
+            position: relative;
+            height: 180px;
+            margin: calc(var(--spacing-xl) * -1) calc(var(--spacing-xl) * -1) var(--spacing-lg);
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .testimonials-section .areas-grid,
+        .whoIam .areas-grid { padding: 0 var(--spacing-lg); }
+
+        .testimonials-section { text-align: center; }
+
+        .metric-number { display: block; }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .footer-content .logo { display: inline-block; }
+
+        .social-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-links a:hover { color: var(--primary-accent); }
+
+        /* ========================================
+           CTA FLOTANTE DE WHATSAPP (aparece al scrollear)
+           */
+        .floating-cta {
+            position: fixed;
+            right: var(--spacing-lg);
+            bottom: var(--spacing-lg);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            height: 56px;
+            padding: 0 16px;
+            border-radius: var(--border-radius-full);
+            background: var(--accent-gradient);
+            color: #FFFFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.45);
+            opacity: 0;
+            transform: translateY(24px) scale(0.9);
+            pointer-events: none;
+            transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .floating-cta.is-visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .floating-cta svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        /* El texto se despliega al pasar el mouse */
+        .floating-cta .floating-cta-label {
+            max-width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: max-width var(--transition-slow), margin-left var(--transition-slow);
+        }
+
+        .floating-cta:hover .floating-cta-label,
+        .floating-cta:focus-visible .floating-cta-label {
+            max-width: 220px;
+            margin-left: var(--spacing-sm);
+        }
+
+        .floating-cta:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 30px rgba(99, 102, 241, 0.7);
+        }
+
+        /* Anillo pulsante sutil para llamar la atención */
+        .floating-cta::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 2px solid rgba(139, 92, 246, 0.7);
+            animation: ctaPulse 2.4s ease-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes ctaPulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            70%, 100% { transform: scale(1.35); opacity: 0; }
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .cta-button svg { width: 20px; height: 20px; }
+
+        @media (max-width: 768px) {
+            .cases-grid { grid-template-columns: 1fr; }
+            header { padding: var(--spacing-md); }
+            .portfolio-section { padding: var(--spacing-xl) var(--spacing-md); }
+            .floating-cta { right: var(--spacing-md); bottom: var(--spacing-md); }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header role="banner">
+        <nav class="nav" aria-label="Navegación principal">
+            <div class="logo">JUAN PABLO <span>AMATO</span></div>
+            <ul class="nav-links" role="list">
+                <li><a href="#who-i-am">Qué Hacemos</a></li>
+                <li><a href="#cases">Casos Destacados</a></li>
+                <li><a href="#portfolio">Portafolio Completo</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero animate-on-load" role="main">
+        <span class="tagline">Desarrollo Web • Gamificación Educativa • Experiencias Digitales</span>
+        <h1 class="hero-title">Transformamos experiencias complejas en soluciones interactivas con impacto medible</h1>
+        <p class="hero-value">🎯 Experto en Gamificación | 💻 Desarrollo Web | 🏆 Premios Internacionales (Caife Gold, COMKIDS, MasMat)</p>
+        <a href="#contact" class="cta-button whatsapp-link animate-on-load" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.43 9.43 0 0 1-1.44-5.03c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.46 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.6l6.02-1.58a11.33 11.33 0 0 0 5.44 1.39h.01c6.26 0 11.36-5.1 11.37-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
+            Hablemos de tu proyecto
+        </a>
+    </section>
+
+    <!-- SECCIÓN 1: WHO I AM + VALUE PROPOSITION -->
+    <section id="who-i-am" class="section whoIam animate-on-load">
+        <h2 class="value-section-title">¿Qué Ofrece el Equipo de Desarrollo Integral?</h2>
+
+        <div class="areas-grid">
+            <div class="area-card animate-on-load">
+                <span class="area-icon">🎮</span>
+                <h3 class="area-title">Gamificación Educativa</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">8M+ visitas anuales • Proyectos con IA • Multidialectales</p>
+            </div>
+
+            <div class="area-card animate-on-load">
+                <span class="area-icon">⚙️</span>
+                <h3 class="area-title">Innovación Tecnológica</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">Soluciones visuales inmersivas • Premios máximos</p>
+            </div>
+
+            <div class="area-card animate-on-load">
+                <span class="area-icon">🌍</span>
+                <h3 class="area-title">Optimización</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">50% reducción infraestructura • Performance First</p>
+            </div>
+
+            <div class="area-card animate-on-load">
+                <span class="area-icon">🎯</span>
+                <h3 class="area-title">Velocidad &amp; Entrega Ágil</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">MVP en tiempo mínimo • Multiplataforma universal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: CASE STUDIES DESTACADOS -->
+    <section id="cases" class="section cases-section animate-on-load">
+        <h2 class="value-section-title" style="margin-bottom: var(--spacing-xl); text-align: center;">Casos de Éxito Destacados</h2>
+
+        <div class="cases-grid">
+            <!-- Case 1 -->
+            <article class="case-card animate-on-load">
+                <div class="case-image">
+                    <!-- Captura del video catavento.mp4 (seg. 34) -->
+                    <img src="img/projects/profissoes_tarjeta.jpg" alt="Profissões do Futuro: tarjeta de la profesión 'Guardião de Vida Animal' proyectada en la instalación" loading="lazy" style="object-position: center top;">
+                </div>
+                <div class="case-content">
+                    <h3 class="case-title">🏆 Profissões do Futuro</h3>
+                    <span class="badge-neon">8M+ Visitas Anuales</span>
+                    <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-sm);">Museu Catavento, São Paulo | PT/ES/EN</p>
+                    <p class="case-description">Transformamos conceptos curriculares complejos en experiencias lúdicas que estimulan la imaginación y el pensamiento crítico.</p>
+                    <div class="project-links">
+                        <a href="https://saopauloparacriancas.com.br/museu-catavento-cultural/" target="_blank" rel="noopener">Prensa ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Case 2 -->
+            <article class="case-card animate-on-load">
+                <div class="case-image">
+                    <img src="img/projects/oil_juego.jpg" alt="Visitante jugando al juego de tuberías en la pantalla del stand Oil &amp; Gas, AOG 2025" loading="lazy">
+                </div>
+                <div class="case-content">
+                    <h3 class="case-title">🏆 Oil &amp; Gas - Stand Inmersivo</h3>
+                    <span class="badge-neon">Caife Gold 2025</span>
+                    <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-sm)">Techint/Tecpetrol/Tenaris | 20k+ asistentes</p>
+                    <p class="case-description">Premio máximos por transformacion contenido industrial en experiencias visuales de precisión e ingeniería.</p>
+                    <div class="project-links">
+                        <a href="https://youtu.be/-mSHuG3vm2k" target="_blank" rel="noopener">▶ Video</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Case 3 -->
+            <article class="case-card animate-on-load">
+                <div class="case-image">
+                    <img src="img/projects/thumb_inventar.jpg" alt="Inventar el Mundo" loading="lazy">
+                </div>
+                <div class="case-content">
+                    <h3 class="case-title">🏆 Inventar el Mundo</h3>
+                    <span class="badge-neon">COMKIDS Winner 2025</span>
+                    <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-sm)">Pakapaka (ARG) | Entrega en 2 meses</p>
+                    <p class="case-description">Equilibrio entre jugabilidad e inteligencia educativa para familias argentinas.</p>
+                    <div class="project-links">
+			    <!--<a href="https://inventar.pakapaka.gob.ar/juego/" target="_blank" rel="noopener">Jugar ↗</a>-->
+                        <a href="https://youtu.be/Vs_wEMhh1O4" target="_blank" rel="noopener">▶ Video</a>
+			<!--<a href="https://www.behance.net/gallery/105417399/Inventar" target="_blank" rel="noopener">Behance</a>-->
+                    </div>
+                </div>
+            </article>
+
+            <!-- Case 4 -->
+            <article class="case-card animate-on-load">
+                <div class="case-image">
+                    <img src="img/projects/thumb_matenautas.jpg" alt="Matenautas" loading="lazy">
+                </div>
+                <div class="case-content">
+                    <h3 class="case-title">🏆 Matenautas</h3>
+                    <span class="badge-neon">MasMat Award + Play Store</span>
+                    <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-sm)">Juego Educativo Matemático | 50k+ descargas</p>
+                    <p class="case-description">Problema matemático resuelto a través del entretenimiento educativo.</p>
+                    <div class="project-links">
+			    <!--<a href="https://play.google.com/store/apps/details?id=com.yaguar.Matenautas" target="_blank" rel="noopener">Play Store ↗</a>-->
+                        <a href="https://youtu.be/9eipDeYoQog" target="_blank" rel="noopener">▶ Video</a>
+			<!--<a href="https://www.behance.net/gallery/122374861/Matenautas" target="_blank" rel="noopener">Behance</a>-->
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: FULL PORTFOLIO (Lista Ordenada) -->
+    <section id="portfolio" class="section portfolio-section animate-on-load">
+        <div class="portfolio-header">
+            <h2 class="value-section-title">Portafolio Completo</h2>
+
+            <!-- Filtros de Categoría -->
+            <div class="filters">
+                <button class="filter-btn active" aria-label="Todos los proyectos" data-filter="all">Todo</button>
+                <button class="filter-btn" aria-label="Educativos" data-filter="edu">Educativo</button>
+                <button class="filter-btn" aria-label="Corporativo" data-filter="corp">Corporativo</button>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- Proyecto 1 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <!-- Captura del video catavento.mp4 (seg. 30) -->
+                    <img src="img/projects/profissoes_pared.jpg" alt="Visitante eligiendo categorías en la pared interactiva de Profissões do Futuro" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 1 - Premium</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Profissões do Futuro</h3>
+                <p class="case-description">Museo Catavento (São Paulo) | Multiplidialectal</p>
+                <div class="project-links">
+                    <a href="https://saopauloparacriancas.com.br/museu-catavento-cultural/" target="_blank" rel="noopener">Prensa ↗</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project-card animate-on-load" data-category="corp">
+                <div class="project-thumb">
+                    <img src="img/projects/oil_sala.jpg" alt="Sala inmersiva del stand de Tenaris, Tecpetrol y Techint en AOG 2025" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 1 - Premium</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Oil &amp; Gas Stand Inmersivo</h3>
+                <p class="case-description">Techint/Tecpetrol/Tenaris | Caife Gold 2025</p>
+                <div class="project-links">
+                    <a href="https://youtu.be/-mSHuG3vm2k" target="_blank" rel="noopener">▶ Video</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_inventar.jpg" alt="Inventar el Mundo" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 1 - Premium</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Inventar el Mundo</h3>
+                <p class="case-description">Pakapaka (ARG) | COMKIDS Winner | 2 meses MVP</p>
+                <div class="project-links">
+			<!--<a href="https://inventar.pakapaka.gob.ar/juego/" target="_blank" rel="noopener">Jugar ↗</a>-->
+                    <a href="https://youtu.be/Vs_wEMhh1O4" target="_blank" rel="noopener">▶ Video</a>
+		    <!--<a href="https://www.behance.net/gallery/105417399/Inventar" target="_blank" rel="noopener">Behance</a>-->
+                </div>
+            </article>
+
+            <!-- Proyecto 4 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_matenautas.jpg" alt="Matenautas" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 2 - Reconocimiento</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Matenautas</h3>
+                <p class="case-description">Proyecto Propio | MasMat Award + Play Store 50k+</p>
+                <div class="project-links">
+			<!--<a href="https://play.google.com/store/apps/details?id=com.yaguar.Matenautas" target="_blank" rel="noopener">Play Store ↗</a>-->
+                    <a href="https://youtu.be/9eipDeYoQog" target="_blank" rel="noopener">▶ Video</a>
+		    <!--<a href="https://www.behance.net/gallery/122374861/Matenautas" target="_blank" rel="noopener">Behance</a>-->
+                </div>
+            </article>
+
+            <!-- Proyecto 5 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_handWashSquad.jpg" alt="Hand Wash Squad" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 2 - Reconocimiento</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Hand Wash Squad</h3>
+                <p class="case-description">Tipitap/Planet One Reality (UK) | Aval UK Infection Prevention Society</p>
+                <div class="project-links">
+                    <a href="https://youtu.be/6uWvsLWCvdE" target="_blank" rel="noopener">▶ Video</a>
+		    <!--<a href="https://www.behance.net/gallery/99073267/Hand-Wash-Squad" target="_blank" rel="noopener">Behance</a>-->
+                </div>
+            </article>
+
+            <!-- Proyecto 6 -->
+            <article class="project-card animate-on-load" data-category="corp">
+                <div class="project-thumb">
+                    <!-- Imagen de prensa (todavía no hay imagen en yaguar.xyz) -->
+                    <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/field/image/alicia-mk-1500x610.jpg" alt="Maravillosa Alicia en el Jardín Botánico de Buenos Aires" loading="lazy">
+                    <span class="image-credit">Foto: Turismo BA</span>
+                </div>
+                <span class="level-badge">Nivel 3 - Alianza Estratégica</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Maravillosa Alicia</h3>
+                <p class="case-description">Jardín Botánico BA (Cultura AR) | CDN -50% costo/carga</p>
+                <div class="project-links">
+                    <a href="https://turismo.buenosaires.gob.ar/es/article/maravillosa-alicia" target="_blank" rel="noopener">Ver experiencia ↗</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 7 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_epson.jpg" alt="Creá sin Límites - app fotográfica para Epson" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 3 - Alianza Estratégica</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Creá sin Límites</h3>
+                <p class="case-description">Plan/Epson (ARG) | IA procesamiento tiempo real</p>
+                <div class="project-links">
+                    <a href="https://youtube.com/shorts/EOX3PXFYaWw" target="_blank" rel="noopener">▶ Video</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 8 -->
+            <article class="project-card animate-on-load" data-category="corp">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_cruce.jpg" alt="Cruce de Mundos" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 3 - Alianza Estratégica</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Cruce de Mundos</h3>
+                <p class="case-description">Ministerio Educativo CABA | Alianza Estado-Desarrollo nacional</p>
+                <div class="project-links">
+                    <a href="https://buenosaires.gob.ar/sites/default/files/media/document/2018/05/22/79ca7512777465d745f90d30cc3e5ec7dd2a79ef.pdf" target="_blank" rel="noopener">Documento ↗</a>
+		    <!--<a href="https://www.behance.net/gallery/62472539/Cruce-de-Mundos" target="_blank" rel="noopener">Behance</a>-->
+                </div>
+            </article>
+
+            <!-- Proyecto 9 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_combatespace.jpg" alt="Liga Combate Space" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 4 - Especialidad</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Ligas Combate Space</h3>
+                <p class="case-description">Banzai Films/Space (ARG) | 25º aniversario programa</p>
+                <div class="project-links">
+                    <a href="https://youtu.be/7AG3wchIyIs" target="_blank" rel="noopener">▶ Video</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 10 -->
+            <article class="project-card animate-on-load" data-category="corp">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_ceamse.jpg" alt="Residuos como Recursos" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 4 - Especialidad</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Residuos como Recursos</h3>
+                <p class="case-description">Ceamse (ARG) | Gamificación ambiental global</p>
+                <div class="project-links">
+                    <a href="https://youtu.be/3czHfR7uiC0" target="_blank" rel="noopener">▶ Video</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 11 -->
+            <article class="project-card animate-on-load" data-category="edu">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_lyna.jpg" alt="LyNa World" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 4 - Especialidad</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">LyNa World</h3>
+                <p class="case-description">4FInteractive (ARG) | UGC, Contenido generado por comunidad</p>
+            </article>
+
+            <!-- Proyecto 12 -->
+            <article class="project-card animate-on-load" data-category="corp">
+                <div class="project-thumb">
+                    <img src="img/projects/thumb_oil.jpg" alt="Oil &amp; Gas - videojuego sobre construcción de plantas energéticas" loading="lazy">
+                </div>
+                <span class="level-badge">Nivel 5 - Inicial</span>
+                <h3 class="case-title" style="font-size: var(--font-size-xl); margin-top: var(--spacing-md);">Oil &amp; Gas - Videojuego</h3>
+                <p class="case-description">Plan/Techint (ARG) | Juego de plantas energéticas para AOGExpo</p>
+                <div class="project-links">
+                    <a href="https://youtu.be/NxLXGz1LVvQ" target="_blank" rel="noopener">▶ Video</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: TESTIMONIALS + SOCIAL PROOF -->
+    <section id="testimonials" class="section testimonials-section animate-on-load">
+        <h2 class="value-section-title">Métricas Destacadas para Prueba Social</h2>
+
+        <div class="areas-grid">
+            <div class="metric-card animate-on-load">
+                <span class="metric-number">8M+</span>
+                <h3 style="font-size: var(--font-size-base); margin-top: var(--spacing-md);">Visitas Anuales</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">Museos educativos (Brasil)</p>
+            </div>
+
+            <div class="metric-card animate-on-load">
+                <span class="metric-number">150k+</span>
+                <h3 style="font-size: var(--font-size-base); margin-top: var(--spacing-md);">Descargas Play Store</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">Proyecto propio + clientes</p>
+            </div>
+
+            <div class="metric-card animate-on-load">
+                <span class="metric-number">3</span>
+                <h3 style="font-size: var(--font-size-base); margin-top: var(--spacing-md);">Premios Internacionales</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">Caife Gold, COMKIDS, MasMat</p>
+            </div>
+
+            <div class="metric-card animate-on-load">
+                <span class="metric-number">50%</span>
+                <h3 style="font-size: var(--font-size-base); margin-top: var(--spacing-md);">Reducción Infraestructura</h3>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-sm);">CDN global - evento cultural</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER + CONTACTO -->
+    <footer id="contact" class="footer animate-on-load" role="contentinfo">
+        <div class="footer-content">
+            <div class="logo">JUAN PABLO <span>AMATO</span></div>
+
+            <div class="social-links">
+                <a href="mailto:juanpamato@gmail.com" aria-label="Email contacto">📧 juanpamato@gmail.com</a>
+                <a href="https://www.linkedin.com/in/juanpamato/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/jpamato" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+                <a href="https://yaguar.xyz" target="_blank" rel="noopener" aria-label="Yaguar">yaguar.xyz</a>
+            </div>
+
+            <span class="contact-email">juanpamato@gmail.com</span>
+        </div>
+
+        <p style="margin-top: var(--spacing-xl); font-size: var(--font-size-sm); color: var(--text-secondary);">&copy; 2025 Juan Pablo Amato. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- CTA FLOTANTE DE WHATSAPP -->
+    <a href="#contact" class="floating-cta whatsapp-link" target="_blank" rel="noopener" aria-label="Hablemos de tu proyecto por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.43 9.43 0 0 1-1.44-5.03c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.46 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.6l6.02-1.58a11.33 11.33 0 0 0 5.44 1.39h.01c6.26 0 11.36-5.1 11.37-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
+        <span class="floating-cta-label">Hablemos de tu proyecto</span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script defer>
+        // ===== WhatsApp =====
+        // Completar con el número en formato internacional, solo dígitos (ej. Argentina: 5491112345678).
+        // Mientras esté vacío, los botones llevan a la sección de contacto.
+        const WHATSAPP_NUMBER = '5491156228810';
+        const WHATSAPP_MESSAGE = 'Hola Juan Pablo, vi tu portafolio y me gustaría hablar sobre un proyecto.';
+
+        if (WHATSAPP_NUMBER) {
+            const waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(WHATSAPP_MESSAGE);
+            document.querySelectorAll('.whatsapp-link').forEach(a => { a.href = waUrl; });
+        } else {
+            document.querySelectorAll('.whatsapp-link').forEach(a => { a.removeAttribute('target'); });
+        }
+
+        // El botón flotante aparece cuando el CTA principal sale de pantalla
+        // y se mantiene visible hasta el final de la página.
+        const heroCta = document.querySelector('.cta-button');
+        const floatingCta = document.querySelector('.floating-cta');
+        let heroVisible = true;
+        const updateFloating = () => floatingCta.classList.toggle('is-visible', !heroVisible);
+
+        new IntersectionObserver(([entry]) => { heroVisible = entry.isIntersecting; updateFloating(); }).observe(heroCta);
+
+        // Filtros de categoría (filtrado real por data-category)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.project-card').forEach(card => {
+                    const show = filter === 'all' || card.dataset.category === filter;
+                    card.classList.toggle('is-hidden', !show);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
