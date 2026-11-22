@@ -371,7 +371,7 @@
 
         .cases-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: var(--spacing-xl);
 	    width: 800px;
 	    margin: auto;
@@ -859,7 +859,7 @@
         }
         /* Grillas de 4 elementos: 4 columnas -> 2x2 -> 1 columna */
         @media (max-width: 1024px) {
-            .areas-grid, .cases-grid { grid-template-columns: repeat(2, 1fr); }
+            .areas-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
             .areas-grid, .cases-grid { grid-template-columns: 1fr; }
