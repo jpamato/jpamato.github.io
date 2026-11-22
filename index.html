@@ -296,7 +296,7 @@
         /* Cards con hover animaciones estilo gaming [1] */
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: var(--spacing-lg);
             max-width: 1200px;
             margin: 0 auto;
@@ -371,7 +371,7 @@
 
         .cases-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: var(--spacing-xl);
 	    width: 800px;
 	    margin: auto;
@@ -618,7 +618,6 @@
             
             .hero-title { font-size: var(--font-size-2xl); }
             
-            .cases-grid { grid-template-columns: 1fr; }
             .portfolio-grid { grid-template-columns: 1fr; }
         }
 
@@ -854,10 +853,16 @@
         .cta-button svg { width: 20px; height: 20px; }
 
         @media (max-width: 768px) {
-            .cases-grid { grid-template-columns: 1fr; }
             header { padding: var(--spacing-md); }
             .portfolio-section { padding: var(--spacing-xl) var(--spacing-md); }
             .floating-cta { right: var(--spacing-md); bottom: var(--spacing-md); }
+        }
+        /* Grillas de 4 elementos: 4 columnas -> 2x2 -> 1 columna */
+        @media (max-width: 1024px) {
+            .areas-grid, .cases-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .areas-grid, .cases-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
